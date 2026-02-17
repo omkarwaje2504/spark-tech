@@ -49,7 +49,7 @@ export default function Hero() {
                     <div
                         className="absolute inset-0 bg-cover bg-center transition-transform duration-[10000ms]"
                         style={{
-                            backgroundImage: `url(${slide.image})`,
+                            backgroundImage: `url('${slide.image}')`,
                             transform: i === current ? 'scale(1.05)' : 'scale(1)',
                         }}
                     />
