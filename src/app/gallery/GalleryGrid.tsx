@@ -11,7 +11,7 @@ const projects = [
         category: 'Refinery',
         location: 'Bangladesh',
         year: '2023',
-        image: '/images/refinery.png',
+        image: '/images/Gallery/Gallery Thumnail Images/Refinery/200 TPD Oil Refinery - Bangladesh.jpg',
         description: 'Complete vegetable oil refinery with degumming, neutralization, bleaching, and deodorization units.',
     },
     {
@@ -20,7 +20,7 @@ const projects = [
         category: 'Extraction',
         location: 'Nepal',
         year: '2022',
-        image: '/images/extraction.png',
+        image: '/images/Gallery/Gallery Thumnail Images/Solvent Extraction/500 TPD Solvent Extraction - Nepal.jpg',
         description: 'Large-scale solvent extraction plant for soybean processing with advanced material handling.',
     },
     {
@@ -29,7 +29,7 @@ const projects = [
         category: 'Fractionation',
         location: 'Sri Lanka',
         year: '2023',
-        image: '/images/fractionation.png',
+        image: '/images/Gallery/Gallery Thumnail Images/Fractionation/Palm Oil Fractionation - Sri Lanka.jpg',
         description: 'Dry fractionation plant with crystallization technology for palm oil processing.',
     },
     {
@@ -38,7 +38,7 @@ const projects = [
         category: 'Bakery',
         location: 'India',
         year: '2024',
-        image: '/images/bakery.png',
+        image: '/images/Gallery/Gallery Thumnail Images/Bakery/1000 kghr Bakery Shortening - India.jpg',
         description: 'High-capacity bakery shortening production facility with nitrogen purging system.',
     },
     {
@@ -47,7 +47,7 @@ const projects = [
         category: 'Refinery',
         location: 'India',
         year: '2022',
-        image: '/images/refinery.png',
+        image: '/images/Gallery/Gallery Thumnail Images/Refinery/Rice Bran Oil Refinery - India.jpg',
         description: 'Complete rice bran oil refinery with winterization and lecithin recovery.',
     },
     {
@@ -56,7 +56,7 @@ const projects = [
         category: 'Extraction',
         location: 'USA',
         year: '2021',
-        image: '/images/extraction.png',
+        image: '/images/Gallery/Gallery Thumnail Images/Solvent Extraction/Soybean Processing Complex - USA.jpg',
         description: 'Integrated soybean processing facility with extraction and meal conditioning.',
     },
     {
@@ -65,7 +65,7 @@ const projects = [
         category: 'Refinery',
         location: 'Bangladesh',
         year: '2023',
-        image: '/images/refinery.png',
+        image: '/images/Gallery/Gallery Thumnail Images/Refinery/Deodorizing Plant.jpg',
         description: 'Advanced continuous countercurrent deodorizer with high heat recovery.',
     },
     {
@@ -74,7 +74,7 @@ const projects = [
         category: 'Bakery',
         location: 'India',
         year: '2024',
-        image: '/images/bakery.png',
+        image: '/images/Gallery/Gallery Thumnail Images/Bakery/1000 kghr Bakery Shortening - India.jpg',
         description: 'State-of-the-art margarine production facility with cooling and crystallization.',
     },
 ];
@@ -106,8 +106,8 @@ export default function GalleryGrid() {
                                     key={category}
                                     onClick={() => setActiveCategory(category)}
                                     className={`px-5 py-2 rounded-full font-medium transition-all ${activeCategory === category
-                                            ? 'bg-gradient-to-r from-[#3CAAE5] to-[#99C71E] text-white shadow-lg'
-                                            : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                                        ? 'bg-gradient-to-r from-[#3CAAE5] to-[#99C71E] text-white shadow-lg'
+                                        : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                                         }`}
                                 >
                                     {category}

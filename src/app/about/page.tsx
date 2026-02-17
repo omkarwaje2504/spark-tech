@@ -19,7 +19,7 @@ export default function AboutPage() {
     ];
 
     const team = [
-        { name: 'Amit Waghmare', role: 'Founder & CEO', image: '/images/about.png' },
+        { name: 'Amit Waghmare', role: 'Founder & CEO', image: '/images/About Us/About Us Thumbnail Image.jpg' },
     ];
 
     return (
@@ -40,7 +40,7 @@ export default function AboutPage() {
                         <div className="relative">
                             <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl">
                                 <Image
-                                    src="/images/about.png"
+                                    src="/images/About Us/About Us Thumbnail Image.jpg"
                                     alt="Sparktech Engineering Team"
                                     fill
                                     className="object-cover"

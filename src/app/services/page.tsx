@@ -16,7 +16,7 @@ const services = [
         title: 'Continuous Solvent Extraction Plant',
         shortDesc: 'Advanced horizontal model with articulated band conveyor assembly for efficient oil extraction.',
         fullDesc: 'Horizontal model comprising of articulated band conveyor assembly, which receives the material from the Feed Hopper and transports it at a very slow predetermined speed from the feed to the discharge end.',
-        image: '/images/extraction.png',
+        image: '/images/Services/Services Thumnail Images/Continuous Solvent Extraction Plant.jpg',
         icon: '🏭',
         features: [
             'Single piece Hollow shaft gear box with 0.05 rpm output',
@@ -33,7 +33,7 @@ const services = [
         title: 'Vegetable Oil Refinery',
         shortDesc: 'Complete chemical and physical refining solutions for crude edible oils.',
         fullDesc: 'In refining, physical and chemical processes are combined to remove undesirable natural as well as environmental-related components from the crude oil including phosphatides, free fatty acids, pigments, odors and waxes.',
-        image: '/images/refinery.png',
+        image: '/images/Services/Services Thumnail Images/Vegetable Oil Refinery.jpg',
         icon: '⚗️',
         features: [
             'Degumming for phosphatides removal',
@@ -50,7 +50,7 @@ const services = [
         title: 'Fractionation Plant',
         shortDesc: 'Dry fractionation process for separating fats into different melting point fractions.',
         fullDesc: 'Natural edible oils are multi-component mixtures consisting of various triglycerides. Through fractionation, different components can be separated for various applications in food technology.',
-        image: '/images/fractionation.png',
+        image: '/images/Services/Services Thumnail Images/Fractionation.jpg',
         icon: '🔬',
         features: [
             'Dry fractionation from melt - no additives',
@@ -67,7 +67,7 @@ const services = [
         title: 'Deodorization Plant',
         shortDesc: 'Continuous deodorizer for quality-defining process in refining oils and fats.',
         fullDesc: 'Deodorization is the quality-defining process step in refining oils and fats. Free and low-boiling substances are distilled at higher temperatures in a high vacuum with steam stripping.',
-        image: '/images/refinery.png',
+        image: '/images/Services/Services Thumnail Images/Deodorizing Plant.jpg',
         icon: '💨',
         features: [
             'Continuous countercurrent deodorizer',
@@ -84,7 +84,7 @@ const services = [
         title: 'Bleaching Plant',
         shortDesc: 'Continuous bleaching process with loop reactor for intensive mixture and contact.',
         fullDesc: 'Continuous bleaching process characterized by the loop reactor enabling operation without agitator tanks with simultaneous intensive mixture and contact of bleaching earth with the oil.',
-        image: '/images/refinery.png',
+        image: '/images/Services/Services Thumnail Images/Bleaching Plant.jpg',
         icon: '✨',
         features: [
             'Loop reactor technology',
@@ -101,7 +101,7 @@ const services = [
         title: 'De-Waxing / Winterization',
         shortDesc: 'Winterization process to achieve necessary cold stability for bottled edible oils.',
         fullDesc: 'For refining products to be bottled as edible oils, winterization is required to achieve the necessary cold stability. This prevents crystallization & clouding of waxes at ambient temperature.',
-        image: '/images/fractionation.png',
+        image: '/images/Services/Services Thumnail Images/De-Waxing.jpg',
         icon: '❄️',
         features: [
             'Cooling by heat exchange with cold water',
@@ -118,7 +118,7 @@ const services = [
         title: 'Lecithin Plant',
         shortDesc: 'High performance plants for dehydration of wet gums from soybean and rice bran.',
         fullDesc: 'SPARKTECH are experts in manufacturing high performance Lecithin Plants for dehydration of wet gums. Our plants feature unique design for gentle drying process without any burn.',
-        image: '/images/bakery.png',
+        image: '/images/Services/Services Thumnail Images/Vegetable Oil Refinery.jpg',
         icon: '🌿',
         features: [
             'Rice Bran Lecithin processing',
@@ -135,7 +135,7 @@ const services = [
         title: 'Bakery Shortening & Margarine Plant',
         shortDesc: 'Complete plant for producing bakery shortening up to 1,000 kgs/hour.',
         fullDesc: 'Process equipment for bakery shortening processing, capable of producing up to 1,000 kgs/hour when cooling from inlet temperature of 45°C to 23-25°C suitable for semi-liquid filling.',
-        image: '/images/bakery.png',
+        image: '/images/Services/Services Thumnail Images/Bakery.jpg',
         icon: '🥐',
         features: [
             'Essess processor heat transfer cylinders',
@@ -152,7 +152,7 @@ const services = [
         title: 'Hydrogenation Plant',
         shortDesc: 'State-of-the-art hydrogenation units for converting liquid oils into solid fats.',
         fullDesc: 'Advanced hydrogenation plants for the conversion of liquid vegetable oils into semi-solid or solid fats through the addition of hydrogen.',
-        image: '/images/refinery.png',
+        image: '/images/Services/Services Thumnail Images/Hydrogenation.jpg',
         icon: '⚡',
         features: [
             'Batch and continuous options',
@@ -163,6 +163,23 @@ const services = [
             'High conversion efficiency',
         ],
         applications: ['Vanaspati', 'Shortening', 'Industrial Fats'],
+    },
+    {
+        id: 'interesterification',
+        title: 'Interesterification Plant',
+        shortDesc: 'Advanced fat modification process for producing zero-trans fats.',
+        fullDesc: 'Interesterification is an advanced process used to modify the physical properties of oils and fats by rearranging the fatty acids within the triglyceride molecule.',
+        image: '/images/Services/Services Thumnail Images/Fractionation.jpg',
+        icon: '🔄',
+        features: [
+            'Zero-trans fat production',
+            'Chemical & enzymatic options',
+            'Flexible feedstock handling',
+            'Precise reaction control',
+            'Advanced separation technology',
+            'Nutritional profile optimization',
+        ],
+        applications: ['Trans-free Margarine', 'Healthy Shortenings', 'Confectionery Fats'],
     },
 ];
 
@@ -175,7 +192,7 @@ export default function ServicesPage() {
                 title="Our Services"
                 subtitle="Complete range of edible oil processing equipment and solutions"
                 breadcrumbs={[{ name: 'Services', href: '/services' }]}
-                backgroundImage="/images/extraction.png"
+                backgroundImage="/images/Services/Services Banner.jpg"
             />
 
             {/* Services Grid */}

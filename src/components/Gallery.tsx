@@ -2,10 +2,10 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 const projects = [
-    { id: 1, title: 'Refinery Plant', location: 'Bangladesh', image: '/images/refinery.png' },
-    { id: 2, title: 'Solvent Extraction', location: 'Nepal', image: '/images/extraction.png' },
-    { id: 3, title: 'Fractionation', location: 'Sri Lanka', image: '/images/fractionation.png' },
-    { id: 4, title: 'Bakery Shortening', location: 'India', image: '/images/bakery.png' },
+    { id: 1, title: 'Refinery Plant', location: 'Bangladesh', image: '/images/Gallery/Gallery Thumnail Images/Refinery/200 TPD Oil Refinery - Bangladesh.jpg' },
+    { id: 2, title: 'Solvent Extraction', location: 'Nepal', image: '/images/Gallery/Gallery Thumnail Images/Solvent Extraction/500 TPD Solvent Extraction - Nepal.jpg' },
+    { id: 3, title: 'Fractionation', location: 'Sri Lanka', image: '/images/Gallery/Gallery Thumnail Images/Fractionation/Palm Oil Fractionation - Sri Lanka.jpg' },
+    { id: 4, title: 'Bakery Shortening', location: 'India', image: '/images/Gallery/Gallery Thumnail Images/Bakery/1000 kghr Bakery Shortening - India.jpg' },
 ];
 
 export default function Gallery() {

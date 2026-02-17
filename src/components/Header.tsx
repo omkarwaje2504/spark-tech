@@ -26,8 +26,12 @@ export default function Header() {
         { name: 'Oil Refinery', href: '/services/oil-refinery' },
         { name: 'Fractionation', href: '/services/fractionation' },
         { name: 'Deodorization', href: '/services/deodorization' },
-        { name: 'Bakery Shortening', href: '/services/bakery-shortening' },
+        { name: 'Bleaching Plant', href: '/services/bleaching' },
+        { name: 'De-Waxing / Winterization', href: '/services/dewaxing' },
         { name: 'Lecithin Plant', href: '/services/lecithin' },
+        { name: 'Bakery Shortening & Margarine', href: '/services/bakery-shortening' },
+        { name: 'Hydrogenation', href: '/services/hydrogenation' },
+        { name: 'Interesterification', href: '/services/interesterification' },
     ];
 
     const navLinks = [
@@ -84,7 +88,7 @@ export default function Header() {
                             </button>
 
                             {isServicesOpen && (
-                                <div className="absolute top-full left-0 pt-2 w-56">
+                                <div className="absolute top-full left-0 pt-2 w-64">
                                     <div className="bg-white rounded-lg shadow-xl border border-gray-100 py-2">
                                         {servicesList.map((service) => (
                                             <Link

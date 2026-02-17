@@ -10,11 +10,11 @@ interface PageBannerProps {
 export default function PageBanner({
     title,
     subtitle,
-    backgroundImage = '/images/hero.png',
+    backgroundImage = '/images/Home Page/Home Page Banner-Advanced Refinery Plants.jpg',
     breadcrumbs = [],
 }: PageBannerProps) {
     return (
-        <section className="relative h-[300px] mt-[120px] overflow-hidden">
+        <section className="relative h-[400px] mt-[120px] overflow-hidden">
             {/* Background Image */}
             <div className="absolute inset-0">
                 <Image

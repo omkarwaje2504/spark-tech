@@ -24,7 +24,7 @@ const capabilities = [
             'P&ID and GA drawing preparation',
             'Structural and civil design integration',
         ],
-        image: '/images/about.png',
+        image: '/images/About Us/About Us Thumbnail Image.jpg',
     },
     {
         id: 'manufacturing',
@@ -39,7 +39,7 @@ const capabilities = [
             'Assembly and integration',
             'Factory acceptance testing',
         ],
-        image: '/images/extraction.png',
+        image: '/images/Technologies/Technologies Thumnail Images/Oil Extraction.jpg',
     },
     {
         id: 'quality',
@@ -54,7 +54,7 @@ const capabilities = [
             'Performance validation',
             'Documentation and traceability',
         ],
-        image: '/images/refinery.png',
+        image: '/images/Services/Services Thumnail Images/Vegetable Oil Refinery.jpg',
     },
     {
         id: 'certification',
@@ -69,7 +69,7 @@ const capabilities = [
             'Environmental standards',
             'Export documentation',
         ],
-        image: '/images/fractionation.png',
+        image: '/images/Services/Services Thumnail Images/Fractionation.jpg',
     },
 ];
 
@@ -105,7 +105,7 @@ export default function CapabilitiesPage() {
                 title="Our Capabilities"
                 subtitle="End-to-end engineering, manufacturing, and project execution"
                 breadcrumbs={[{ name: 'Capabilities', href: '/capabilities' }]}
-                backgroundImage="/images/refinery.png"
+                backgroundImage="/images/Home Page/Home Page Banner-Advanced Refinery Plants.jpg"
             />
 
             {/* Main Capabilities */}
@@ -212,7 +212,7 @@ export default function CapabilitiesPage() {
 
                         <div className="relative h-[400px] rounded-2xl overflow-hidden">
                             <Image
-                                src="/images/extraction.png"
+                                src="/images/Home Page/Home Page Banner-Turnkey Solutions.jpg"
                                 alt="Manufacturing Facility"
                                 fill
                                 className="object-cover"

@@ -15,7 +15,7 @@ const technologies = [
         id: 'seed-preparation',
         title: 'Oil Seed Preparation',
         description: 'Preparation of oil bearing material prior to its Extraction is often under estimated by many processors. To achieve the best results in solvent Extraction, proper preparation is essential.',
-        image: '/images/extraction.png',
+        image: '/images/Technologies/Technologies Thumnail Images/Oil Seed Preparation.jpg',
         features: [
             'Cracking, cooking and flaking operations',
             'Multi-stage vertical vessel cookers',
@@ -29,7 +29,7 @@ const technologies = [
         id: 'oil-extraction',
         title: 'Oil Extraction',
         description: 'Our continuous solvent extraction plants are designed for maximum efficiency with horizontal model comprising of articulated band conveyor assembly.',
-        image: '/images/extraction.png',
+        image: '/images/Technologies/Technologies Thumnail Images/Oil Extraction.jpg',
         features: [
             'Horizontal band conveyor system',
             'Single piece hollow shaft gear box',
@@ -43,7 +43,7 @@ const technologies = [
         id: 'oil-refining',
         title: 'Oil & Fats Refining',
         description: 'Complete refining solutions combining physical and chemical processes to remove undesirable components from crude oil.',
-        image: '/images/refinery.png',
+        image: '/images/Technologies/Technologies Thumnail Images/Oil & ats Refining.jpg',
         features: [
             'Degumming for removal of phosphatides',
             'Neutralization for free fatty acids removal',
@@ -57,7 +57,7 @@ const technologies = [
         id: 'oil-processing',
         title: 'Oil Processing',
         description: 'Advanced processing techniques including fractionation, hardening and interesterification for specialized applications.',
-        image: '/images/fractionation.png',
+        image: '/images/Technologies/Technologies Thumnail Images/Fractionation.jpg',
         features: [
             'Dry fractionation process',
             'No additives required',
@@ -71,7 +71,7 @@ const technologies = [
         id: 'filtration',
         title: 'Filtration',
         description: 'High-performance filtration systems including pressure leaf filters and specialized equipment for oil clarification.',
-        image: '/images/refinery.png',
+        image: '/images/Technologies/Technologies Thumnail Images/Filtration.jpg',
         features: [
             'Pressure leaf filters',
             'High efficiency cleaning',
@@ -85,7 +85,7 @@ const technologies = [
         id: 'value-added',
         title: 'Value Added Projects',
         description: 'Specialized plants for lecithin production, bakery shortening, margarine, and other value-added products.',
-        image: '/images/bakery.png',
+        image: '/images/Services/Services Thumnail Images/Bakery.jpg',
         features: [
             'Rice Bran Lecithin Plant',
             'Soya Lecithin Plant',
@@ -106,7 +106,7 @@ export default function TechnologiesPage() {
                 title="Technologies"
                 subtitle="Cutting-edge solutions for oil seed processing and refining"
                 breadcrumbs={[{ name: 'Technologies', href: '/technologies' }]}
-                backgroundImage="/images/extraction.png"
+                backgroundImage="/images/Technologies/Technologies Banner.jpg"
             />
 
             {/* Technologies Overview */}

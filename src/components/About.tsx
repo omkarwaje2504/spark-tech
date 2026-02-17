@@ -64,7 +64,7 @@ export default function About() {
                     <div className="relative">
                         <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
                             <Image
-                                src="/images/about.png"
+                                src="/images/About Us/About Us Thumbnail Image.jpg"
                                 alt="Sparktech Engineering"
                                 fill
                                 className="object-cover"

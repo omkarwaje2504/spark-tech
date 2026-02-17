@@ -18,7 +18,7 @@ export default function GalleryPage() {
                 title="Our Projects"
                 subtitle="Explore our successfully completed projects across the globe"
                 breadcrumbs={[{ name: 'Gallery', href: '/gallery' }]}
-                backgroundImage="/images/hero.png"
+                backgroundImage="/images/Gallery/Gallery Banner/Gallery Banner.jpg"
             />
 
             <GalleryGrid />

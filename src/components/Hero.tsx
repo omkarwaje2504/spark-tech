@@ -6,21 +6,21 @@ import Link from 'next/link';
 const slides = [
     {
         id: 1,
-        image: '/images/hero.png',
+        image: '/images/Home Page/Home Page Banner-Project Engineering Services.jpg',
         title: 'Project Engineering Services',
         highlight: 'Edible Oil Extraction & Refining',
         description: 'Continuous Solvent Extraction is the most modern way of recovery of oil from oil bearing materials.',
     },
     {
         id: 2,
-        image: '/images/refinery.png',
+        image: '/images/Home Page/Home Page Banner-Advanced Refinery Plants.jpg',
         title: 'Advanced Refinery Plants',
         highlight: 'Physical & Chemical Refining',
         description: 'Complete refining solutions including degumming, neutralizing, bleaching, dewaxing, and deodorization.',
     },
     {
         id: 3,
-        image: '/images/extraction.png',
+        image: '/images/Home Page/Home Page Banner-Turnkey Solutions.jpg',
         title: 'Turnkey Solutions',
         highlight: 'A Perfect EPC Partner',
         description: 'Engineering, Procurement, and Construction services for the edible oil and food-processing industries.',

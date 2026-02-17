@@ -47,7 +47,7 @@ const servicesData: Record<string, {
                 ]
             }
         ],
-        image: '/images/extraction.png',
+        image: '/images/Services/Services Thumnail Images/Continuous Solvent Extraction Plant.jpg',
         features: [
             'Single piece Hollow shaft gear box with 0.05 rpm output',
             'Variable frequency drive for finite speed adjustment with data-logging',
@@ -97,7 +97,7 @@ const servicesData: Record<string, {
                 ]
             }
         ],
-        image: '/images/refinery.png',
+        image: '/images/Services/Services Thumnail Images/Vegetable Oil Refinery.jpg',
         features: [
             'Fully automated handling of various crude oil qualities',
             'Short downtime for raw material changeover',
@@ -141,7 +141,7 @@ const servicesData: Record<string, {
                 ]
             }
         ],
-        image: '/images/fractionation.png',
+        image: '/images/Services/Services Thumnail Images/Fractionation.jpg',
         features: [
             'Dry fractionation - no additives required',
             'Physiologically neutral products',
@@ -192,7 +192,7 @@ const servicesData: Record<string, {
                 ]
             }
         ],
-        image: '/images/bakery.png',
+        image: '/images/Services/Services Thumnail Images/Bakery.jpg',
         features: [
             'Essessprocessor with glycol cooling system',
             'Internal hard chrome plated cylinders',
@@ -243,7 +243,7 @@ const servicesData: Record<string, {
                 ]
             }
         ],
-        image: '/images/bakery.png',
+        image: '/images/Services/Services Thumnail Images/Vegetable Oil Refinery.jpg',
         features: [
             'Gentle drying process without burn',
             'High flow rate operation',
@@ -293,7 +293,7 @@ const servicesData: Record<string, {
                 ]
             }
         ],
-        image: '/images/refinery.png',
+        image: '/images/Technologies/Technologies Thumnail Images/Filtration.jpg',
         features: [
             'Horizontal pressure leaf filter (2-100 m²)',
             'Vertical pressure leaf filter (10-50 m²)',
@@ -312,6 +312,211 @@ const servicesData: Record<string, {
             { label: 'Discharge', value: 'Automatic' },
         ],
         process: ['Pre-filtration', 'Main Filtration', 'Cake Formation', 'Discharge', 'Filter Cleaning']
+    },
+    'deodorization': {
+        title: 'Deodorization Plant',
+        subtitle: 'Continuous High-Vacuum Distillation',
+        description: 'Deodorization is the quality-defining process step in refining oils and fats. Free and low-boiling substances are distilled at higher temperatures in a high vacuum with steam stripping.',
+        sections: [
+            {
+                heading: 'Process Principle',
+                content: [
+                    'The continuous deodorizer operates according to the countercurrent principle. Product and strip steam are directed in countercurrent during entire processing time.',
+                    'Free and low-boiling substances like fatty acids, odors, and flavors are distilled at higher temperatures in a high vacuum with steam stripping.',
+                    'The process includes gentle cooling under deodorizing conditions to ensure maximum product quality and stability.'
+                ]
+            },
+            {
+                heading: 'Energy Efficiency',
+                content: [
+                    'Features integrated countercurrent heat transfer with high heat recovery (>80%), significantly reducing operational costs.',
+                    'The system is designed with no moving parts, ensuring a long service life and minimal maintenance requirements.',
+                    'Equipped with an automatic product change system to minimize downtime and prevent cross-contamination.'
+                ]
+            }
+        ],
+        image: '/images/Services/Services Thumnail Images/Deodorizing Plant.jpg',
+        features: [
+            'Continuous countercurrent principle',
+            'Heat recovery exceeding 80%',
+            'Integrated vapor scrubber',
+            'No moving parts design',
+            'Automatic product change system',
+            'High vacuum operation',
+            'Stainless steel construction',
+            'Centralized control system'
+        ],
+        applications: ['Palm Oil', 'Soybean Oil', 'Sunflower Oil', 'Coconut Oil', 'Specialty Fats'],
+        specs: [
+            { label: 'Vacuum Level', value: '1-3 mbar' },
+            { label: 'Operating Temp', value: '230-260°C' },
+            { label: 'Heat Recovery', value: '> 80%' },
+            { label: 'Steam Consumption', value: 'Low' },
+        ],
+        process: ['Heating', 'Distillation', 'De-aeration', 'Cooling', 'Polishing']
+    },
+    'bleaching': {
+        title: 'Continuous Bleaching Plant',
+        subtitle: 'Loop Reactor Technology',
+        description: 'Continuous bleaching process characterized by the loop reactor enabling operation without agitator tanks with simultaneous intensive mixture and contact of bleaching earth with the oil.',
+        sections: [
+            {
+                heading: 'Loop Reactor System',
+                content: [
+                    'The process is characterized by the loop reactor enabling operation without agitator tanks as well as simultaneous intensive mixture and contact of the bleaching earth with the oil.',
+                    'The bleaching earth adsorbs color pigments, oxidation-supporting metal ions, complex compounds, residual soaps and traces of catalyst from hydrogenation.'
+                ]
+            },
+            {
+                heading: 'Quality Features',
+                content: [
+                    'Operation under vacuum ensures no oxidation of oil during the process.',
+                    'Gentle heating through optimized temperature control preserves the nutritional value of the oil.',
+                    'Highly effective decoloration of the oil with minimal bleaching earth consumption.'
+                ]
+            }
+        ],
+        image: '/images/Services/Services Thumnail Images/Bleaching Plant.jpg',
+        features: [
+            'Loop reactor technology',
+            'Agitator-free operation',
+            'Vacuum processing',
+            'Optimized temperature control',
+            'High decoloration efficiency',
+            'Low earth consumption',
+            'Automatic earth dosing',
+            'Continuous flow design'
+        ],
+        applications: ['Degummed Oil', 'Neutralized Oil', 'Hydrogenated Oil'],
+        specs: [
+            { label: 'Operation', value: 'Continuous' },
+            { label: 'Condition', value: 'Vacuum' },
+            { label: 'Mixing', value: 'Loop Reactor' },
+        ],
+        process: ['Oil Heating', 'Earth Dosing', 'Intensive Mixing', 'Vacuum Bleaching', 'Filtration']
+    },
+    'dewaxing': {
+        title: 'De-Waxing / Winterization',
+        subtitle: 'Cold Stability Solutions',
+        description: 'Winterization is required to achieve necessary cold stability for bottled edible oils, preventing crystallization and clouding of waxes at ambient temperature.',
+        sections: [
+            {
+                heading: 'Winterization Process',
+                content: [
+                    'For refining products to be bottled as edible oils, winterization is required to achieve the necessary cold stability.',
+                    'The process involves cooling the oil by heat exchange with cold water to temperatures between 5-10°C.',
+                    'A maturation period of up to 24 hours ensures proper crystal growth for effective separation.'
+                ]
+            },
+            {
+                heading: 'Crystal Separation',
+                content: [
+                    'Horizontal filtration systems are used for the separation of crystals.',
+                    'Continuous filtering aid addition ensures efficiency and consistency in wax removal.',
+                    'Advanced technology prevents clouding of oil even in cold climates.'
+                ]
+            }
+        ],
+        image: '/images/Services/Services Thumnail Images/De-Waxing.jpg',
+        features: [
+            'Precise temperature control',
+            'Extended maturation period',
+            'Horizontal filtration systems',
+            'Continuous filter aid dosing',
+            'Crystal separation technology',
+            'High cold stability output',
+            'Automated process control',
+            'Energy efficient cooling'
+        ],
+        applications: ['Sunflower Oil', 'Corn Oil', 'Rice Bran Oil', 'Cottonseed Oil'],
+        specs: [
+            { label: 'Cooling Temp', value: '5-10°C' },
+            { label: 'Maturation Time', value: '12-24 hours' },
+            { label: 'Filter Type', value: 'Horizontal Leaf' },
+        ],
+        process: ['Cooling', 'Crystallization', 'Maturation', 'Filtration', 'Wax Discharge']
+    },
+    'hydrogenation': {
+        title: 'Hydrogenation Plant',
+        subtitle: 'Fat Modification Technology',
+        description: 'Advanced hydrogenation plants for the conversion of liquid vegetable oils into semi-solid or solid fats through the addition of hydrogen, suitable for vanaspati and shortening production.',
+        sections: [
+            {
+                heading: 'Hydrogenation Process',
+                content: [
+                    'Conversion of liquid vegetable oils into semi-solid or solid fats by adding hydrogen under pressure and temperature in the presence of a catalyst.',
+                    'Precise control of the degree of saturation allows for the production of products with specific melting points and textures.',
+                    'The process is essential for producing stable frying oils and base fats for margarine and bakery shortening.'
+                ]
+            },
+            {
+                heading: 'System Features',
+                content: [
+                    'Available in both batch and continuous options depending on production requirements.',
+                    'Features sophisticated catalyst handling and recovery systems to minimize waste and cost.',
+                    'Integrated safety interlock systems ensure safe operation under pressure.'
+                ]
+            }
+        ],
+        image: '/images/Services/Services Thumnail Images/Hydrogenation.jpg',
+        features: [
+            'Batch and continuous options',
+            'Precise temperature control',
+            'Catalyst handling systems',
+            'Safety interlock systems',
+            'High conversion efficiency',
+            'Quality monitoring units',
+            'Pressure control systems',
+            'Automated dosing'
+        ],
+        applications: ['Vanaspati', 'Shortening base', 'Industrial Fats', 'Margarine base'],
+        specs: [
+            { label: 'Process', value: 'High Pressure' },
+            { label: 'Catalyst', value: 'Nickel based' },
+            { label: 'Control', value: 'PLC Based' },
+        ],
+        process: ['Oil Preparation', 'Catalyst Addition', 'Hydrogenation', 'Filtration', 'Cooling']
+    },
+    'interesterification': {
+        title: 'Interesterification Plant',
+        subtitle: 'Chemical & Enzymatic Modification',
+        description: 'Interesterification is a advanced process used to modify the physical properties of oils and fats by rearranging the fatty acids within the triglyceride molecule, offering a zero-trans alternative to hydrogenation.',
+        sections: [
+            {
+                heading: 'Process Overview',
+                content: [
+                    'Unlike hydrogenation, interesterification does not change the degree of saturation or isomerize the fatty acids, thus creating zero-trans fats.',
+                    'The process involves the rearrangement of fatty acid chains between and within the triglycerides to achieve desired melting characteristics and nutritional profiles.',
+                    'Both chemical and enzymatic interesterification options are available to meet various regulatory and functional requirements.'
+                ]
+            },
+            {
+                heading: 'Technological Advantages',
+                content: [
+                    'Produces fats with excellent plasticity and melting properties for margarine and shortening.',
+                    'Capable of processing a wide variety of feedstock oils including palm, soy, and sunflower.',
+                    'Modern plants feature low-impact processing to maintain the natural antioxidants in the oil.'
+                ]
+            }
+        ],
+        image: '/images/Services/Services Thumnail Images/Fractionation.jpg',
+        features: [
+            'Zero-trans fat production',
+            'Chemical & Enzymatic options',
+            'Flexible feedstock handling',
+            'Precise reaction control',
+            'Advanced separation technology',
+            'Nutritional profile optimization',
+            'Low process losses',
+            'Automated control system'
+        ],
+        applications: ['Trans-free Margarine', 'Healthy Shortenings', 'Confectionery Fats', 'Specialty Bio-lipids'],
+        specs: [
+            { label: 'Type', value: 'Batch / Continuous' },
+            { label: 'Method', value: 'Chemical/Enzymatic' },
+            { label: 'Trans-fat', value: '0%' },
+        ],
+        process: ['Oil Preparation', 'Reaction', 'Catalyst Neutralization', 'Washing', 'Drying', 'Polishing']
     },
 };
 

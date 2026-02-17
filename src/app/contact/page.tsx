@@ -18,7 +18,7 @@ export default function ContactPage() {
                 title="Contact Us"
                 subtitle="Get in touch with our team for inquiries and project discussions"
                 breadcrumbs={[{ name: 'Contact Us', href: '/contact' }]}
-                backgroundImage="/images/about.png"
+                backgroundImage="/images/Contact Us/Contact Us Banner.jpg"
             />
 
             {/* Contact Info Cards */}
