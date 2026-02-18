@@ -13,6 +13,10 @@ export const metadata: Metadata = {
   description: "Leading manufacturer and exporter of industrial machinery for edible oil extraction, refinery plants, and food processing equipment. A Perfect EPC Project Partner since 2007.",
   keywords: "oil extraction plant, edible oil refinery, solvent extraction, vegetable oil, oil processing equipment, Mumbai, India",
   authors: [{ name: "Sparktech Processes LLP" }],
+  icons: {
+    icon: "/images/Sparktech logo.png",
+    apple: "/images/Sparktech logo.png",
+  },
   openGraph: {
     title: "Sparktech Processes LLP | Edible Oil Extraction & Refinery Equipment",
     description: "Leading manufacturer and exporter of industrial machinery for edible oil extraction and refinery plants.",

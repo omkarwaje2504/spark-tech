@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 
 export default function Header() {
@@ -53,13 +54,14 @@ export default function Header() {
 
                     {/* Logo */}
                     <Link href="/" className="flex items-center gap-3">
-                        <div className="w-10 h-10 rounded-full bg-gradient-to-br from-sky-500 to-lime-500 flex items-center justify-center">
-                            <span className="text-white font-bold text-lg">S</span>
-                        </div>
-                        <div>
-                            <span className="block text-xl font-bold text-gray-900 leading-tight">Sparktech</span>
-                            <span className="block text-xs text-gray-500 tracking-widest uppercase">Processes LLP</span>
-                        </div>
+                        <Image
+                            src="/images/Sparktech logo.png"
+                            alt="Sparktech Processes LLP"
+                            width={160}
+                            height={50}
+                            className="h-12 w-auto"
+                            priority
+                        />
                     </Link>
 
                     {/* Desktop Nav */}

@@ -48,15 +48,6 @@ export default function Gallery() {
                                 fill
                                 className="object-cover transition-transform duration-500 group-hover:scale-110"
                             />
-                            <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/20 to-transparent" />
-                            <div className="absolute bottom-0 left-0 right-0 p-6">
-                                <p className="text-lime-400 text-xs font-semibold tracking-widest uppercase mb-2">
-                                    {project.location}
-                                </p>
-                                <h3 className="text-white text-xl font-bold">
-                                    {project.title}
-                                </h3>
-                            </div>
                         </Link>
                     ))}
                 </div>

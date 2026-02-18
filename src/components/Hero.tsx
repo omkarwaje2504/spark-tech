@@ -38,7 +38,7 @@ export default function Hero() {
     }, []);
 
     return (
-        <section className="relative min-h-screen flex items-center pt-24 overflow-hidden">
+        <section className="relative min-h-[calc(100vh-70px)] flex items-center pt-24 overflow-hidden">
 
             {/* Background */}
             {slides.map((slide, i) => (

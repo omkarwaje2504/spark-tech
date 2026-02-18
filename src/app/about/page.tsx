@@ -4,6 +4,13 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import PageBanner from '@/components/PageBanner';
 
+const coreValues = [
+    { icon: '/images/About Us/Our Core Values Icon/Quality.png', title: 'Quality', desc: 'Uncompromising quality in every product we deliver' },
+    { icon: '/images/About Us/Our Core Values Icon/Innovation.png', title: 'Innovation', desc: 'Continuous improvement and technological advancement' },
+    { icon: '/images/About Us/Our Core Values Icon/Integrity.png', title: 'Integrity', desc: 'Honest and transparent in all our dealings' },
+    { icon: '/images/About Us/Our Core Values Icon/Sustainability.png', title: 'Sustainability', desc: 'Environmentally responsible manufacturing practices' },
+];
+
 export const metadata: Metadata = {
     title: 'About Us | Sparktech Processes LLP',
     description: 'Learn about Sparktech Processes LLP - Leading manufacturer of edible oil extraction and refinery equipment since 2007. Founded by Amit Waghmare in Mumbai.',
@@ -29,6 +36,7 @@ export default function AboutPage() {
             <PageBanner
                 title="About Us"
                 subtitle="Your trusted partner in edible oil processing solutions since 2007"
+                backgroundImage="/images/About Us/About Us Banner.jpg"
                 breadcrumbs={[{ name: 'About Us', href: '/about' }]}
             />
 
@@ -160,14 +168,11 @@ export default function AboutPage() {
                     </div>
 
                     <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                        {[
-                            { icon: '🎯', title: 'Quality', desc: 'Uncompromising quality in every product we deliver' },
-                            { icon: '💡', title: 'Innovation', desc: 'Continuous improvement and technological advancement' },
-                            { icon: '🤝', title: 'Integrity', desc: 'Honest and transparent in all our dealings' },
-                            { icon: '🌍', title: 'Sustainability', desc: 'Environmentally responsible manufacturing practices' },
-                        ].map((value, index) => (
+                        {coreValues.map((value, index) => (
                             <div key={index} className="text-center p-6 rounded-xl bg-white/5 hover:bg-white/10 transition-colors">
-                                <div className="text-5xl mb-4">{value.icon}</div>
+                                <div className="flex justify-center mb-4">
+                                    <Image src={value.icon} alt={value.title} width={64} height={64} />
+                                </div>
                                 <h3 className="text-xl font-bold mb-2">{value.title}</h3>
                                 <p className="text-gray-400">{value.desc}</p>
                             </div>
