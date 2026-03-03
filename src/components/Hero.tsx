@@ -6,24 +6,21 @@ import Link from 'next/link';
 const slides = [
     {
         id: 1,
-        image: '/images/Home Page/Home Page Banner-Project Engineering Services.jpg',
         title: 'Project Engineering Services',
         highlight: 'Edible Oil Extraction & Refining',
         description: 'Continuous Solvent Extraction is the most modern way of recovery of oil from oil bearing materials.',
     },
     {
         id: 2,
-        image: '/images/Home Page/Home Page Banner-Advanced Refinery Plants.jpg',
         title: 'Advanced Refinery Plants',
         highlight: 'Physical & Chemical Refining',
         description: 'Complete refining solutions including degumming, neutralizing, bleaching, dewaxing, and deodorization.',
     },
     {
         id: 3,
-        image: '/images/Home Page/Home Page Banner-Turnkey Solutions.jpg',
         title: 'Turnkey Solutions',
         highlight: 'A Perfect EPC Partner',
-        description: 'Engineering, Procurement, and Construction services for the edible oil and food-processing industries.',
+        description: 'Engineering, Procurement, and Consultant services for the edible oil and food-processing industries.',
     },
 ];
 
@@ -38,56 +35,39 @@ export default function Hero() {
     }, []);
 
     return (
-        <section className="relative min-h-[calc(100vh-70px)] flex items-center pt-24 overflow-hidden">
+        <section className="relative min-h-[calc(100vh-120px)] flex items-center pt-24 overflow-hidden">
 
-            {/* Background */}
-            {slides.map((slide, i) => (
-                <div
-                    key={slide.id}
-                    className={`absolute inset-0 transition-opacity duration-1000 ${i === current ? 'opacity-100' : 'opacity-0'}`}
+            {/* Video Background */}
+            <div className="absolute inset-0">
+                <video
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="absolute inset-0 w-full h-full object-cover"
                 >
-                    <div
-                        className="absolute inset-0 bg-cover bg-center transition-transform duration-[10000ms]"
-                        style={{
-                            backgroundImage: `url('${slide.image}')`,
-                            transform: i === current ? 'scale(1.05)' : 'scale(1)',
-                        }}
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-r from-gray-900 via-gray-900/80 to-gray-900/40" />
-                </div>
-            ))}
-
-            {/* Animated Grid Lines */}
-            <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                <div className="absolute top-0 left-1/4 w-px h-full bg-white/5" />
-                <div className="absolute top-0 left-1/2 w-px h-full bg-white/5" />
-                <div className="absolute top-0 left-3/4 w-px h-full bg-white/5" />
+                    <source src="/images/Home-banner/Sparktech Video.mp4" type="video/mp4" />
+                </video>
+                {/* Dark overlay for text readability */}
+                <div className="absolute inset-0 bg-gray-900/60" />
             </div>
 
             {/* Content */}
-            <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 py-32">
+            <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 py-24">
                 <div className="max-w-3xl">
 
-                    {/* Badge */}
-                    <div className={`flex items-center gap-3 mb-8 transition-all duration-700 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-                        <div className="w-12 h-px bg-lime-400" />
-                        <p className="text-lime-400 text-sm font-semibold tracking-[0.3em] uppercase">
-                            Welcome to Sparktech
-                        </p>
-                    </div>
-
                     {/* Title */}
-                    <h1 className={`text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6 transition-all duration-700 delay-100 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+                    <h1 className={`text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6 transition-all duration-700 delay-100 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
                         {slides[current].title}
                     </h1>
 
                     {/* Highlight */}
-                    <p className={`text-2xl md:text-3xl text-sky-400 font-light mb-8 transition-all duration-700 delay-200 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+                    <p className={`text-xl md:text-2xl text-sky-400 font-light mb-8 transition-all duration-700 delay-200 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
                         {slides[current].highlight}
                     </p>
 
                     {/* Description */}
-                    <p className={`text-gray-300 text-lg leading-relaxed mb-12 max-w-xl transition-all duration-700 delay-300 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+                    <p className={`text-gray-300 text-base leading-relaxed mb-12 max-w-xl transition-all duration-700 delay-300 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
                         {slides[current].description}
                     </p>
 
@@ -146,3 +126,4 @@ export default function Hero() {
         </section>
     );
 }
+

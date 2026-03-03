@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function ContactForm() {
     const [formData, setFormData] = useState({
@@ -13,6 +13,15 @@ export default function ContactForm() {
     });
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isSubmitted, setIsSubmitted] = useState(false);
+
+    // Auto-fill service interest from cookie (set when user visits a service page)
+    useEffect(() => {
+        const match = document.cookie.match(/sparktech_service_interest=([^;]+)/);
+        if (match) {
+            const serviceName = decodeURIComponent(match[1]);
+            setFormData((prev) => ({ ...prev, service: prev.service || serviceName }));
+        }
+    }, []);
 
     const services = [
         'Solvent Extraction Plant',

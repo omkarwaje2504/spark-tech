@@ -148,6 +148,26 @@ export default function GalleryGrid() {
                                         fill
                                         className="object-cover transition-transform duration-500 group-hover:scale-110"
                                     />
+                                    {/* Gradient overlay on hover */}
+                                    <div className="absolute inset-0 bg-gradient-to-t from-gray-900/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                                </div>
+                                {/* Project Info */}
+                                <div className="p-4">
+                                    <div className="flex items-center gap-2 mb-2">
+                                        <span className="px-2 py-0.5 bg-gradient-to-r from-[#3CAAE5] to-[#99C71E] text-white text-xs font-semibold rounded-full">
+                                            {project.category}
+                                        </span>
+                                        <span className="text-gray-400 text-xs">{project.year}</span>
+                                    </div>
+                                    <h3 className="text-sm font-bold text-gray-900 leading-snug mb-1 group-hover:text-[#3CAAE5] transition-colors">
+                                        {project.title}
+                                    </h3>
+                                    <p className="text-xs text-gray-500 flex items-center gap-1">
+                                        <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+                                        </svg>
+                                        {project.location}
+                                    </p>
                                 </div>
                             </div>
                         ))}

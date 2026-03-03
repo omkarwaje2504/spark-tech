@@ -122,58 +122,97 @@ export default function TechnologiesPage() {
                         </p>
                     </div>
 
-                    {/* Technology Cards */}
-                    <div className="space-y-20">
-                        {technologies.map((tech, index) => (
-                            <div key={tech.id} className={`grid lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
-                                {/* Image */}
-                                <div className={`relative ${index % 2 === 1 ? 'lg:order-2' : ''}`}>
-                                    <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-2xl">
-                                        <Image
-                                            src={tech.image}
-                                            alt={tech.title}
-                                            fill
-                                            className="object-cover"
-                                        />
-                                        <div className="absolute inset-0 bg-gradient-to-t from-gray-900/50 to-transparent"></div>
-                                        <div className="absolute bottom-6 left-6">
-                                            <span className="inline-block px-4 py-2 bg-gradient-to-r from-[#3CAAE5] to-[#99C71E] text-white rounded-full text-sm font-semibold">
-                                                {String(index + 1).padStart(2, '0')}
-                                            </span>
-                                        </div>
-                                    </div>
+                    <div className="grid lg:grid-cols-[280px_1fr] gap-12">
+                        {/* Sidebar */}
+                        <aside className="hidden lg:block">
+                            <div className="sticky top-24 space-y-6">
+                                <div className="bg-gray-50 rounded-2xl p-6">
+                                    <h3 className="text-lg font-bold text-gray-900 mb-4">Quick Navigation</h3>
+                                    <nav className="space-y-1">
+                                        {technologies.map((tech, index) => (
+                                            <a
+                                                key={tech.id}
+                                                href={`#${tech.id}`}
+                                                className="flex items-center gap-3 px-4 py-3 text-gray-600 hover:text-[#3CAAE5] hover:bg-white rounded-xl transition-all group"
+                                            >
+                                                <span className="w-7 h-7 rounded-lg bg-gradient-to-r from-[#3CAAE5] to-[#99C71E] text-white flex items-center justify-center text-xs font-bold flex-shrink-0 group-hover:shadow-md transition-shadow">
+                                                    {String(index + 1).padStart(2, '0')}
+                                                </span>
+                                                <span className="text-sm font-medium">{tech.title}</span>
+                                            </a>
+                                        ))}
+                                    </nav>
                                 </div>
 
-                                {/* Content */}
-                                <div className={`${index % 2 === 1 ? 'lg:order-1' : ''}`}>
-                                    <h3 className="text-3xl font-bold text-gray-900 mb-4">{tech.title}</h3>
-                                    <p className="text-gray-600 mb-6">{tech.description}</p>
-                                    <p className="text-gray-500 text-sm mb-6">{tech.details}</p>
-
-                                    {/* Features */}
-                                    <ul className="space-y-3 mb-8">
-                                        {tech.features.map((feature, idx) => (
-                                            <li key={idx} className="flex items-center gap-3">
-                                                <svg className="w-5 h-5 text-[#99C71E] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                                                </svg>
-                                                <span className="text-gray-700">{feature}</span>
-                                            </li>
-                                        ))}
-                                    </ul>
-
+                                {/* Sidebar CTA */}
+                                <div className="bg-gradient-to-br from-[#3CAAE5] to-[#99C71E] rounded-2xl p-6 text-white">
+                                    <h3 className="text-lg font-bold mb-2">Need Help Choosing?</h3>
+                                    <p className="text-white/80 text-sm mb-4">
+                                        Our experts can recommend the best technology for your needs.
+                                    </p>
                                     <Link
                                         href="/contact"
-                                        className="inline-flex items-center gap-2 bg-gradient-to-r from-[#3CAAE5] to-[#99C71E] text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition-all"
+                                        className="block w-full text-center py-3 bg-white text-[#3CAAE5] font-semibold rounded-xl hover:bg-gray-100 transition-colors text-sm"
                                     >
-                                        Get Quote
-                                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                                        </svg>
+                                        Talk to an Expert
                                     </Link>
                                 </div>
                             </div>
-                        ))}
+                        </aside>
+
+                        {/* Technology Cards */}
+                        <div className="space-y-20">
+                            {technologies.map((tech, index) => (
+                                <div key={tech.id} id={tech.id} className={`scroll-mt-24 grid md:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'md:flex-row-reverse' : ''}`}>
+                                    {/* Image */}
+                                    <div className={`relative ${index % 2 === 1 ? 'md:order-2' : ''}`}>
+                                        <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-2xl">
+                                            <Image
+                                                src={tech.image}
+                                                alt={tech.title}
+                                                fill
+                                                className="object-cover"
+                                            />
+                                            <div className="absolute inset-0 bg-gradient-to-t from-gray-900/50 to-transparent"></div>
+                                            <div className="absolute bottom-6 left-6">
+                                                <span className="inline-block px-4 py-2 bg-gradient-to-r from-[#3CAAE5] to-[#99C71E] text-white rounded-full text-sm font-semibold">
+                                                    {String(index + 1).padStart(2, '0')}
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {/* Content */}
+                                    <div className={`${index % 2 === 1 ? 'md:order-1' : ''}`}>
+                                        <h3 className="text-3xl font-bold text-gray-900 mb-4">{tech.title}</h3>
+                                        <p className="text-gray-600 mb-6">{tech.description}</p>
+                                        <p className="text-gray-500 text-sm mb-6">{tech.details}</p>
+
+                                        {/* Features */}
+                                        <ul className="space-y-3 mb-8">
+                                            {tech.features.map((feature, idx) => (
+                                                <li key={idx} className="flex items-center gap-3">
+                                                    <svg className="w-5 h-5 text-[#99C71E] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                                                    </svg>
+                                                    <span className="text-gray-700">{feature}</span>
+                                                </li>
+                                            ))}
+                                        </ul>
+
+                                        <Link
+                                            href="/contact"
+                                            className="inline-flex items-center gap-2 bg-gradient-to-r from-[#3CAAE5] to-[#99C71E] text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition-all"
+                                        >
+                                            Get Quote
+                                            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                            </svg>
+                                        </Link>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </section>

@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import ServiceCookieTracker from '@/components/ServiceCookieTracker';
 
 // Complete service data from client content
 const servicesData: Record<string, {
@@ -209,7 +210,7 @@ const servicesData: Record<string, {
             { label: 'Inlet Temperature', value: '45°C' },
             { label: 'Outlet Temperature', value: '23 - 25°C' },
             { label: 'Pump Capacity', value: '1,690 L/hr' },
-            { label: 'Construction', value: 'SS 304/316' },
+            { label: 'Consultant', value: 'SS 304/316' },
         ],
         process: ['Fat Blending', 'Pump Feeding', 'Scraped Surface Cooling', 'Crystal Distribution', 'Stabilization', 'Filling']
     },
@@ -553,6 +554,7 @@ export default async function ServiceDetailPage({ params }: Props) {
     return (
         <>
             <Header />
+            <ServiceCookieTracker slug={slug} />
 
             {/* Hero Banner */}
             <section className="relative pt-32 pb-24 bg-gray-900 overflow-hidden">

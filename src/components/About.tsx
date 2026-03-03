@@ -140,7 +140,7 @@ export default function About() {
                 <div className="grid md:grid-cols-4 gap-6 mb-24">
                     {[
                         { title: 'Research & Engineering', icon: '🔬' },
-                        { title: 'Design & Construction', icon: '📐' },
+                        { title: 'Design & Consultant', icon: '📐' },
                         { title: 'Consulting & Planning', icon: '📋' },
                         { title: 'Staff Training', icon: '👥' },
                     ].map((item, i) => (
@@ -165,7 +165,7 @@ export default function About() {
                             A Perfect <span className="text-sky-400">EPC</span> Project Partner
                         </h3>
                         <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-                            Engineering • Procurement • Construction — Delivering complete turnkey solutions for the edible oil industry
+                            Engineering • Procurement • Consultant — Delivering complete turnkey solutions for the edible oil industry
                         </p>
                     </div>
                 </div>
