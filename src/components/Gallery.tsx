@@ -35,18 +35,18 @@ export default function Gallery() {
                 </div>
 
                 {/* Grid */}
-                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div className="grid md:grid-cols-2 gap-6">
                     {projects.map((project) => (
                         <Link
                             key={project.id}
                             href="/gallery"
-                            className="group relative aspect-[3/4] rounded-xl overflow-hidden"
+                            className="group relative aspect-[4/3] rounded-xl overflow-hidden bg-gray-100"
                         >
                             <Image
                                 src={project.image}
                                 alt={project.title}
                                 fill
-                                className="object-cover transition-transform duration-500 group-hover:scale-110"
+                                className="object-contain transition-transform duration-500 group-hover:scale-110"
                             />
                             {/* Info overlay */}
                             <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/20 to-transparent" />

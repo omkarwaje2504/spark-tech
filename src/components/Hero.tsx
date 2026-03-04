@@ -6,7 +6,7 @@ import Link from 'next/link';
 const slides = [
     {
         id: 1,
-        title: 'Project Engineering Services',
+        title: 'Project Engineering',
         highlight: 'Edible Oil Extraction & Refining',
         description: 'Continuous Solvent Extraction is the most modern way of recovery of oil from oil bearing materials.',
     },
@@ -35,21 +35,20 @@ export default function Hero() {
     }, []);
 
     return (
-        <section className="relative min-h-[calc(100vh-120px)] flex items-center pt-24 overflow-hidden">
+        <section className="relative min-h-[calc(100vh-84px)] mt-[84px] flex items-center overflow-hidden">
 
             {/* Video Background */}
-            <div className="absolute inset-0">
+            <div className="absolute inset-0 bg-gray-900">
                 <video
                     autoPlay
                     loop
                     muted
                     playsInline
-                    className="absolute inset-0 w-full h-full object-cover"
+                    className="absolute inset-0 w-full h-full object-contain"
                 >
                     <source src="/images/Home-banner/Sparktech Video.mp4" type="video/mp4" />
                 </video>
-                {/* Dark overlay for text readability */}
-                <div className="absolute inset-0 bg-gray-900/60" />
+
             </div>
 
             {/* Content */}
