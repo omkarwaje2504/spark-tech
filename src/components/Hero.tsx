@@ -44,7 +44,7 @@ export default function Hero() {
                     loop
                     muted
                     playsInline
-                    className="absolute inset-0 w-full h-full object-contain"
+                    className="absolute inset-0 w-full h-full object-cover"
                 >
                     <source src="/images/Home-banner/Sparktech Video.mp4" type="video/mp4" />
                 </video>
