@@ -35,7 +35,7 @@ export default function Hero() {
     }, []);
 
     return (
-        <section className="relative min-h-[calc(100vh-84px)] mt-[84px] flex items-center overflow-hidden">
+        <section className="relative min-h-[calc(100vh-84px)] mt-[84px] flex flex-col justify-end overflow-hidden">
 
             {/* Video Background */}
             <div className="absolute inset-0 bg-gray-900">
@@ -48,70 +48,70 @@ export default function Hero() {
                 >
                     <source src="/images/Home-banner/Sparktech Video.mp4" type="video/mp4" />
                 </video>
-
             </div>
 
-            {/* Content */}
-            <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 py-24">
-                <div className="max-w-3xl">
+            {/* Bottom gradient for text readability */}
+            <div className="absolute bottom-0 left-0 right-0 h-[45%] bg-gradient-to-t from-gray-900/90 via-gray-900/40 to-transparent z-[1]" />
 
-                    {/* Title */}
-                    <h1 className={`text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6 transition-all duration-700 delay-100 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-                        {slides[current].title}
-                    </h1>
+            {/* Content - spread across bottom */}
+            <div className="relative z-10 w-full px-8 lg:px-16 pb-10">
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-end">
 
-                    {/* Highlight */}
-                    <p className={`text-xl md:text-2xl text-sky-400 font-light mb-8 transition-all duration-700 delay-200 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-                        {slides[current].highlight}
-                    </p>
+                    {/* Left - Title & Description */}
+                    <div className={`transition-all duration-700 delay-100 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+                        <h1 className="text-2xl md:text-3xl font-bold text-white leading-snug mb-1">
+                            {slides[current].title}
+                        </h1>
+                        <p className="text-sm md:text-base text-sky-400 font-light mb-2">
+                            {slides[current].highlight}
+                        </p>
+                        <p className="text-gray-400 text-xs leading-relaxed max-w-sm">
+                            {slides[current].description}
+                        </p>
+                    </div>
 
-                    {/* Description */}
-                    <p className={`text-gray-300 text-base leading-relaxed mb-12 max-w-xl transition-all duration-700 delay-300 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-                        {slides[current].description}
-                    </p>
-
-                    {/* Buttons */}
-                    <div className={`flex flex-wrap gap-4 transition-all duration-700 delay-400 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+                    {/* Center - Buttons */}
+                    <div className={`flex flex-wrap justify-start lg:justify-center gap-3 transition-all duration-700 delay-300 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
                         <Link
                             href="/services"
-                            className="inline-flex items-center gap-2 px-8 py-4 bg-sky-500 text-white font-semibold rounded-lg hover:bg-sky-600 transition-all hover:shadow-lg hover:shadow-sky-500/25"
+                            className="inline-flex items-center gap-2 px-5 py-2.5 bg-sky-500 text-white text-sm font-semibold rounded-lg hover:bg-sky-600 transition-all hover:shadow-lg hover:shadow-sky-500/25"
                         >
                             Explore Services
-                            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                             </svg>
                         </Link>
                         <Link
                             href="/contact"
-                            className="inline-flex items-center gap-2 px-8 py-4 bg-white/10 text-white font-semibold rounded-lg border border-white/30 hover:bg-white hover:text-gray-900 transition-all backdrop-blur-sm"
+                            className="inline-flex items-center gap-2 px-5 py-2.5 bg-white/10 text-white text-sm font-semibold rounded-lg border border-white/30 hover:bg-white hover:text-gray-900 transition-all backdrop-blur-sm"
                         >
                             Contact Us
                         </Link>
                     </div>
-                </div>
 
-                {/* Stats */}
-                <div className={`mt-20 flex flex-wrap gap-12 transition-all duration-700 delay-500 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-                    {[
-                        { value: '17+', label: 'Years Experience' },
-                        { value: '100+', label: 'Projects Completed' },
-                        { value: '10+', label: 'Countries Served' },
-                    ].map((stat, i) => (
-                        <div key={i} className="text-white">
-                            <span className="text-4xl font-bold text-sky-400">{stat.value}</span>
-                            <span className="block text-sm text-gray-400 mt-1">{stat.label}</span>
-                        </div>
-                    ))}
+                    {/* Right - Stats */}
+                    <div className={`flex flex-wrap gap-6 lg:justify-end transition-all duration-700 delay-500 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+                        {[
+                            { value: '17+', label: 'Years Experience' },
+                            { value: '100+', label: 'Projects Completed' },
+                            { value: '10+', label: 'Countries Served' },
+                        ].map((stat, i) => (
+                            <div key={i} className="text-white">
+                                <span className="text-2xl font-bold text-sky-400">{stat.value}</span>
+                                <span className="block text-xs text-gray-400 mt-0.5">{stat.label}</span>
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </div>
 
             {/* Slide Indicators */}
-            <div className="absolute bottom-12 left-1/2 -translate-x-1/2 flex gap-3 z-20">
+            <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-3 z-20">
                 {slides.map((_, i) => (
                     <button
                         key={i}
                         onClick={() => setCurrent(i)}
-                        className={`h-1 rounded-full transition-all duration-500 ${i === current ? 'w-12 bg-sky-500' : 'w-6 bg-white/30 hover:bg-white/50'}`}
+                        className={`h-1 rounded-full transition-all duration-500 ${i === current ? 'w-10 bg-sky-500' : 'w-5 bg-white/30 hover:bg-white/50'}`}
                         aria-label={`Go to slide ${i + 1}`}
                     />
                 ))}
