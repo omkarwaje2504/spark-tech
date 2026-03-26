@@ -121,42 +121,46 @@ function ServiceCard({ service, index }: { service: typeof services[0]; index: n
         <Link
             ref={ref}
             href={service.href}
-            className={`group relative bg-white/[0.03] backdrop-blur-sm rounded-2xl p-7 border border-white/[0.08] hover:border-sky-400/40 transition-all duration-500 transform overflow-hidden ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+            className={`group relative bg-white/[0.03] backdrop-blur-md rounded-2xl p-7 border border-white/[0.08] hover:border-sky-400/50 transition-all duration-700 transform overflow-hidden shadow-2xl ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
                 }`}
-            style={{ transitionDelay: `${index * 80}ms` }}
+            style={{ transitionDelay: `${index * 100}ms` }}
         >
             {/* Hover gradient overlay */}
-            <div className="absolute inset-0 bg-gradient-to-br from-sky-500/[0.06] to-lime-500/[0.04] opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl" />
+            <div className="absolute inset-0 bg-gradient-to-br from-sky-500/[0.08] to-lime-500/[0.05] opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-2xl" />
 
-            {/* Top accent line */}
-            <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-sky-400/60 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
+            {/* Top glass reflection */}
+            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none">
+                <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/[0.02] to-white/[0.05]" />
+            </div>
 
             <div className="relative z-10">
                 {/* Icon & Number row */}
-                <div className="flex items-center justify-between mb-5">
-                    <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-sky-500/15 to-sky-400/5 border border-sky-400/10 flex items-center justify-center text-sky-400 group-hover:from-sky-500/25 group-hover:to-lime-400/10 group-hover:border-sky-400/25 group-hover:text-sky-300 transition-all duration-500 group-hover:shadow-[0_0_20px_rgba(56,189,248,0.12)]">
+                <div className="flex items-center justify-between mb-6">
+                    <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-sky-500/20 to-sky-400/5 border border-sky-400/20 flex items-center justify-center text-sky-400 group-hover:from-sky-500/30 group-hover:to-lime-400/10 group-hover:border-sky-400/40 group-hover:text-sky-300 transition-all duration-500 group-hover:shadow-[0_0_30px_rgba(14,165,233,0.2)]">
                         {service.icon}
                     </div>
-                    <span className="text-[2.5rem] font-bold leading-none text-white/[0.04] group-hover:text-white/[0.08] transition-colors duration-500 select-none">
+                    <span className="text-[2.2rem] font-black leading-none text-white/[0.03] group-hover:text-white/[0.08] transition-colors duration-700 select-none font-outfit">
                         {String(index + 1).padStart(2, '0')}
                     </span>
                 </div>
 
                 {/* Title */}
-                <h3 className="text-[15px] font-semibold text-white/90 group-hover:text-white transition-colors duration-300 mb-2.5 leading-snug">
+                <h3 className="text-[17px] font-bold text-white mb-3 leading-tight group-hover:text-sky-300 transition-colors duration-300 font-outfit">
                     {service.title}
                 </h3>
 
                 {/* Description */}
-                <p className="text-white/40 text-sm leading-relaxed mb-4 group-hover:text-white/55 transition-colors duration-300">
+                <p className="text-gray-400 text-sm leading-relaxed mb-6 group-hover:text-gray-300 transition-colors duration-300 line-clamp-2">
                     {service.description}
                 </p>
 
                 {/* Learn more link */}
-                <div className="flex items-center gap-1.5 text-sky-400/70 group-hover:text-sky-300 text-xs font-medium transition-all duration-300">
-                    <span>Learn more</span>
-                    <svg className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                <div className="flex items-center gap-2 text-sky-400/80 group-hover:text-sky-400 text-xs font-bold tracking-widest transition-all duration-300 uppercase">
+                    <span>EXPLORE NOW</span>
+                    <div className="w-6 h-px bg-sky-400/30 group-hover:w-10 group-hover:bg-sky-400 transition-all duration-500" />
+                    <svg className="w-3.5 h-3.5 group-hover:translate-x-1.5 transition-transform duration-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                     </svg>
                 </div>
             </div>
@@ -184,20 +188,20 @@ export default function Services() {
 
                 {/* Header */}
                 <div className="text-center mb-16 lg:mb-20">
-                    <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sky-500/10 border border-sky-400/20 mb-6">
-                        <div className="w-1.5 h-1.5 rounded-full bg-sky-400 animate-pulse" />
-                        <span className="text-sky-400 font-medium tracking-wider uppercase text-xs">
-                            What We Offer
+                    <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sky-500/10 border border-sky-400/20 mb-6 backdrop-blur-sm animate-fade-in-up">
+                        <div className="w-1.5 h-1.5 rounded-full bg-sky-400 animate-pulse shadow-[0_0_10px_rgba(56,189,248,0.8)]" />
+                        <span className="text-sky-400 font-bold tracking-[0.2em] uppercase text-[10px]">
+                            SOLUTIONS & EXPERTISE
                         </span>
                     </div>
-                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-5 leading-tight">
+                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight tracking-tight font-outfit animate-fade-in-up delay-100">
                         Project Management &{' '}
-                        <span className="bg-gradient-to-r from-sky-400 to-lime-400 bg-clip-text text-transparent">
+                        <span className="bg-gradient-to-r from-sky-400 via-sky-300 to-lime-400 bg-clip-text text-transparent">
                             Engineering Services
                         </span>
                     </h2>
-                    <p className="text-white/50 text-lg max-w-3xl mx-auto leading-relaxed">
-                        Comprehensive turnkey solutions for the edible oil processing industry — from solvent extraction to refining, fractionation, and specialized processing equipment.
+                    <p className="text-gray-400 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed font-light animate-fade-in-up delay-200">
+                        Comprehensive turnkey solutions for the edible oil processing industry — from solvent extraction to refining and specialized processing equipment.
                     </p>
                 </div>
 
@@ -209,14 +213,15 @@ export default function Services() {
                 </div>
 
                 {/* View All */}
-                <div className="text-center mt-14 lg:mt-16">
+                <div className="text-center mt-16 lg:mt-24 animate-fade-in-up delay-500">
                     <Link
                         href="/services"
-                        className="group inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-sky-500 to-sky-600 text-white font-semibold rounded-xl hover:from-sky-400 hover:to-sky-500 transition-all duration-300 shadow-lg shadow-sky-500/20 hover:shadow-sky-500/30 hover:shadow-xl"
+                        className="group relative inline-flex items-center gap-4 px-10 py-5 bg-gradient-to-r from-sky-500 to-sky-600 text-white font-bold rounded-full hover:from-sky-400 hover:to-sky-500 transition-all duration-300 shadow-xl shadow-sky-500/20 hover:shadow-sky-500/40 hover:-translate-y-1 active:scale-95 shine-effect"
                     >
-                        View All Services
-                        <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                        <span className="tracking-wider">VIEW ALL SERVICES</span>
+                        <div className="w-6 h-px bg-white/40 group-hover:w-10 group-hover:bg-white transition-all duration-500" />
+                        <svg className="w-5 h-5 group-hover:translate-x-1.5 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                         </svg>
                     </Link>
                 </div>

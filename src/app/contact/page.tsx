@@ -22,9 +22,9 @@ export default function ContactPage() {
             />
 
             {/* Contact Info Cards */}
-            <section className="py-16 bg-white">
-                <div className="container mx-auto px-4">
-                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 -mt-24 relative z-20">
+            <section className="py-24 bg-white relative">
+                <div className="max-w-7xl mx-auto px-6 lg:px-8">
+                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 -mt-32 lg:-mt-40 relative z-20">
                         {[
                             {
                                 icon: (
@@ -53,7 +53,7 @@ export default function ContactPage() {
                                     </svg>
                                 ),
                                 title: 'Email Address',
-                                info: 'info@sparktechprocesses.com',
+                                info: 'info@sparktech.com',
                                 link: 'mailto:info@sparktechprocesses.com',
                             },
                             {
@@ -63,20 +63,21 @@ export default function ContactPage() {
                                     </svg>
                                 ),
                                 title: 'Working Hours',
-                                info: 'Mon - Sat: 9:00 AM - 6:00 PM',
+                                info: 'Mon - Sat: 9 AM - 6 PM',
                             },
                         ].map((item, index) => (
-                            <div key={index} className="bg-white rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-shadow text-center border border-gray-100">
-                                <div className="w-16 h-16 bg-gradient-to-r from-[#3CAAE5] to-[#99C71E] rounded-xl flex items-center justify-center text-white mx-auto mb-4">
+                            <div key={index} className="group bg-white rounded-3xl p-8 shadow-[0_20px_50px_rgba(0,0,0,0.1)] hover:shadow-[0_40px_80px_rgba(0,0,0,0.15)] transition-all duration-700 text-center border border-gray-100/50 hover:-translate-y-2 relative overflow-hidden backdrop-blur-md">
+                                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-sky-500 to-lime-500 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                                <div className="w-16 h-16 bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl flex items-center justify-center text-sky-500 mx-auto mb-6 group-hover:bg-sky-500 group-hover:text-white transition-all duration-500 group-hover:scale-110 shadow-inner">
                                     {item.icon}
                                 </div>
-                                <h3 className="text-lg font-bold text-gray-900 mb-2">{item.title}</h3>
+                                <h3 className="text-lg font-bold text-gray-900 mb-3 font-outfit uppercase tracking-wider">{item.title}</h3>
                                 {item.link ? (
-                                    <a href={item.link} className="text-gray-600 hover:text-[#3CAAE5] transition-colors">
+                                    <a href={item.link} className="text-gray-500 hover:text-sky-600 transition-colors font-light text-sm">
                                         {item.info}
                                     </a>
                                 ) : (
-                                    <p className="text-gray-600">{item.info}</p>
+                                    <p className="text-gray-500 font-light text-sm leading-relaxed">{item.info}</p>
                                 )}
                             </div>
                         ))}

@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 
-export function useScrollAnimation() {
+export function useScrollAnimation(options: IntersectionObserverInit = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }) {
     const ref = useRef<HTMLDivElement>(null);
     const [isVisible, setIsVisible] = useState(false);
 
@@ -14,7 +14,7 @@ export function useScrollAnimation() {
                     observer.disconnect();
                 }
             },
-            { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+            options
         );
 
         if (ref.current) {
@@ -22,7 +22,7 @@ export function useScrollAnimation() {
         }
 
         return () => observer.disconnect();
-    }, []);
+    }, [options]);
 
     return { ref, isVisible };
 }

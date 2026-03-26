@@ -95,86 +95,58 @@ export default function AboutPage() {
             </section>
 
             {/* Vision & Mission */}
-            <section className="py-20 bg-gray-50">
-                <div className="container mx-auto px-4">
-                    <div className="grid md:grid-cols-2 gap-8">
+            <section className="py-24 bg-gray-50 overflow-hidden">
+                <div className="max-w-7xl mx-auto px-6 lg:px-8">
+                    <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
                         {/* Vision */}
-                        <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
-                            <div className="w-16 h-16 bg-gradient-to-r from-[#3CAAE5] to-[#77C6F1] rounded-xl flex items-center justify-center mb-6">
-                                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <div className="group bg-white rounded-[2rem] p-10 lg:p-12 shadow-[0_20px_50px_rgba(0,0,0,0.05)] hover:shadow-[0_40px_80px_rgba(0,0,0,0.1)] transition-all duration-700 hover:-translate-y-2 border border-gray-100">
+                            <div className="w-20 h-20 bg-gradient-to-br from-sky-500 to-sky-400 rounded-2xl flex items-center justify-center mb-10 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3 shadow-lg shadow-sky-500/20">
+                                <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
                                 </svg>
                             </div>
-                            <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Vision</h3>
-                            <p className="text-gray-600">
+                            <h3 className="text-3xl font-bold text-gray-900 mb-6 font-outfit">Our Vision</h3>
+                            <p className="text-gray-500 text-lg leading-relaxed font-light">
                                 To be the global leader in providing innovative, sustainable, and efficient solutions for the edible oil and food processing industries, setting new standards for quality and reliability.
                             </p>
                         </div>
 
                         {/* Mission */}
-                        <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
-                            <div className="w-16 h-16 bg-gradient-to-r from-[#99C71E] to-[#B8D809] rounded-xl flex items-center justify-center mb-6">
-                                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <div className="group bg-white rounded-[2rem] p-10 lg:p-12 shadow-[0_20px_50px_rgba(0,0,0,0.05)] hover:shadow-[0_40px_80px_rgba(0,0,0,0.1)] transition-all duration-700 hover:-translate-y-2 border border-gray-100">
+                            <div className="w-20 h-20 bg-gradient-to-br from-lime-500 to-lime-400 rounded-2xl flex items-center justify-center mb-10 transition-transform duration-500 group-hover:scale-110 group-hover:-rotate-3 shadow-lg shadow-lime-500/20">
+                                <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                                 </svg>
                             </div>
-                            <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Mission</h3>
-                            <p className="text-gray-600">
-                                To deliver cutting-edge technology and turnkey solutions that empower our clients to achieve maximum productivity, efficiency, and profitability while maintaining the highest standards of safety and environmental responsibility.
+                            <h3 className="text-3xl font-bold text-gray-900 mb-6 font-outfit">Our Mission</h3>
+                            <p className="text-gray-500 text-lg leading-relaxed font-light">
+                                To deliver cutting-edge technology and turnkey solutions that empower our clients to achieve maximum productivity, efficiency, and profitability while maintaining safety.
                             </p>
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* Timeline */}
-            <section className="py-20 bg-white">
-                <div className="container mx-auto px-4">
-                    <div className="text-center mb-16">
-                        <p className="text-[#3CAAE5] font-semibold tracking-wider uppercase mb-2">Our Journey</p>
-                        <h2 className="text-4xl font-bold text-gray-900">Company Milestones</h2>
-                    </div>
-
-                    <div className="relative">
-                        {/* Timeline Line */}
-                        <div className="absolute left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-[#3CAAE5] to-[#99C71E] hidden md:block"></div>
-
-                        {milestones.map((milestone, index) => (
-                            <div key={index} className={`relative flex items-center mb-12 ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
-                                <div className={`w-full md:w-1/2 ${index % 2 === 0 ? 'md:pr-12 md:text-right' : 'md:pl-12'}`}>
-                                    <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow border border-gray-100">
-                                        <span className="inline-block px-4 py-1 bg-gradient-to-r from-[#3CAAE5] to-[#99C71E] text-white rounded-full text-sm font-semibold mb-2">
-                                            {milestone.year}
-                                        </span>
-                                        <h3 className="text-xl font-bold text-gray-900 mb-2">{milestone.title}</h3>
-                                        <p className="text-gray-600">{milestone.description}</p>
-                                    </div>
-                                </div>
-                                {/* Center Dot */}
-                                <div className="absolute left-1/2 -translate-x-1/2 w-6 h-6 bg-white border-4 border-[#3CAAE5] rounded-full hidden md:block"></div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
             {/* Core Values */}
-            <section className="py-20 bg-gradient-to-r from-gray-900 to-gray-800 text-white">
-                <div className="container mx-auto px-4">
-                    <div className="text-center mb-16">
-                        <p className="text-[#B8D809] font-semibold tracking-wider uppercase mb-2">What Drives Us</p>
-                        <h2 className="text-4xl font-bold">Our Core Values</h2>
+            <section className="py-24 bg-gray-950 text-white overflow-hidden relative">
+                <div className="absolute inset-0 opacity-10">
+                    <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-sky-500 rounded-full blur-[120px]" />
+                </div>
+                <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+                    <div className="text-center mb-20">
+                        <p className="text-lime-400 font-bold tracking-[0.3em] uppercase text-[10px] mb-4">WHAT DRIVES US</p>
+                        <h2 className="text-4xl md:text-5xl font-bold font-outfit">Our Core Values</h2>
                     </div>
 
                     <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                         {coreValues.map((value, index) => (
-                            <div key={index} className="text-center p-6 rounded-xl bg-white/5 hover:bg-white/10 transition-colors">
-                                <div className="flex justify-center mb-4">
-                                    <Image src={value.icon} alt={value.title} width={64} height={64} />
+                            <div key={index} className="group p-8 rounded-3xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-500 text-center">
+                                <div className="flex justify-center mb-8 transition-transform duration-500 group-hover:scale-110 group-hover:-translate-y-2">
+                                    <Image src={value.icon} alt={value.title} width={64} height={64} className="opacity-90 transition-all duration-500" />
                                 </div>
-                                <h3 className="text-xl font-bold mb-2">{value.title}</h3>
-                                <p className="text-gray-400">{value.desc}</p>
+                                <h3 className="text-xl font-bold mb-4 font-outfit text-sky-400">{value.title}</h3>
+                                <p className="text-gray-400 text-sm leading-relaxed font-light">{value.desc}</p>
                             </div>
                         ))}
                     </div>

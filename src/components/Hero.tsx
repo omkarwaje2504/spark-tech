@@ -35,7 +35,7 @@ export default function Hero() {
     }, []);
 
     return (
-        <section className="relative min-h-[calc(100vh-84px)] mt-[84px] flex flex-col justify-end overflow-hidden">
+        <section className="relative min-h-screen flex flex-col justify-end overflow-hidden mt-0">
 
             {/* Video Background */}
             <div className="absolute inset-0 bg-gray-900">
