@@ -9,7 +9,7 @@ const painPoints = [
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-gray-950 pt-32 pb-16 text-white lg:min-h-[85vh] lg:flex lg:items-center">
+    <section className="relative overflow-hidden bg-gray-950 h-screen flex items-center text-white">
       <div className="absolute inset-0 bg-gray-900">
         <video 
           autoPlay 
@@ -38,7 +38,7 @@ export default function Hero() {
             <h1 className="max-w-4xl text-4xl font-bold leading-tight tracking-tight md:text-5xl lg:text-6xl">
               Processing Oil Fats &amp; Derivatives
               <span className="block bg-gradient-to-r from-sky-300 via-white to-lime-300 bg-clip-text text-transparent">
-                Oil Extraction &amp; Refinery Units
+                Oil Extraction, Refinery &amp; Food Processing Units
               </span>
             </h1>
 

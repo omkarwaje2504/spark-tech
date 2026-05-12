@@ -310,25 +310,22 @@ const servicesData: Record<string, {
             {
                 heading: 'Horizontal Pressure Leaf Filter',
                 content: [
-                    'Consists of horizontally mounted leaves, pneumatic vibrator assembly, hydraulic power pack for dismantling of shell side.',
-                    'Shell can be separated from dish end by hydraulic system and leaves are easily accessible for cleaning.',
-                    'More suitable where deposits are more. Filtration area ranges from 2mÂ² to 100mÂ².'
+                    'Consists of horizontally mounted leaves, pneumatic vibrator assembly, hydraulic power pack for dismantling of shell side. Shell can be separated from dish end by hydraulic system and leaves are easily accessible for cleaning.',
+                    'More suitable where deposits are more. Filtration area ranges from 2m\u00B2 to 100m\u00B2.'
                 ]
             },
             {
                 heading: 'Vertical Pressure Leaf Filter',
                 content: [
-                    'Consists of vertical pressure vessel with conical bottom, vertically arranged filter leaves, pneumatic vibrator assembly.',
-                    'Features automatic discharge of cake. Stainless steel filter leaves eliminate use of filter cloth.',
-                    'Filtration area ranges from 10mÂ² to 50mÂ².'
+                    'Consists of vertical pressure vessel with conical bottom, vertically arranged filter leaves, pneumatic vibrator assembly. Features automatic discharge of cake.',
+                    'Stainless steel filter leaves eliminate use of filter cloth. Filtration area ranges from 10m\u00B2 to 150m\u00B2.'
                 ]
             },
             {
-                heading: 'Cartridge & Polish Filters',
+                heading: 'Polish & Cartridge Filter',
                 content: [
-                    'Cartridge filters designed for standard cartridges in 1 to 5 microns - wound, pleated, activated, ceramic types.',
-                    'Polish filter available in 1 to 5 microns with single or multi bag system.',
-                    'Ideal for solvent liquid, vegetable oil, syrup with low-medium solid content.'
+                    '<strong>Polish Filter:</strong> Available in 1 to 10 microns with single bag or multi bag system for efficient filtration of solvent liquid, vegetable oil, syrup.',
+                    '<strong>Cartridge Filter:</strong> Designed for use with standard cartridges in various sizes from 1 to 5 microns including diamond wound, pleated, activated, ceramic and porous stainless steel cartridges.'
                 ]
             }
         ],
