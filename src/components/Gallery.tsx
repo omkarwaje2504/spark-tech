@@ -1,97 +1,92 @@
-'use client';
-
 import Image from 'next/image';
 import Link from 'next/link';
-import { useScrollAnimation } from '@/hooks/useAnimations';
 
 const projects = [
-    { id: 1, title: 'Refinery Plant', location: 'Bangladesh', image: '/images/Gallery/Gallery Thumnail Images/Refinery/200 TPD Oil Refinery - Bangladesh.jpg' },
-    { id: 2, title: 'Solvent Extraction', location: 'Nepal', image: '/images/Gallery/Gallery Thumnail Images/Solvent Extraction/500 TPD Solvent Extraction - Nepal.jpg' },
-    { id: 3, title: 'Fractionation', location: 'Sri Lanka', image: '/images/Gallery/Gallery Thumnail Images/Fractionation/Palm Oil Fractionation - Sri Lanka.jpg' },
-    { id: 4, title: 'Bakery Shortening', location: 'India', image: '/images/Gallery/Gallery Thumnail Images/Bakery/1000 kghr Bakery Shortening - India.jpg' },
+  {
+    title: '200 TPD Oil Refinery',
+    location: 'Bangladesh',
+    image: '/images/Gallery/Gallery Thumnail Images/Refinery/200 TPD Oil Refinery - Bangladesh.jpg',
+    proof: 'Refinery reference',
+  },
+  {
+    title: '500 TPD Solvent Extraction',
+    location: 'Nepal',
+    image: '/images/Gallery/Gallery Thumnail Images/Solvent Extraction/500 TPD Solvent Extraction - Nepal.jpg',
+    proof: 'Extraction reference',
+  },
+  {
+    title: 'Palm Oil Fractionation',
+    location: 'Sri Lanka',
+    image: '/images/Gallery/Gallery Thumnail Images/Fractionation/Palm Oil Fractionation - Sri Lanka.jpg',
+    proof: 'Value-added processing reference',
+  },
+  {
+    title: '1000 kg/hr Bakery Shortening',
+    location: 'India',
+    image: '/images/Gallery/Gallery Thumnail Images/Bakery/1000 kghr Bakery Shortening - India.jpg',
+    proof: 'Specialty fats reference',
+  },
 ];
 
 export default function Gallery() {
-    const { ref: sectionRef, isVisible } = useScrollAnimation();
+  return (
+    <section className="bg-gray-950 py-24 text-white lg:py-28">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+          <div className="max-w-3xl">
+            <p className="text-sm font-semibold uppercase tracking-[0.24em] text-sky-300">Proof of work</p>
+            <h2 className="mt-4 text-4xl font-bold tracking-tight text-white md:text-5xl">
+              Project references add the credibility the homepage was missing
+            </h2>
+            <p className="mt-6 text-lg leading-8 text-gray-300">
+              When buyers evaluate an EPC partner, they look for context, scale, and relevance. The gallery now
+              works harder as a proof section instead of a purely visual showcase.
+            </p>
+          </div>
+          <Link href="/gallery" className="inline-flex items-center gap-3 self-start rounded-full border border-white/15 px-6 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-white transition hover:border-sky-400 hover:text-sky-300">
+            Review Project Gallery
+            <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </Link>
+        </div>
 
-    return (
-        <section ref={sectionRef} className="py-24 lg:py-32 bg-white overflow-hidden">
-            <div className="max-w-7xl mx-auto px-6 lg:px-8">
-
-                {/* Header */}
-                <div className={`flex flex-col md:flex-row justify-between items-start md:items-end gap-8 mb-20 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
-                    <div className="max-w-xl">
-                        <div className="inline-flex items-center gap-2 mb-4">
-                            <div className="h-px w-8 bg-sky-500" />
-                            <p className="text-sky-600 font-bold tracking-[0.2em] uppercase text-[10px]">
-                                OUR GLOBAL FOOTPRINT
-                            </p>
-                        </div>
-                        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 tracking-tight font-outfit">
-                            Engineering Excellence <br />
-                            <span className="text-sky-600">Across Borders</span>
-                        </h2>
-                    </div>
-                    <Link
-                        href="/gallery"
-                        className="group flex items-center gap-3 px-6 py-3 rounded-full border border-gray-200 hover:border-sky-500 hover:bg-sky-50 transition-all duration-300 active:scale-95"
-                    >
-                        <span className="text-gray-900 font-bold text-sm tracking-wide group-hover:text-sky-600">VIEW ALL PROJECTS</span>
-                        <div className="w-8 h-px bg-gray-300 group-hover:w-10 group-hover:bg-sky-500 transition-all duration-300" />
-                        <svg className="w-5 h-5 text-gray-400 group-hover:text-sky-500 group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                        </svg>
-                    </Link>
+        <div className="mt-10 grid gap-6 md:grid-cols-2">
+          {projects.map((project) => (
+            <Link key={project.title} href="/gallery" className="group relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/5">
+              <div className="relative aspect-[16/10]">
+                <Image 
+                  src={project.image} 
+                  alt={`${project.title} in ${project.location}`} 
+                  fill 
+                  className="object-cover transition duration-700 group-hover:scale-105" 
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/10 to-transparent" />
+              </div>
+              <div className="absolute inset-x-0 bottom-0 p-6 lg:p-7">
+                <div className="inline-flex items-center rounded-full border border-white/15 bg-black/25 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.2em] text-sky-200 backdrop-blur-sm">
+                  {project.proof}
                 </div>
+                <h3 className="mt-4 text-2xl font-semibold text-white">{project.title}</h3>
+                <p className="mt-2 text-sm leading-6 text-gray-200">{project.location}</p>
+              </div>
+            </Link>
+          ))}
+        </div>
 
-                {/* Grid */}
-                <div className="grid md:grid-cols-2 gap-8 lg:gap-10">
-                    {projects.map((project, index) => (
-                        <Link
-                            key={project.id}
-                            href="/gallery"
-                            className={`group relative aspect-[16/10] rounded-2xl overflow-hidden bg-gray-100 shadow-xl transition-all duration-1000 transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
-                                }`}
-                            style={{ transitionDelay: `${index * 150}ms` }}
-                        >
-                            <Image
-                                src={project.image}
-                                alt={project.title}
-                                fill
-                                className="object-cover transition-transform duration-1000 group-hover:scale-110"
-                            />
-                            
-                            {/* Sophisticated overlays */}
-                            <div className="absolute inset-0 bg-gradient-to-t from-gray-950/90 via-gray-950/20 to-transparent transition-opacity duration-500 opacity-60 group-hover:opacity-80" />
-                            <div className="absolute inset-0 bg-sky-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-
-                            {/* Content */}
-                            <div className="absolute inset-0 p-8 flex flex-col justify-end">
-                                <div className="translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                                    <h3 className="text-white font-bold text-2xl mb-2 font-outfit">{project.title}</h3>
-                                    <div className="flex items-center justify-between">
-                                        <p className="text-sky-300 font-medium flex items-center gap-2 text-sm tracking-wide">
-                                            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                                            </svg>
-                                            {project.location}
-                                        </p>
-                                        <div className="w-10 h-10 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 scale-50 group-hover:scale-100">
-                                            <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2/5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            {/* Border reflection */}
-                            <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-sky-400 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-                        </Link>
-                    ))}
-                </div>
-            </div>
-        </section>
-    );
+        <div className="mt-10 rounded-[2rem] border border-white/10 bg-white/[0.04] p-8">
+          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-sky-300">Reference footprint</p>
+          <div className="mt-5 flex flex-wrap gap-3">
+            {['India', 'Bangladesh', 'Nepal', 'Sri Lanka', 'USA'].map((item) => (
+              <span key={item} className="rounded-full border border-white/10 bg-black/20 px-4 py-2 text-sm text-gray-200">
+                {item}
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 }
+

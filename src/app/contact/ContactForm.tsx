@@ -27,8 +27,6 @@ export default function ContactForm() {
         'Solvent Extraction Plant',
         'Vegetable Oil Refinery',
         'Fractionation Plant',
-        'Deodorization Plant',
-        'Bleaching Plant',
         'Winterization / De-Waxing',
         'Lecithin Plant',
         'Bakery Shortening Plant',

@@ -4,10 +4,11 @@ import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import PageBanner from '@/components/PageBanner';
+import { isArchivedServiceSlug } from '@/lib/serviceVisibility';
 
 export const metadata: Metadata = {
     title: 'Services | Sparktech Processes LLP',
-    description: 'Complete range of edible oil processing equipment - Solvent Extraction, Refinery, Fractionation, Deodorization, Lecithin Plants, and Bakery Shortening.',
+    description: 'Complete range of edible oil processing equipment - Solvent Extraction, Refinery, Fractionation, Lecithin Plants, and Bakery Shortening.',
 };
 
 const services = [
@@ -17,7 +18,7 @@ const services = [
         shortDesc: 'Advanced horizontal model with articulated band conveyor assembly for efficient oil extraction.',
         fullDesc: 'Horizontal model comprising of articulated band conveyor assembly, which receives the material from the Feed Hopper and transports it at a very slow predetermined speed from the feed to the discharge end.',
         image: '/images/Services/Services Thumnail Images/Continuous Solvent Extraction Plant.jpg',
-        icon: '🏭',
+        icon: 'ðŸ­',
         features: [
             'Single piece Hollow shaft gear box with 0.05 rpm output',
             'Variable frequency drive for finite speed adjustment',
@@ -34,7 +35,7 @@ const services = [
         shortDesc: 'Complete chemical and physical refining solutions for crude edible oils.',
         fullDesc: 'In refining, physical and chemical processes are combined to remove undesirable natural as well as environmental-related components from the crude oil including phosphatides, free fatty acids, pigments, odors and waxes.',
         image: '/images/Services/Services Thumnail Images/Vegetable Oil Refinery.jpg',
-        icon: '⚗️',
+        icon: 'âš—ï¸',
         features: [
             'Degumming for phosphatides removal',
             'Neutralization for free fatty acids removal',
@@ -51,7 +52,7 @@ const services = [
         shortDesc: 'Dry fractionation process for separating fats into different melting point fractions.',
         fullDesc: 'Natural edible oils are multi-component mixtures consisting of various triglycerides. Through fractionation, different components can be separated for various applications in food technology.',
         image: '/images/Services/Services Thumnail Images/Fractionation.jpg',
-        icon: '🔬',
+        icon: 'ðŸ”¬',
         features: [
             'Dry fractionation from melt - no additives',
             'Physiologically neutral products',
@@ -68,7 +69,7 @@ const services = [
         shortDesc: 'Continuous deodorizer for quality-defining process in refining oils and fats.',
         fullDesc: 'Deodorization is the quality-defining process step in refining oils and fats. Free and low-boiling substances are distilled at higher temperatures in a high vacuum with steam stripping.',
         image: '/images/Services/Services Thumnail Images/Deodorizing Plant.jpg',
-        icon: '💨',
+        icon: 'ðŸ’¨',
         features: [
             'Continuous countercurrent deodorizer',
             'Gentle cooling under deodorizing conditions',
@@ -85,7 +86,7 @@ const services = [
         shortDesc: 'Continuous bleaching process with loop reactor for intensive mixture and contact.',
         fullDesc: 'Continuous bleaching process characterized by the loop reactor enabling operation without agitator tanks with simultaneous intensive mixture and contact of bleaching earth with the oil.',
         image: '/images/Services/Services Thumnail Images/Bleaching Plant.jpg',
-        icon: '✨',
+        icon: 'âœ¨',
         features: [
             'Loop reactor technology',
             'Operation under vacuum',
@@ -102,10 +103,10 @@ const services = [
         shortDesc: 'Winterization process to achieve necessary cold stability for bottled edible oils.',
         fullDesc: 'For refining products to be bottled as edible oils, winterization is required to achieve the necessary cold stability. This prevents crystallization & clouding of waxes at ambient temperature.',
         image: '/images/Services/Services Thumnail Images/De-Waxing.jpg',
-        icon: '❄️',
+        icon: 'â„ï¸',
         features: [
             'Cooling by heat exchange with cold water',
-            'Temperature range 5-10°C',
+            'Temperature range 5-10Â°C',
             'Maturation period up to 24 hours',
             'Horizontal filtration systems',
             'Continuous filtering aid addition',
@@ -119,7 +120,7 @@ const services = [
         shortDesc: 'High performance plants for dehydration of wet gums from soybean and rice bran.',
         fullDesc: 'SPARKTECH are experts in manufacturing high performance Lecithin Plants for dehydration of wet gums. Our plants feature unique design for gentle drying process without any burn.',
         image: '/images/Services/Services Thumnail Images/Vegetable Oil Refinery.jpg',
-        icon: '🌿',
+        icon: 'ðŸŒ¿',
         features: [
             'Rice Bran Lecithin processing',
             'Soya Lecithin dehydration',
@@ -134,9 +135,9 @@ const services = [
         id: 'bakery-shortening',
         title: 'Bakery Shortening & Margarine Plant',
         shortDesc: 'Complete plant for producing bakery shortening up to 1,000 kgs/hour.',
-        fullDesc: 'Process equipment for bakery shortening processing, capable of producing up to 1,000 kgs/hour when cooling from inlet temperature of 45°C to 23-25°C suitable for semi-liquid filling.',
+        fullDesc: 'Process equipment for bakery shortening processing, capable of producing up to 1,000 kgs/hour when cooling from inlet temperature of 45Â°C to 23-25Â°C suitable for semi-liquid filling.',
         image: '/images/Services/Services Thumnail Images/Bakery.jpg',
-        icon: '🥐',
+        icon: 'ðŸ¥',
         features: [
             'Essess processor heat transfer cylinders',
             'Crystal distribution cum stabilizer',
@@ -153,7 +154,7 @@ const services = [
         shortDesc: 'State-of-the-art hydrogenation units for converting liquid oils into solid fats.',
         fullDesc: 'Advanced hydrogenation plants for the conversion of liquid vegetable oils into semi-solid or solid fats through the addition of hydrogen.',
         image: '/images/Services/Services Thumnail Images/Hydrogenation.jpg',
-        icon: '⚡',
+        icon: 'âš¡',
         features: [
             'Batch and continuous options',
             'Precise temperature control',
@@ -170,7 +171,7 @@ const services = [
         shortDesc: 'Advanced fat modification process for producing zero-trans fats.',
         fullDesc: 'Interesterification is an advanced process used to modify the physical properties of oils and fats by rearranging the fatty acids within the triglyceride molecule.',
         image: '/images/Services/Services Thumnail Images/Fractionation.jpg',
-        icon: '🔄',
+        icon: 'ðŸ”„',
         features: [
             'Zero-trans fat production',
             'Chemical & enzymatic options',
@@ -213,7 +214,7 @@ export default function ServicesPage() {
 
                     {/* Services Cards */}
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {services.map((service) => (
+                        {services.filter((service) => !isArchivedServiceSlug(service.id)).map((service) => (
                             <div
                                 key={service.id}
                                 className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all overflow-hidden border border-gray-100 group"
@@ -272,10 +273,10 @@ export default function ServicesPage() {
 
                     <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                         {[
-                            { icon: '🎯', title: 'Expertise', desc: '17+ years of industry experience' },
-                            { icon: '🔧', title: 'Turnkey Solutions', desc: 'Complete EPC project delivery' },
-                            { icon: '🌍', title: 'Global Reach', desc: 'Serving clients in 15+ countries' },
-                            { icon: '📞', title: '24/7 Support', desc: 'Round-the-clock technical assistance' },
+                            { icon: 'ðŸŽ¯', title: 'Expertise', desc: '17+ years of industry experience' },
+                            { icon: 'ðŸ”§', title: 'Turnkey Solutions', desc: 'Complete EPC project delivery' },
+                            { icon: 'ðŸŒ', title: 'Global Reach', desc: 'Serving clients in 15+ countries' },
+                            { icon: 'ðŸ“ž', title: '24/7 Support', desc: 'Round-the-clock technical assistance' },
                         ].map((item, index) => (
                             <div key={index} className="text-center p-6 bg-white rounded-2xl shadow-lg">
                                 <div className="text-5xl mb-4">{item.icon}</div>
@@ -301,19 +302,19 @@ export default function ServicesPage() {
                             href="/contact"
                             className="inline-flex items-center gap-2 bg-white text-[#3CAAE5] px-8 py-4 rounded-lg font-semibold hover:shadow-xl transition-all"
                         >
-                            Request Quote
+                            Send Your Enquiry
                             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                             </svg>
                         </Link>
                         <a
-                            href="tel:+919876543210"
+                            href="tel:+912226465920"
                             className="inline-flex items-center gap-2 bg-gray-900 text-white px-8 py-4 rounded-lg font-semibold hover:bg-gray-800 transition-all"
                         >
                             <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                                 <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                             </svg>
-                            Call Us Now
+                            Ask Our Experts
                         </a>
                     </div>
                 </div>
@@ -323,3 +324,5 @@ export default function ServicesPage() {
         </>
     );
 }
+
+

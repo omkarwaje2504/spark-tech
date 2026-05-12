@@ -21,30 +21,45 @@ const servicesData: Record<string, {
     'solvent-extraction': {
         title: 'Continuous Solvent Extraction Plant',
         subtitle: 'Modern Oil Recovery Technology',
-        description: 'Continuous Solvent Extraction is the most modern way of recovery of oil from oil bearing materials. Based on the chemical principle that "like dissolves like," used to selectively dissolve and separate compounds.',
+        description: 'Continuous Solvent Extraction is the most modern method of recovering oil from oil-bearing materials. Proper preparation of the feed, controlled extraction, effective desolventizing, and solvent recovery together determine plant performance.',
         sections: [
             {
                 heading: 'Preparatory Section',
                 content: [
-                    'Preparation of oil bearing material prior to its Extraction is often underestimated by many processors. To achieve the best results in solvent Extraction, the way in which the raw material is prepared is almost as important as Extraction Equipment itself.',
-                    'The feed stock should have a particle size small enough to enable the solvent to reach right up to the core, but at the same time not so small as to constitute "fines". It should have fairly uniform particle size in order to "pack well" in the Extractor and form a homogenous bed with good percolation characteristics.',
-                    'For SOYABEANS, SUNFLOWER, RAPESEED, SALSEED, RICEBRAN - the Expander system with the squeezomatic attachment ensures even direct extraction of high oil content material, producing the best quality crude oil and completely eliminating prepressing operations.'
+                    'Preparation of oil-bearing material prior to its extraction is often underestimated by many processors. To achieve the best results in solvent extraction, the way in which the raw material is prepared is almost as important as the extraction equipment itself.',
+                    'The feed stock should have a particle size small enough to enable the solvent to reach right up to the core, but not so small as to constitute fines. It should have fairly uniform particle size to pack well in the extractor, form a homogenous bed, and possess good percolation characteristics.',
+                    'Too-big pieces result in high residual oil content in meal. Too-small particles or fines lead to poor percolation and channelling, resulting in poor plant performance.',
+                    'Fully conscious of the importance of proper preparation, SPARKTECH have developed a complete range of preparatory equipment suited for each type of raw material.'
+                ]
+            },
+            {
+                heading: 'Extruder \u2013 Expander \u2013 Drier Cooler',
+                content: [
+                    '<strong>For Soyabeans, Sunflower, Rapeseed, Salseed, Ricebran etc.</strong> SPARKTECH offers total expander system with squeezomatic cage, Drier Cooler, Conditioner, and Conveying Equipment.',
+                    'Machine and internal components are highly rugged in construction due to quality workmanship and optimized metallurgy. Drier cooler of Horizontal type with M.S. fabricated body and S.S. Perforated Tray complete with hot air radiator and blowers.',
+                    '<strong>Capacity:</strong> Expanders available in various models from 100 to 500 Tons with pulley as well as gear box driven system.',
+                    '<strong>Advantages:</strong> Increases production of existing plants. Reduces solvent & steam consumptions. Consistent results of oil contact in D.O.C. Lower retention of solvent in meal due to high porosity. Can process high oil bearing materials without expellers. Elimination of fines.',
+                    '<strong>Expeller Cakes:</strong> Handled by Cake Breaker and Roller Mill. Two pairs of spiked rolls in special alloy break large pieces, further broken in Roller Mill using special corrugated rolls.',
+                    '<strong>Soyabeans:</strong> Requires cracking, cooking and flaking. SPARKTECH Cooker is a multistage vertical vessel with steam heated bottom plates. Hydraulic Flaker produces quality flakes of 0.25-0.3 mm thickness.',
+                    '<strong>Ricebran:</strong> A powdery material requiring SPARKTECH pelletizing machine for producing porous pellets with good percolation characteristics.'
                 ]
             },
             {
                 heading: 'Extraction Process',
                 content: [
-                    'Horizontal model comprising of articulated band conveyor assembly, which receives the material from the Feed Hopper and transports it at a very slow predetermined speed from the feed to the discharge end.',
-                    'The conveyor moves over rails suitably located inside the Extractor and rides on specially constructed sprocket at either end. Adjustable damper for regulation of the height of the bed of material on the chain conveyor.',
-                    'Band Conveyor Assembly designed to act as filter bed for eliminating fines, complete with rotary brushes & mesh cleaning system for effective cleaning of mesh.'
+                    'Horizontal model with articulated band conveyor assembly receiving material from the Feed Hopper at very slow predetermined speed. Conveyor moves over rails inside the Extractor on specially constructed sprockets.',
+                    'Series of Spray breakers for perfect spray of solvent on the moving bed. Band Conveyor acts as filter bed for eliminating fines, complete with rotary brushes & mesh cleaning system.',
+                    '<strong>Drive:</strong> Single piece Hollow shaft gear box with 0.05 rpm output, avoiding Big Gear and pinion arrangement. Variable frequency drive allows finite speed adjustment and data-logging.',
+                    '<strong>Construction:</strong> Single piece miscella hoppers with no joints. All body plates sandblasted and Zinc base epoxy primer coated. Factory pre-fabrication ensures quality. Bed height limited to 1.5m reducing miscella channelling.'
                 ]
             },
             {
-                heading: 'Distillation & Recovery',
+                heading: 'Desolventizing, Distillation & Recovery',
                 content: [
-                    'Distillation is a multi-stage process that separates the solvent (like hexane) from the extracted oil using heat, followed by condensation to recover and reuse the solvent.',
-                    'The process involves heating the miscella (solution of oil in solvent) in evaporators, sometimes under vacuum, to vaporize the solvent, which is then condensed back into liquid and recycled.',
-                    'Recuperation ensures economic viability by recovering the solvent, minimizes waste disposal, and conserves natural resources and energy.'
+                    '<strong>Desolventiser Toaster:</strong> Vapor tight construction in carbon steel with stages having jacketed bottoms for indirect heating. Hollow shaft steam connections facilitate injection through moving blades ensuring highest contact ratio between sparge steam and meal.',
+                    '<strong>Distillation:</strong> Miscella fed through vapour economizer to first Evaporator. The Economizer Unit effectively utilizes heat of vapours from the DT, reducing steam consumption. System operates under very high vacuum and lower temperatures ensuring good quality oil.',
+                    '<strong>Recuperation:</strong> Uncondensed gases pass through fine spray of cold mineral oil absorbing traces of hexane vapour. SPARKTECH Recuperation system ensures practically NIL escape of hexane to atmosphere.',
+                    '<strong>Conditioning:</strong> Extracted meal at around 100 deg. C is cooled in a ventilated conveyor. In the Humidification unit, desired quantity of water is metered and finely sprayed on the material.'
                 ]
             }
         ],
@@ -65,36 +80,52 @@ const servicesData: Record<string, {
             { label: 'Solvent', value: 'Food Grade Hexane' },
             { label: 'Residual Oil in Meal', value: '< 1%' },
             { label: 'Extractor Drive', value: '0.05 rpm output' },
-        ],
-        process: ['Preparatory Section', 'Extraction', 'Distillation', 'Meal Desolventising', 'Recuperation', 'Meal Conditioning']
+        ]
     },
     'oil-refinery': {
         title: 'Chemical/Physical Vegetable Oil Refineries',
         subtitle: 'Complete Refining Solutions',
-        description: 'In refining, physical and chemical processes are combined to remove undesirable natural as well as environmental-related components from crude oil including phosphatides, free fatty acids, pigments, odors, waxes, heavy metals and pesticides.',
+        description: 'Following extraction of crude edible oils by screw presses and solvent extraction, refining combines physical and chemical processes to remove phosphatides, free fatty acids, pigments, odors, waxes, heavy metals, pesticides, and other undesirable components.',
         sections: [
+            {
+                heading: 'Neutralizing & Refining',
+                content: [
+                    'A refining process is carried out following extraction of crude edible oils by means of screw presses and/or solvent extraction.',
+                    'In refining, physical and chemical processes are combined to remove undesirable natural as well as environmental-related components from the crude oil including phosphatides, free fatty acids, pigments (such as chlorophyll), odors and flavors, waxes, heavy metals, pesticides etc.',
+                    '<strong>Basic Processes:</strong> Degumming for removal of phosphatides, neutralization for removal of free fatty acids, bleaching for removal of color, deodorization to distill odors and flavors as well as free fatty acids, and winterization for separation of waxes.'
+                ]
+            },
             {
                 heading: 'Degumming Process',
                 content: [
-                    'Water Degumming: A large part of the phosphatides (gums) can be hydrated quickly and easily. Water is added to the oil, and after reaction period the hydrated phosphatides are separated by centrifuges.',
-                    'Dry Acid Degumming: Particularly suitable for processing oils with low gum contents such as palm oil, coconut oil, palm kernel oil. Intensive mixing follows acid addition, conditioned gums are absorbed into bleaching earth.',
-                    'Wet Acid Degumming: For oils with higher gum contents (e.g. corn oil), water is added following acid apportioning to achieve gum hydration.'
+                    '<strong>Water Degumming:</strong> A large part of the phosphatides (gums) can be hydrated quickly and easily. Water is added to the oil and after a certain reaction period the hydrated phosphatides can be separated either by decantation (settling) or continuously by means of centrifuges.',
+                    'A large part of hydratable and even a small proportion of the non-hydratable phosphatides are removed. The extracted gums can be processed into lecithin for food, feed or technical purposes.',
+                    '<strong>Chemical Refining:</strong> The free fatty acids are neutralized by caustic soda resulting in so-called soap stock which is separated. Simultaneously the non-hydratable phosphatides are also separated.',
+                    '<strong>Physical Refining:</strong> The gum content can be further reduced by dry acid degumming or wet acid degumming processes.'
                 ]
             },
             {
-                heading: 'Continuous Bleaching',
+                heading: 'Dry & Wet Acid Degumming',
                 content: [
-                    'The process is characterized by the loop reactor enabling operation without agitator tanks as well as simultaneous intensive mixture and contact of the bleaching earth with the oil.',
-                    'The bleaching earth adsorbs color pigments, oxidation-supporting metal ions, complex compounds, residual soaps and traces of catalyst from hydrogenation.',
-                    'Benefits include enhanced product quality under vacuum, gentle heating through optimized temperature control, and intensive decoloration of the oil.'
+                    '<strong>Dry Acid Degumming:</strong> Particularly suitable for oils with low gum contents such as palm oil, coconut oil, palm kernel oil or animal fats. Intensive mixing is implemented following addition of acid to pre-heated crude oil. Conditioned gums are absorbed into bleaching earth and separated by filtration.',
+                    '<strong>Benefits:</strong> Low energy consumption, low operation and maintenance costs, minimum footprint, low investment costs, environmentally friendly as no wastewater or soap stock occur.',
+                    '<strong>Wet Acid Degumming:</strong> Initially oils with higher gum contents (e.g. corn oil) are similarly processed. Water is added following acid apportioning to achieve gum hydration. Centrifuges enable easy separation of gums in oils with higher non-hydratable gum contents. Consumption of bleaching earth is reduced because the oil has already been extensively degummed.'
                 ]
             },
             {
-                heading: 'Deodorization',
+                heading: 'Bleaching',
                 content: [
-                    'Deodorization is the quality-defining process step in refining oils and fats. Free and low-boiling substances are distilled at higher temperatures in a high vacuum with steam stripping.',
-                    'The continuous deodorizer operates according to the countercurrent principle. Product and strip steam are directed in countercurrent during entire processing time.',
-                    'Features integrated countercurrent heat transfer with high heat recovery (>80%), long service life due to no moving parts, and automatic product change system.'
+                    'Continuous bleaching process used for: bleaching degummed oil prior to physical neutralization and deodorization, bleaching wet-degummed and chemically neutralized oil prior to deodorization, and post-refining of hydrogenated and chemically interesterified oils and fats.',
+                    'The loop reactor enables operation without agitator tanks as well as simultaneous intensive mixture and contact of the bleaching earth with the oil. The bleaching earth adsorbs color pigments as well as oxidation-supporting metal ions, complex compounds, residual soaps and traces of catalyst from hydrogenation.',
+                    '<strong>Benefits:</strong> Enhanced product quality, gentle heating through optimized temperature control, intensive decoloration, increased efficiency through optimized utilization of bleaching earth in loop reactor, energy efficiency, and higher wear resistance through high quality materials.'
+                ]
+            },
+            {
+                heading: 'De-Waxing & Deodorization',
+                content: [
+                    '<strong>De-Waxing:</strong> For bottled edible oils (e.g. sunflower seed oil or corn oil), winterization prevents crystallization & clouding of waxes at ambient temperature. Oil is cooled by heat exchange with cold water to 5-10 degree C. Crystals are formed during maturation period of up to 24 hours & subsequently separated through horizontal filters.',
+                    '<strong>Deodorization:</strong> The continuous deodorizer operates according to the counter current principle. In case of higher concentration of fatty acids, an upstream counter current column is connected. This ensures optimal absorbing capacity of stripping steam resulting in considerable savings.',
+                    '<strong>Benefits:</strong> Gentle cooling under deodorizing conditions, uniform processing, integrated counter current heat transfer with high heat recovery (>80%), long service life, no moving parts, compact configuration with integrated vapour scrubber, easy inspection and product change.'
                 ]
             }
         ],
@@ -116,29 +147,39 @@ const servicesData: Record<string, {
             { label: 'Steam Consumption', value: '70-100 kg/MT oil' },
             { label: 'Phosphorus Content', value: '2-3 PPM max' },
         ],
-        process: ['Degumming', 'Neutralization', 'Bleaching', 'De-waxing', 'Deodorization', 'Filtration']
+        process: []
     },
     'fractionation': {
         title: 'Fractionation Plant',
         subtitle: 'Dry Fractionation Technology',
-        description: 'Natural edible oils are multi-component mixtures of triglycerides. Through fractionation, components with smaller melting temperature ranges can be separated for various food technology applications.',
+        description: 'Natural edible oils are multi-component mixtures consisting of various triglycerides. Fractionation separates them into components with smaller melting temperature ranges for different food technology applications.',
         sections: [
-            {
-                heading: 'Fractionation Applications',
-                content: [
-                    'The low melting fraction of an edible fat can be used as an adequate substitute for conventional salad oils.',
-                    'The higher-melting fraction can be used for production of margarine or shortening.',
-                    'Mid-fractions can be used as substitutes for expensive cocoa butter.',
-                    'Special fats such as deep frying oil, diet margarine, shortening or mayonnaise are preferably made from fat fractions.'
-                ]
-            },
             {
                 heading: 'Dry Fractionation Process',
                 content: [
-                    'We recommend the "dry" fractionation process from the melt because this process operates without any additives.',
-                    'Results in physiologically neutral products as additives do not cause contamination.',
-                    'High operational safety as solvents do not present explosion hazards.',
-                    'No contamination of wastewater or exhaust air as completely free of additives.'
+                    'SPARKTECH dry fractionation plant is custom designed to allow you to achieve selective crystallisation of different triglycerides in edible oil. You can count on producing stable and filterable crystals giving you a product to fit your standards and quality requirements.',
+                    'Dry Fractionation System is designed to process crude, pre-treated or RBD palm oil. This makes the entire process simpler with no environmentally hazardous waste products.',
+                    '<strong>Process Stages:</strong> 1. Heating the feed oil, 2. Formation of crystal by controlled cooling, 3. Crystal growth, 4. Maturation of crystals, 5. Filtration to separate Olein and Stearin.',
+                    'Crystallizers are fitted with double row of circular cooling and variable speed multi-stage agitator. Crystallizer designed with large cooling surface area ensuring no build-up of crystals. Variable speed agitator contributes to gentle agitation without stagnation close to the cooling coil.'
+                ]
+            },
+            {
+                heading: 'Applications in Nutrition',
+                content: [
+                    '<strong>Low Melting Fraction:</strong> Can be used as an adequate substitute for conventional salad oils.',
+                    '<strong>Higher-Melting Fraction:</strong> Used for production of margarine or shortening.',
+                    '<strong>Mid-Fractions:</strong> Can be used as substitutes for expensive cocoa butter.',
+                    '<strong>Special Fats:</strong> Deep frying oil, diet margarine, shortening or mayonnaise are preferably made from fat fractions.',
+                    'All common fats such as palm oil, hardened fish or rape oil, soybean oil and butter fat can be processed. No contamination of wastewater or exhaust air as products are completely free of additives.'
+                ]
+            },
+            {
+                heading: 'Filtration Equipment',
+                content: [
+                    '<strong>Horizontal Pressure Leaf Filter:</strong> Horizontally mounted leaves, pneumatic vibrator assembly, hydraulic power pack for dismantling. Shell can be separated by hydraulic system for easy cleaning. Filtration area from 2m\u00B2 to 100m\u00B2.',
+                    '<strong>Vertical Pressure Leaf Filter:</strong> Vertical pressure vessel with conical bottom, pneumatic vibrator assembly for dry cake discharge. Stainless steel filter leaves eliminate use of filter cloth. Filtration area from 10m\u00B2 to 150m\u00B2.',
+                    '<strong>Polish Filter:</strong> Available in 1 to 10 microns with single bag or multi bag system for efficient filtration of solvent liquid, vegetable oil, syrup.',
+                    '<strong>Cartridge Filter:</strong> Designed for use with standard cartridges in various sizes from 1 to 5 microns including diamond wound, pleated, activated, ceramic and porous stainless steel cartridges.'
                 ]
             }
         ],
@@ -160,36 +201,34 @@ const servicesData: Record<string, {
             { label: 'Filtration', value: 'Membrane Filter Press' },
             { label: 'Control', value: 'Computerized DCS' },
         ],
-        process: ['Oil Heating', 'Controlled Crystallization', 'Crystal Maturation', 'Membrane Filtration', 'Olein/Stearin Separation']
+        process: []
     },
     'bakery-shortening': {
         title: 'Bakery Shortening & Margarine Plant',
         subtitle: 'Premium Processing Equipment',
-        description: 'Complete processing equipment for bakery shortening, capable of producing up to 1,000 kgs/hour when cooling from inlet temperature of 45°C to 23-25°C suitable for semi-liquid filling into cans.',
+        description: 'Complete plant for producing bakery shortening. Capacity is dependent upon product formulations and inlet temperature of the product to be processed.',
         sections: [
             {
-                heading: 'Essessprocessor System',
+                heading: 'Plant Overview',
                 content: [
-                    'Two interconnected Essessprocessor units consisting of single horizontal heat transfer cylinder assembly mounted on open frame.',
-                    'Cylinder is jacketed and lagged for use with glycol solution. Removable heat transfer cylinder internally hard chrome plated.',
-                    'Shaft has four diametrically opposed rows of floating type scraper blades driven by suitable motor hoseproof to IP55 standard.',
-                    'All product contact parts are SS304. Chilling jacket suitably insulated and cladded with stainless steel for utmost hygiene.'
+                    '<strong>The Plant Consists Of:</strong> 1. Essessprocessor - Heat transfer cylinder assembly, 2. Crystal distribution cum stabilizer, 3. Triplex plunger reciprocating pump, 4. Nitrogen gas purging system, 5. Interconnecting product pipeline.'
                 ]
             },
             {
-                heading: 'Crystal Distribution & Stabilizer',
+                heading: 'Essessprocessor',
                 content: [
-                    'Horizontally mounted and sequentially connected to Essessprocessors.',
-                    'Cylinder has two rows of fixed pins at 180° with concentric shaft carrying pins in helical arrangement.',
-                    'Two heaters provided for product heating in case of solidification during power failure.'
+                    'Two numbers of interconnected Essessprocessor consisting of a single horizontal heat transfer cylinder assembly mounted on an open frame. The cylinder is jacketed and lagged for use with glycol solution. The removable heat transfer cylinder will be internally hard chrome plated.',
+                    'The Essessprocessor shaft is concentrically mounted within the cylinder and has four diametrically opposed rows of floating type scraper blades driven by suitable motor. All product contact parts are made of stainless steel AISI 304 materials.',
+                    'Two heaters are provided for heating of the product in case of product solidification inside the product cylinder during power failure or production stoppage. Chilling jacket is suitably insulated and cladded with stainless steel sheets for maintaining utmost hygiene.'
                 ]
             },
             {
-                heading: 'Control & Safety System',
+                heading: 'Crystal Distribution & Supporting Systems',
                 content: [
-                    'The control panel enables smooth and trouble-free handling with safe operation.',
-                    'Unit does not start unless temperature at specified locations is below the specified limit.',
-                    'Safety features prevent damage to equipment when product inside is solid due to power failure or changeover.'
+                    '<strong>Crystal Distribution Cum Stabilizer:</strong> Horizontally mounted and sequentially connected to the Essessprocessors. The cylinder has two rows of fixed pins with a concentric shaft carrying pins in helical arrangement which intermesh with fixed pins while rotating.',
+                    '<strong>Triplex Plunger Reciprocating Pump:</strong> Single acting reciprocating plunger pump for feeding the product to the system. All product contact parts are of stainless steel, suitably jacketed for hot water/steam circulation.',
+                    '<strong>Nitrogen Purging System:</strong> Pressure regulating valve for regulating line pressure with gauges for reading line and cylinder pressure. Flow meter with flow regulating valve for adjusting required amount of gas.',
+                    '<strong>Interconnecting Product Pipeline:</strong> Each section suitably interconnected for continuous flow of the entire length of the product pipeline.'
                 ]
             }
         ],
@@ -207,40 +246,39 @@ const servicesData: Record<string, {
         applications: ['Bakery Shortening', 'Margarine', 'Vegetable Ghee', 'Pastry Fat', 'Puff Pastry Margarine'],
         specs: [
             { label: 'Production Capacity', value: 'Up to 1000 kg/hr' },
-            { label: 'Inlet Temperature', value: '45°C' },
-            { label: 'Outlet Temperature', value: '23 - 25°C' },
+            { label: 'Inlet Temperature', value: '45Â°C' },
+            { label: 'Outlet Temperature', value: '23 - 25Â°C' },
             { label: 'Pump Capacity', value: '1,690 L/hr' },
             { label: 'Consultant', value: 'SS 304/316' },
         ],
-        process: ['Fat Blending', 'Pump Feeding', 'Scraped Surface Cooling', 'Crystal Distribution', 'Stabilization', 'Filling']
+        process: []
     },
     'lecithin': {
         title: 'Rice Bran & Soya Lecithin Plant',
         subtitle: 'High Performance Lecithin Recovery',
-        description: 'SPARKTECH are experts in manufacturing high performance Lecithin Plants for dehydration of wet gums from soybean and rice bran with unique gentle drying design.',
+        description: 'SPARKTECH manufactures high-performance lecithin plants for rice bran and soybean processing, featuring unique design for gentle drying of wet gums without any burn.',
         sections: [
             {
                 heading: 'Rice Bran Lecithin',
                 content: [
-                    'Rice bran oil contains phospholipids, protein, carbohydrates, mucilages and resins as gummy substances which impart colour, turbidity and odour to the oil.',
-                    'Phospholipids are the major component of gum which increases refining losses, creates foaming problems and generates more colour.',
-                    'The extracted rice bran oil is dewaxed then prepared for degumming. Degumming agents are used for recovery of oil and gums from dewaxed rice bran.'
+                    'The rice bran oil contains phosphatides, protein, carbohydrates, mucilages and resins as gummy substances which impart colour, turbidity and odour to the oil.',
+                    'Phosphatides are the major component of gum which increases refining losses, creates foaming problems and generates more colour.',
+                    'The extracted rice bran oil is first dewaxed then prepared for degumming. In the degumming process, degumming agents are used for recovery of oil and gums from the dewaxed rice bran.'
                 ]
             },
             {
-                heading: 'Soya Lecithin Processing',
+                heading: 'Soya Lecithin Plant',
                 content: [
-                    'Soybeans are conveyed in the plant where screening and cracking to appropriate dimensions are conducted.',
-                    'Our plants feature unique design which makes the drying process of the feed gentle without any burn.',
-                    'The Lecithin Plant requires easy cleaning and minimum maintenance.'
+                    'SPARKTECH are experts in manufacturing high performance Soya Lecithin Plants for dehydration of wet gums from soybean.',
+                    'The soybeans are conveyed in the plant, where screening and cracking to appropriate dimensions are conducted. Beans pass through solid fractions developing a bow wave ahead of each blade.',
+                    'Our Lecithin Plant requires easy cleaning and minimum maintenance. The plant features unique design making the drying process gentle without any burn.'
                 ]
             },
             {
-                heading: 'Phosphatidylcholine',
+                heading: 'Plant Features',
                 content: [
-                    'Phosphatidylcholine is a natural phospholipid that is biocompatible, biodegradable, and has cleaning action.',
-                    'It is obtained from a by-product in the manufacturing process of soybean oil and rice bran oil.',
-                    'Raw material comprises mixture of fatty acids, lipids, proteins, phospholipids with phosphatidylcholine between 10-20%.'
+                    '<strong>Features:</strong> High flow rate, continuous operation, low energy consumption, low power consumption.',
+                    'The plant is designed for gentle handling of the feed while maintaining efficient lecithin recovery from rice bran and soybean processing streams.'
                 ]
             }
         ],
@@ -262,7 +300,7 @@ const servicesData: Record<string, {
             { label: 'Energy', value: 'Low consumption' },
             { label: 'Maintenance', value: 'Minimum required' },
         ],
-        process: ['Wet Gum Collection', 'Degumming', 'Gentle Drying', 'Cooling', 'Purification', 'Packaging']
+        process: []
     },
     'filtration': {
         title: 'Vegetable Oil Filtration Equipment',
@@ -274,7 +312,7 @@ const servicesData: Record<string, {
                 content: [
                     'Consists of horizontally mounted leaves, pneumatic vibrator assembly, hydraulic power pack for dismantling of shell side.',
                     'Shell can be separated from dish end by hydraulic system and leaves are easily accessible for cleaning.',
-                    'More suitable where deposits are more. Filtration area ranges from 2m² to 100m².'
+                    'More suitable where deposits are more. Filtration area ranges from 2mÂ² to 100mÂ².'
                 ]
             },
             {
@@ -282,7 +320,7 @@ const servicesData: Record<string, {
                 content: [
                     'Consists of vertical pressure vessel with conical bottom, vertically arranged filter leaves, pneumatic vibrator assembly.',
                     'Features automatic discharge of cake. Stainless steel filter leaves eliminate use of filter cloth.',
-                    'Filtration area ranges from 10m² to 50m².'
+                    'Filtration area ranges from 10mÂ² to 50mÂ².'
                 ]
             },
             {
@@ -296,8 +334,8 @@ const servicesData: Record<string, {
         ],
         image: '/images/Technologies/Technologies Thumnail Images/Filtration.jpg',
         features: [
-            'Horizontal pressure leaf filter (2-100 m²)',
-            'Vertical pressure leaf filter (10-50 m²)',
+            'Horizontal pressure leaf filter (2-100 mÂ²)',
+            'Vertical pressure leaf filter (10-50 mÂ²)',
             'Automatic cake discharge',
             'Stainless steel filter leaves',
             'Pneumatic vibrator assembly',
@@ -307,32 +345,39 @@ const servicesData: Record<string, {
         ],
         applications: ['Vegetable Oil', 'Solvent Extraction', 'Syrup Filtration', 'Bleaching Earth Separation'],
         specs: [
-            { label: 'Horizontal Filter Area', value: '2 - 100 m²' },
-            { label: 'Vertical Filter Area', value: '10 - 50 m²' },
+            { label: 'Horizontal Filter Area', value: '2 - 100 mÂ²' },
+            { label: 'Vertical Filter Area', value: '10 - 50 mÂ²' },
             { label: 'Micron Rating', value: '1 - 5 microns' },
             { label: 'Discharge', value: 'Automatic' },
         ],
-        process: ['Pre-filtration', 'Main Filtration', 'Cake Formation', 'Discharge', 'Filter Cleaning']
+        process: []
     },
     'deodorization': {
         title: 'Deodorization Plant',
         subtitle: 'Continuous High-Vacuum Distillation',
-        description: 'Deodorization is the quality-defining process step in refining oils and fats. Free and low-boiling substances are distilled at higher temperatures in a high vacuum with steam stripping.',
+        description: 'Deodorization is the quality-defining process step in refining oils and fats. The continuous deodorizer operates according to the counter current principle ensuring optimal product quality and efficiency.',
         sections: [
             {
                 heading: 'Process Principle',
                 content: [
-                    'The continuous deodorizer operates according to the countercurrent principle. Product and strip steam are directed in countercurrent during entire processing time.',
-                    'Free and low-boiling substances like fatty acids, odors, and flavors are distilled at higher temperatures in a high vacuum with steam stripping.',
-                    'The process includes gentle cooling under deodorizing conditions to ensure maximum product quality and stability.'
+                    'Deodorization is the quality-defining process step in refining oils and fats. Undesired by-products remain in the oil following preceding refining processes. These can impair the odor, taste or shelf life and must therefore be removed.',
+                    'Some by-products are still bound in fat molecules and are only released by chemical transformation provided the oil has been sufficiently retained in the deodorizer. Free and low-boiling substances are distilled at higher temperatures in a high vacuum with steam added for stripping.'
                 ]
             },
             {
-                heading: 'Energy Efficiency',
+                heading: 'Continuous Counter Current Deodorizer',
                 content: [
-                    'Features integrated countercurrent heat transfer with high heat recovery (>80%), significantly reducing operational costs.',
-                    'The system is designed with no moving parts, ensuring a long service life and minimal maintenance requirements.',
-                    'Equipped with an automatic product change system to minimize downtime and prevent cross-contamination.'
+                    'The continuous deodorizer is an established distillation device. In case of higher concentration of fatty acids an upstream counter current column is connected. This combination is particularly economical.',
+                    'This ensures optimal absorbing capacity of the stripping steam resulting in considerable savings of resources for vacuum generation.',
+                    'The product and strip steam are directed in a counter current during the entire processing time. Continuous operation ensures low steam consumption and high degree of heat recovery.'
+                ]
+            },
+            {
+                heading: 'Operational Benefits',
+                content: [
+                    '<strong>Product Quality:</strong> Gentle cooling under deodorizing conditions, uniform processing, throughput and processing time infinitely adjustable to product properties.',
+                    '<strong>High Efficiency:</strong> Integrated counter current heat transfer with high heat recovery (>80%), long service life, no moving parts, minor footprint through compact configuration with integrated vapour scrubber.',
+                    '<strong>Operational Safety:</strong> Easy inspection of all trays through the central shaft, easy product change, simple product change through automatic system.'
                 ]
             }
         ],
@@ -350,30 +395,31 @@ const servicesData: Record<string, {
         applications: ['Palm Oil', 'Soybean Oil', 'Sunflower Oil', 'Coconut Oil', 'Specialty Fats'],
         specs: [
             { label: 'Vacuum Level', value: '1-3 mbar' },
-            { label: 'Operating Temp', value: '230-260°C' },
+            { label: 'Operating Temp', value: '230-260Â°C' },
             { label: 'Heat Recovery', value: '> 80%' },
             { label: 'Steam Consumption', value: 'Low' },
         ],
-        process: ['Heating', 'Distillation', 'De-aeration', 'Cooling', 'Polishing']
+        process: []
     },
     'bleaching': {
         title: 'Continuous Bleaching Plant',
         subtitle: 'Loop Reactor Technology',
-        description: 'Continuous bleaching process characterized by the loop reactor enabling operation without agitator tanks with simultaneous intensive mixture and contact of bleaching earth with the oil.',
+        description: 'Continuous bleaching process characterized by the loop reactor enabling operation without agitator tanks, with simultaneous intensive mixture and contact of bleaching earth with the oil.',
         sections: [
             {
-                heading: 'Loop Reactor System',
+                heading: 'Bleaching Process',
                 content: [
-                    'The process is characterized by the loop reactor enabling operation without agitator tanks as well as simultaneous intensive mixture and contact of the bleaching earth with the oil.',
-                    'The bleaching earth adsorbs color pigments, oxidation-supporting metal ions, complex compounds, residual soaps and traces of catalyst from hydrogenation.'
+                    'Continuous bleaching process used for: bleaching degummed oil prior to physical neutralization and deodorization, bleaching wet-degummed and chemically neutralized oil, and post-refining of hydrogenated and chemically interesterified oils and fats.',
+                    'A pre-defined quantity of activated earth, mixed with activated carbon, is continuously added to the oil. The loop reactor enables operation without agitator tanks with simultaneous intensive mixture and contact.',
+                    'The bleaching earth adsorbs color pigments as well as oxidation-supporting metal ions, complex compounds, residual soaps and similar substances such as traces of catalyst from hydrogenation. It also serves as filter for impurities and gums precipitated by acid in dry degumming.'
                 ]
             },
             {
-                heading: 'Quality Features',
+                heading: 'Benefits',
                 content: [
-                    'Operation under vacuum ensures no oxidation of oil during the process.',
-                    'Gentle heating through optimized temperature control preserves the nutritional value of the oil.',
-                    'Highly effective decoloration of the oil with minimal bleaching earth consumption.'
+                    '<strong>Enhanced Product Quality:</strong> Gentle heating through optimized temperature control, intensive decoloration of the oil.',
+                    '<strong>Increased Efficiency:</strong> Optimized utilization of bleaching earth through intensive reaction in the loop reactor, convenient operation through sturdy flow.',
+                    '<strong>Energy Efficiency:</strong> Higher wear resistance through high quality materials, heat recovery system.'
                 ]
             }
         ],
@@ -394,27 +440,26 @@ const servicesData: Record<string, {
             { label: 'Condition', value: 'Vacuum' },
             { label: 'Mixing', value: 'Loop Reactor' },
         ],
-        process: ['Oil Heating', 'Earth Dosing', 'Intensive Mixing', 'Vacuum Bleaching', 'Filtration']
+        process: []
     },
     'dewaxing': {
         title: 'De-Waxing / Winterization',
         subtitle: 'Cold Stability Solutions',
-        description: 'Winterization is required to achieve necessary cold stability for bottled edible oils, preventing crystallization and clouding of waxes at ambient temperature.',
+        description: 'For refining products to be bottled as edible oils, winterization is required to achieve the necessary cold stability. Winterization prevents crystallization & clouding of the waxes contained in the oil at ambient temperature.',
         sections: [
             {
                 heading: 'Winterization Process',
                 content: [
-                    'For refining products to be bottled as edible oils, winterization is required to achieve the necessary cold stability.',
-                    'The process involves cooling the oil by heat exchange with cold water to temperatures between 5-10°C.',
-                    'A maturation period of up to 24 hours ensures proper crystal growth for effective separation.'
+                    'For refining products to be bottled as edible oils (e.g. sunflower seed oil or corn oil) winterization is required to achieve the necessary cold stability.',
+                    'Winterization prevents crystallization & clouding of the waxes contained in the oil at ambient temperature.',
+                    'In the winterization process the oil is cooled by heat exchange with cold water to a temperature between approx. 5 & 10 degree C. Crystals causing oil clouding are formed during a mature period of up to 24 hours & are subsequently separated.'
                 ]
             },
             {
                 heading: 'Crystal Separation',
                 content: [
-                    'Horizontal filtration systems are used for the separation of crystals.',
-                    'Continuous filtering aid addition ensures efficiency and consistency in wax removal.',
-                    'Advanced technology prevents clouding of oil even in cold climates.'
+                    'This is implemented by continuously adding filtering aids & filtration via horizontal filters.',
+                    'The process achieves clear, cold-stable oil suitable for bottling and long-term storage.'
                 ]
             }
         ],
@@ -431,31 +476,32 @@ const servicesData: Record<string, {
         ],
         applications: ['Sunflower Oil', 'Corn Oil', 'Rice Bran Oil', 'Cottonseed Oil'],
         specs: [
-            { label: 'Cooling Temp', value: '5-10°C' },
+            { label: 'Cooling Temp', value: '5-10Â°C' },
             { label: 'Maturation Time', value: '12-24 hours' },
             { label: 'Filter Type', value: 'Horizontal Leaf' },
         ],
-        process: ['Cooling', 'Crystallization', 'Maturation', 'Filtration', 'Wax Discharge']
+        process: []
     },
     'hydrogenation': {
         title: 'Hydrogenation Plant',
         subtitle: 'Fat Modification Technology',
-        description: 'Advanced hydrogenation plants for the conversion of liquid vegetable oils into semi-solid or solid fats through the addition of hydrogen, suitable for vanaspati and shortening production.',
+        description: 'Hydrogenation is a chemical process used to convert liquid vegetable oils into solid or semi-solid fats. Through the process, oils are turned to solids by saturating carbon bonds with hydrogen using a metal catalyst.',
         sections: [
             {
                 heading: 'Hydrogenation Process',
                 content: [
-                    'Conversion of liquid vegetable oils into semi-solid or solid fats by adding hydrogen under pressure and temperature in the presence of a catalyst.',
-                    'Precise control of the degree of saturation allows for the production of products with specific melting points and textures.',
-                    'The process is essential for producing stable frying oils and base fats for margarine and bakery shortening.'
+                    'Vegetable oils are made from cottonseed, soybean, and rapeseed (canola oil); through the process of hydrogenation, oils are turned to solids. This is how margarine, shortening, and cake frosting are made, maintaining their solid state at room temperature.',
+                    'Hydrogenating vegetable oil is done by raising a blend of vegetable oil and a metal catalyst, typically nickel, in near-vacuum to very high temperatures, and introducing hydrogen. This causes the carbon atoms of the oil to break double-bonds with other carbons.',
+                    'The degree of hydrogenation is controlled by restricting the amount of hydrogen, reaction temperature and time, and the catalyst. Full hydrogenation results in conversion of all unsaturated fats into saturated fats.'
                 ]
             },
             {
-                heading: 'System Features',
+                heading: 'Applications & Benefits',
                 content: [
-                    'Available in both batch and continuous options depending on production requirements.',
-                    'Features sophisticated catalyst handling and recovery systems to minimize waste and cost.',
-                    'Integrated safety interlock systems ensure safe operation under pressure.'
+                    '<strong>Texture Modification:</strong> Transforms liquid oils (unsaturated) into solid or semi-solid fats (saturated), creating solid shortenings or spreads that behave similarly to butter.',
+                    '<strong>Extended Shelf Life:</strong> The process makes the oil more resistant to spoiling, allowing food products to remain fresh for longer.',
+                    '<strong>High-Temperature Stability:</strong> Hydrogenated oils have a higher melting point, making them ideal for frying and cooking at high temperatures without breaking down.',
+                    '<strong>Culinary Texture:</strong> Provides a creamy, solid texture for baking cakes, cookies, and pastries.'
                 ]
             }
         ],
@@ -476,7 +522,7 @@ const servicesData: Record<string, {
             { label: 'Catalyst', value: 'Nickel based' },
             { label: 'Control', value: 'PLC Based' },
         ],
-        process: ['Oil Preparation', 'Catalyst Addition', 'Hydrogenation', 'Filtration', 'Cooling']
+        process: []
     },
     'interesterification': {
         title: 'Interesterification Plant',
@@ -618,7 +664,11 @@ export default async function ServiceDetailPage({ params }: Props) {
                                     </h2>
                                     <div className="space-y-4 pl-13">
                                         {section.content.map((para, i) => (
-                                            <p key={i} className="text-gray-600 leading-relaxed">{para}</p>
+                                            <p
+                                                key={i}
+                                                className="text-gray-600 leading-relaxed [&_strong]:font-bold [&_strong]:text-gray-900"
+                                                dangerouslySetInnerHTML={{ __html: para }}
+                                            />
                                         ))}
                                     </div>
                                 </div>
@@ -666,19 +716,7 @@ export default async function ServiceDetailPage({ params }: Props) {
                             </div>
 
                             {/* Specs */}
-                            {service.specs && (
-                                <div className="bg-gray-50 rounded-2xl p-6">
-                                    <h3 className="text-lg font-bold text-gray-900 mb-4">Technical Specifications</h3>
-                                    <div className="space-y-3">
-                                        {service.specs.map((spec, i) => (
-                                            <div key={i} className="flex justify-between py-3 border-b border-gray-200 last:border-0">
-                                                <span className="text-gray-600">{spec.label}</span>
-                                                <span className="font-semibold text-gray-900">{spec.value}</span>
-                                            </div>
-                                        ))}
-                                    </div>
-                                </div>
-                            )}
+
 
                             {/* Applications */}
                             <div className="bg-gray-50 rounded-2xl p-6">
@@ -694,19 +732,19 @@ export default async function ServiceDetailPage({ params }: Props) {
 
                             {/* CTA Card */}
                             <div className="bg-gradient-to-br from-sky-500 to-sky-600 rounded-2xl p-8 text-white">
-                                <h3 className="text-xl font-bold mb-4">Get a Quote</h3>
+                                <h3 className="text-xl font-bold mb-4">Send Your Enquiry</h3>
                                 <p className="text-sky-100 mb-6 leading-relaxed">
-                                    Interested in this solution? Contact our engineering team for a customized proposal.
+                                    Interested in this solution? Send your enquiry to our engineering team for a customized proposal.
                                 </p>
                                 <Link href="/contact" className="block w-full text-center py-4 bg-white text-sky-600 font-semibold rounded-xl hover:bg-gray-100 transition-colors">
-                                    Request Quote
+                                    Send Your Enquiry
                                 </Link>
                                 <div className="mt-6 pt-6 border-t border-sky-400 space-y-3">
-                                    <a href="tel:+919876543210" className="flex items-center gap-3 text-sky-100 hover:text-white transition-colors">
+                                    <a href="tel:+912226465920" className="flex items-center gap-3 text-sky-100 hover:text-white transition-colors">
                                         <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                                             <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                                         </svg>
-                                        +91 98765 43210
+                                        (022) 2646 5920
                                     </a>
                                     <a href="mailto:info@sparktechprocesses.com" className="flex items-center gap-3 text-sky-100 hover:text-white transition-colors">
                                         <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
@@ -750,3 +788,5 @@ export default async function ServiceDetailPage({ params }: Props) {
         </>
     );
 }
+
+

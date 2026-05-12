@@ -1,16 +1,13 @@
 import Link from 'next/link';
+import { siteContact } from '@/lib/site';
 
 export default function Footer() {
     return (
         <footer className="bg-gray-950 text-white relative overflow-hidden">
-            {/* Background Accent */}
             <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
 
-            {/* Main Footer */}
             <div className="max-w-7xl mx-auto px-6 lg:px-8 py-20 lg:py-24">
                 <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16">
-
-                    {/* Company */}
                     <div className="space-y-8">
                         <Link href="/" className="flex items-center gap-3 group">
                             <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-sky-500 to-lime-500 flex items-center justify-center shadow-lg shadow-sky-500/20 transition-transform duration-500 group-hover:scale-110">
@@ -38,7 +35,6 @@ export default function Footer() {
                         </div>
                     </div>
 
-                    {/* Technologies */}
                     <div>
                         <h4 className="text-white font-bold mb-8 font-outfit uppercase tracking-widest text-xs">Technologies</h4>
                         <ul className="space-y-4">
@@ -53,7 +49,6 @@ export default function Footer() {
                         </ul>
                     </div>
 
-                    {/* Capabilities */}
                     <div>
                         <h4 className="text-white font-bold mb-8 font-outfit uppercase tracking-widest text-xs">Capabilities</h4>
                         <ul className="space-y-4">
@@ -68,7 +63,6 @@ export default function Footer() {
                         </ul>
                     </div>
 
-                    {/* Contact */}
                     <div>
                         <h4 className="text-white font-bold mb-8 font-outfit uppercase tracking-widest text-xs">Get In Touch</h4>
                         <ul className="space-y-5">
@@ -78,7 +72,11 @@ export default function Footer() {
                                         <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
                                     </svg>
                                 </div>
-                                <span className="text-gray-400 text-sm leading-relaxed font-light">Santacruz West, Mumbai, <br />Maharashtra, India</span>
+                                <span className="text-gray-400 text-sm leading-relaxed font-light">
+                                    {siteContact.addressTitle}, <br />
+                                    {siteContact.addressLines[0]} <br />
+                                    {siteContact.addressLines[1]}
+                                </span>
                             </li>
                             <li className="flex items-center gap-4 group">
                                 <div className="p-2.5 rounded-lg bg-white/5 border border-white/10 group-hover:bg-sky-500/10 group-hover:border-sky-500/20 transition-all">
@@ -86,7 +84,7 @@ export default function Footer() {
                                         <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                                     </svg>
                                 </div>
-                                <a href="tel:+919876543210" className="text-gray-400 hover:text-white transition-colors text-sm font-light">+91 98765 43210</a>
+                                <a href={siteContact.officePhoneHref} className="text-gray-400 hover:text-white transition-colors text-sm font-light">{siteContact.officePhoneDisplay}</a>
                             </li>
                             <li className="flex items-center gap-4 group">
                                 <div className="p-2.5 rounded-lg bg-white/5 border border-white/10 group-hover:bg-sky-500/10 group-hover:border-sky-500/20 transition-all">
@@ -95,7 +93,7 @@ export default function Footer() {
                                         <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
                                     </svg>
                                 </div>
-                                <a href="mailto:info@sparktechprocesses.com" className="text-gray-400 hover:text-white transition-colors text-sm font-light truncate">info@sparktechprocesses.com</a>
+                                <a href={siteContact.emailHref} className="text-gray-400 hover:text-white transition-colors text-sm font-light truncate">{siteContact.emailDisplay}</a>
                             </li>
                         </ul>
 
@@ -103,7 +101,7 @@ export default function Footer() {
                             href="/contact"
                             className="inline-flex items-center gap-3 mt-10 px-8 py-4 bg-white/5 text-white font-bold rounded-full border border-white/10 hover:bg-sky-500 hover:border-sky-400 transition-all duration-500 shadow-xl hover:shadow-sky-500/20 active:scale-95 group overflow-hidden"
                         >
-                            <span className="relative z-10 text-[10px] tracking-[0.2em]">SEND INQUIRY</span>
+                            <span className="relative z-10 text-[10px] tracking-[0.2em]">SEND YOUR ENQUIRY</span>
                             <svg className="w-4 h-4 relative z-10 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                             </svg>
@@ -112,7 +110,6 @@ export default function Footer() {
                 </div>
             </div>
 
-            {/* Bottom Bar */}
             <div className="border-t border-white/5 bg-gray-950/50 backdrop-blur-sm">
                 <div className="max-w-7xl mx-auto px-6 lg:px-8 py-8">
                     <div className="flex flex-col md:flex-row justify-between items-center gap-6">
@@ -131,3 +128,4 @@ export default function Footer() {
         </footer>
     );
 }
+

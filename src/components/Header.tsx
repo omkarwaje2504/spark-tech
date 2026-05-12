@@ -4,6 +4,8 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
+import { siteContact } from '@/lib/site';
+import { isArchivedServiceSlug } from '@/lib/serviceVisibility';
 
 export default function Header() {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -23,16 +25,16 @@ export default function Header() {
     };
 
     const servicesList = [
-        { name: 'Solvent Extraction', href: '/services/solvent-extraction' },
-        { name: 'Oil Refinery', href: '/services/oil-refinery' },
-        { name: 'Fractionation', href: '/services/fractionation' },
-        { name: 'Deodorization', href: '/services/deodorization' },
-        { name: 'Bleaching Plant', href: '/services/bleaching' },
-        { name: 'De-Waxing / Winterization', href: '/services/dewaxing' },
-        { name: 'Lecithin Plant', href: '/services/lecithin' },
-        { name: 'Bakery Shortening & Margarine', href: '/services/bakery-shortening' },
-        { name: 'Hydrogenation', href: '/services/hydrogenation' },
-        { name: 'Interesterification', href: '/services/interesterification' },
+        { name: 'Solvent Extraction', href: '/services/solvent-extraction', slug: 'solvent-extraction' },
+        { name: 'Oil Refinery', href: '/services/oil-refinery', slug: 'oil-refinery' },
+        { name: 'Fractionation', href: '/services/fractionation', slug: 'fractionation' },
+        { name: 'Deodorization', href: '/services/deodorization', slug: 'deodorization' },
+        { name: 'Bleaching Plant', href: '/services/bleaching', slug: 'bleaching' },
+        { name: 'De-Waxing / Winterization', href: '/services/dewaxing', slug: 'dewaxing' },
+        { name: 'Lecithin Plant', href: '/services/lecithin', slug: 'lecithin' },
+        { name: 'Bakery Shortening & Margarine', href: '/services/bakery-shortening', slug: 'bakery-shortening' },
+        { name: 'Hydrogenation', href: '/services/hydrogenation', slug: 'hydrogenation' },
+        { name: 'Interesterification', href: '/services/interesterification', slug: 'interesterification' },
     ];
 
     const navLinks = [
@@ -45,14 +47,10 @@ export default function Header() {
 
     return (
         <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled ? 'glass shadow-lg py-0' : 'bg-white/80 backdrop-blur-md py-2'}`}>
-
-            {/* Accent Line */}
             <div className={`h-[2px] bg-gradient-to-r from-sky-500 via-lime-500 to-sky-500 transition-all duration-1000 ${isScrolled ? 'opacity-100' : 'opacity-50'}`} />
 
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
                 <div className={`flex justify-between items-center transition-all duration-500 ${isScrolled ? 'h-16' : 'h-20'}`}>
-
-                    {/* Logo */}
                     <Link href="/" className="flex items-center gap-3 group">
                         <div className="relative overflow-hidden">
                             <Image
@@ -66,7 +64,6 @@ export default function Header() {
                         </div>
                     </Link>
 
-                    {/* Desktop Nav */}
                     <nav className="hidden lg:flex items-center gap-8">
                         {navLinks.slice(0, 2).map((link) => (
                             <Link
@@ -78,7 +75,6 @@ export default function Header() {
                             </Link>
                         ))}
 
-                        {/* Services Dropdown */}
                         <div
                             className="relative"
                             onMouseEnter={() => setIsServicesOpen(true)}
@@ -95,7 +91,9 @@ export default function Header() {
                                 <div className="absolute top-full left-0 pt-2 w-72 animate-scale-in">
                                     <div className="glass shadow-2xl rounded-xl border border-white/20 py-3 overflow-hidden">
                                         <div className="grid grid-cols-1 gap-1">
-                                            {servicesList.map((service) => (
+                                            {servicesList
+                                                .filter((service) => !isArchivedServiceSlug(service.slug))
+                                                .map((service) => (
                                                 <Link
                                                     key={service.name}
                                                     href={service.href}
@@ -108,7 +106,7 @@ export default function Header() {
                                         <div className="border-t border-gray-100 mt-2 pt-2 px-2">
                                             <Link href="/services" className="flex items-center justify-between px-3 py-2.5 text-sm font-bold text-sky-600 hover:bg-sky-50 rounded-lg transition-colors group">
                                                 View All Services
-                                                <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
+                                                <span className="transition-transform duration-300 group-hover:translate-x-1">-&gt;</span>
                                             </Link>
                                         </div>
                                     </div>
@@ -127,25 +125,23 @@ export default function Header() {
                         ))}
                     </nav>
 
-                    {/* CTA */}
                     <div className="hidden lg:flex items-center gap-8">
-                        <a href="tel:+919876543210" className="text-sm font-medium text-gray-600 hover:text-sky-600 flex items-center gap-2.5 transition-colors group">
+                        <a href={siteContact.officePhoneHref} className="text-sm font-medium text-gray-600 hover:text-sky-600 flex items-center gap-2.5 transition-colors group">
                             <div className="w-8 h-8 rounded-full bg-sky-50 flex items-center justify-center group-hover:bg-sky-100 transition-colors">
                                 <svg className="w-4 h-4 text-sky-600" fill="currentColor" viewBox="0 0 20 20">
                                     <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                                 </svg>
                             </div>
-                            <span className="tracking-tight">+91 98765 43210</span>
+                            <span className="tracking-tight">{siteContact.officePhoneDisplay}</span>
                         </a>
                         <Link
                             href="/contact"
                             className="relative px-7 py-3 bg-gray-900 text-white text-sm font-bold tracking-wider rounded-full hover:bg-sky-600 transition-all duration-300 hover:shadow-lg hover:shadow-sky-500/20 shine-effect group overflow-hidden"
                         >
-                            <span className="relative z-10">GET QUOTE</span>
+                            <span className="relative z-10">SEND YOUR ENQUIRY</span>
                         </Link>
                     </div>
 
-                    {/* Mobile Menu */}
                     <button className="lg:hidden p-2 rounded-lg hover:bg-gray-50 transition-colors" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
                         <div className="w-6 h-5 relative flex flex-col justify-between">
                             <span className={`w-full h-0.5 bg-gray-900 rounded-full transition-all duration-300 ${isMobileMenuOpen ? 'rotate-45 translate-y-2' : ''}`} />
@@ -155,7 +151,6 @@ export default function Header() {
                     </button>
                 </div>
 
-                {/* Mobile Nav */}
                 <div className={`lg:hidden overflow-hidden transition-all duration-500 ease-in-out ${isMobileMenuOpen ? 'max-h-screen opacity-100 py-6' : 'max-h-0 opacity-0'}`}>
                     <nav className="flex flex-col gap-2">
                         {[...navLinks.slice(0, 2), { name: 'Services', href: '/services' }, ...navLinks.slice(2)].map((link) => (
@@ -169,7 +164,7 @@ export default function Header() {
                             </Link>
                         ))}
                         <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)} className="mt-4 mx-4 px-6 py-4 bg-gray-900 text-white text-center font-bold rounded-xl shadow-lg active:scale-95 transition-all">
-                            GET QUOTE
+                            SEND YOUR ENQUIRY
                         </Link>
                     </nav>
                 </div>
@@ -177,3 +172,5 @@ export default function Header() {
         </header>
     );
 }
+
+
