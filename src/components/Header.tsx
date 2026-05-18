@@ -46,7 +46,7 @@ export default function Header() {
     ];
 
     return (
-        <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled ? 'glass shadow-lg py-0' : 'bg-white/80 backdrop-blur-md py-2'}`}>
+        <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled ? 'bg-white shadow-lg py-0' : 'bg-white shadow-sm py-2'}`}>
             <div className={`h-[2px] bg-gradient-to-r from-sky-500 via-lime-500 to-sky-500 transition-all duration-1000 ${isScrolled ? 'opacity-100' : 'opacity-50'}`} />
 
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -89,7 +89,7 @@ export default function Header() {
 
                             {isServicesOpen && (
                                 <div className="absolute top-full left-0 pt-2 w-72 animate-scale-in">
-                                    <div className="glass shadow-2xl rounded-xl border border-white/20 py-3 overflow-hidden">
+                                    <div className="bg-white shadow-2xl rounded-xl border border-gray-100 py-3 overflow-hidden">
                                         <div className="grid grid-cols-1 gap-1">
                                             {servicesList
                                                 .filter((service) => !isArchivedServiceSlug(service.slug))

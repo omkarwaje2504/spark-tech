@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import StickyCTA from '@/components/StickyCTA';
 import PageBanner from '@/components/PageBanner';
 import { isArchivedServiceSlug } from '@/lib/serviceVisibility';
 
@@ -188,6 +189,7 @@ export default function ServicesPage() {
     return (
         <>
             <Header />
+            <StickyCTA />
 
             <PageBanner
                 title="Our Services"
