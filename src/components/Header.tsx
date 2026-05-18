@@ -34,7 +34,6 @@ export default function Header() {
         { name: 'Lecithin Plant', href: '/services/lecithin', slug: 'lecithin' },
         { name: 'Bakery Shortening & Margarine', href: '/services/bakery-shortening', slug: 'bakery-shortening' },
         { name: 'Hydrogenation', href: '/services/hydrogenation', slug: 'hydrogenation' },
-        { name: 'Interesterification', href: '/services/interesterification', slug: 'interesterification' },
     ];
 
     const navLinks = [

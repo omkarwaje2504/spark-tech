@@ -166,23 +166,6 @@ const services = [
         ],
         applications: ['Vanaspati', 'Shortening', 'Industrial Fats'],
     },
-    {
-        id: 'interesterification',
-        title: 'Interesterification Plant',
-        shortDesc: 'Advanced fat modification process for producing zero-trans fats.',
-        fullDesc: 'Interesterification is an advanced process used to modify the physical properties of oils and fats by rearranging the fatty acids within the triglyceride molecule.',
-        image: '/images/Services/Services Thumnail Images/Fractionation.jpg',
-        icon: 'ðŸ”„',
-        features: [
-            'Zero-trans fat production',
-            'Chemical & enzymatic options',
-            'Flexible feedstock handling',
-            'Precise reaction control',
-            'Advanced separation technology',
-            'Nutritional profile optimization',
-        ],
-        applications: ['Trans-free Margarine', 'Healthy Shortenings', 'Confectionery Fats'],
-    },
 ];
 
 export default function ServicesPage() {
