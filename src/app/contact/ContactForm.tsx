@@ -19,6 +19,7 @@ export default function ContactForm() {
         const match = document.cookie.match(/sparktech_service_interest=([^;]+)/);
         if (match) {
             const serviceName = decodeURIComponent(match[1]);
+            // eslint-disable-next-line react-hooks/set-state-in-effect
             setFormData((prev) => ({ ...prev, service: prev.service || serviceName }));
         }
     }, []);

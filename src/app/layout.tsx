@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Outfit } from "next/font/google";
 import "./globals.css";
+import WhatsAppFloat from "@/components/WhatsAppFloat";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -39,6 +40,7 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} ${outfit.variable} scroll-smooth`}>
       <body className="antialiased min-h-screen flex flex-col">
         {children}
+        <WhatsAppFloat />
       </body>
     </html>
   );

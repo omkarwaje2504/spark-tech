@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import PageBanner from '@/components/PageBanner';
+import StickyCTA from '@/components/StickyCTA';
 
 export const metadata: Metadata = {
     title: 'Technologies | Sparktech Processes LLP',
@@ -101,6 +102,7 @@ export default function TechnologiesPage() {
     return (
         <>
             <Header />
+            <StickyCTA />
 
             <PageBanner
                 title="Technologies"
@@ -113,7 +115,6 @@ export default function TechnologiesPage() {
             <section className="py-20 bg-white">
                 <div className="container mx-auto px-4">
                     <div className="text-center mb-16">
-                        <p className="text-[#3CAAE5] font-semibold tracking-wider uppercase mb-2">Our Expertise</p>
                         <h2 className="text-4xl font-bold text-gray-900 mb-4">
                             Advanced <span className="bg-gradient-to-r from-[#3CAAE5] to-[#99C71E] bg-clip-text text-transparent">Processing Technologies</span>
                         </h2>

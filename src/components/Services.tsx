@@ -35,15 +35,14 @@ const additionalServices = [
 
 export default function Services() {
   return (
-    <section className="bg-gray-950 py-24 text-white lg:py-28">
+    <section className="bg-gray-950 py-12 text-white lg:py-16">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-3xl">
-            <p className="text-sm font-semibold uppercase tracking-[0.24em] text-sky-300">Core solutions</p>
-            <h2 className="mt-4 text-4xl font-bold tracking-tight text-white md:text-5xl">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white">
               Lead with the three services buyers search for first
             </h2>
-            <p className="mt-6 text-lg leading-8 text-gray-300">
+            <p className="mt-6 text-base sm:text-lg leading-relaxed text-gray-300">
               Instead of presenting every service with the same weight, the homepage now highlights the
               core systems most buyers evaluate first and keeps the rest accessible without overload.
             </p>
@@ -59,9 +58,8 @@ export default function Services() {
         <div className="mt-12 grid gap-6 lg:grid-cols-3">
           {featuredServices.map((service) => (
             <Link key={service.title} href={service.href} className="group rounded-[2rem] border border-white/10 bg-white/[0.04] p-7 transition hover:-translate-y-1 hover:border-sky-400/50 hover:bg-white/[0.06]">
-              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-sky-300">Featured service</p>
-              <h3 className="mt-5 text-2xl font-semibold text-white">{service.title}</h3>
-              <p className="mt-4 text-sm leading-7 text-gray-300">{service.description}</p>
+              <h3 className="text-xl lg:text-2xl font-semibold text-white">{service.title}</h3>
+              <p className="mt-3 text-sm leading-relaxed text-gray-300">{service.description}</p>
               <div className="mt-6 rounded-2xl border border-white/8 bg-black/20 px-4 py-4 text-sm leading-6 text-gray-200">
                 {service.useCase}
               </div>
@@ -75,10 +73,10 @@ export default function Services() {
           ))}
         </div>
 
-        <div className="mt-10 grid gap-6 rounded-[2rem] border border-white/10 bg-white/[0.03] p-8 lg:grid-cols-[minmax(0,1fr)_320px]">
+        <div className="mt-8 rounded-[2rem] border border-white/10 bg-white/[0.03] p-8">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-sky-300">Additional capabilities</p>
-            <div className="mt-5 grid gap-3 md:grid-cols-2">
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-sky-300">Additional capabilities</p>
+            <div className="mt-5 grid gap-3 md:grid-cols-2 lg:grid-cols-3">
               {additionalServices.filter((service) => !isArchivedServiceSlug(service.slug)).map((service, index) => (
                 <Link key={service.name} href={service.href} className="flex items-center justify-between rounded-2xl border border-white/8 bg-black/10 px-4 py-4 text-sm text-gray-200 transition hover:border-sky-400/40 hover:text-white">
                   <span>{service.name}</span>
@@ -86,15 +84,6 @@ export default function Services() {
                 </Link>
               ))}
             </div>
-          </div>
-
-          <div className="rounded-[1.75rem] border border-sky-400/20 bg-sky-500/10 p-6">
-            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-sky-200">Message to buyers</p>
-            <h3 className="mt-4 text-2xl font-semibold text-white">Need a complete line, not a single machine?</h3>
-            <p className="mt-4 text-sm leading-7 text-gray-200">
-              Sparktech can scope upstream, refining, and value-added processing under one engineering plan,
-              so the plant is designed around a clear operating objective instead of disconnected equipment choices.
-            </p>
           </div>
         </div>
       </div>

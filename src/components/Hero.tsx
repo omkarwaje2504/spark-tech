@@ -1,15 +1,9 @@
 import Link from 'next/link';
-import { siteContact, siteProof } from '@/lib/site';
-
-const painPoints = [
-  'Oil Extraction Plants',
-  'Refinery Setup & Upgrades',
-  'Food Processing Units',
-];
+import { siteContact } from '@/lib/site';
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-gray-950 h-screen flex items-center text-white">
+    <section className="relative overflow-hidden bg-gray-950 min-h-screen py-32 lg:py-40 flex items-center text-white">
       <div className="absolute inset-0 bg-gray-900">
         <video 
           autoPlay 
@@ -28,13 +22,6 @@ export default function Hero() {
       <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
         <div className="grid gap-12 lg:grid-cols-[minmax(0,1.3fr)_minmax(300px,0.7fr)] lg:items-center">
           <div>
-            <div className="mb-6 inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/8 px-4 py-2 backdrop-blur-sm">
-              <span className="h-2 w-2 rounded-full bg-lime-400" />
-              <span className="text-[10px] font-semibold uppercase tracking-[0.28em] text-sky-100">
-                Concept to Engineering
-              </span>
-            </div>
-
             <h1 className="max-w-4xl text-4xl font-bold leading-tight tracking-tight md:text-5xl lg:text-6xl">
               Processing Oil Fats &amp; Derivatives
               <span className="block bg-gradient-to-r from-sky-300 via-white to-lime-300 bg-clip-text text-transparent">
@@ -42,7 +29,7 @@ export default function Hero() {
               </span>
             </h1>
 
-            <p className="mt-6 max-w-2xl text-base leading-7 text-gray-200 md:text-lg">
+            <p className="mt-6 max-w-2xl text-base sm:text-lg leading-relaxed text-gray-200">
               Specialized in supply and initialization of oil extraction, refinery
               &amp; food processing units — from concept to commissioning.
             </p>

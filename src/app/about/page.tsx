@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import PageBanner from '@/components/PageBanner';
+import StickyCTA from '@/components/StickyCTA';
 
 const coreValues = [
     { icon: '/images/About Us/Our Core Values Icon/Quality.png', title: 'Quality', desc: 'Uncompromising quality in every product we deliver' },
@@ -32,6 +33,7 @@ export default function AboutPage() {
     return (
         <>
             <Header />
+            <StickyCTA />
 
             <PageBanner
                 title="About Us"
@@ -76,7 +78,6 @@ export default function AboutPage() {
 
                         {/* Content */}
                         <div className="lg:pl-8">
-                            <p className="text-[#3CAAE5] font-semibold tracking-wider uppercase mb-2">Who We Are</p>
                             <h2 className="text-4xl font-bold text-gray-900 mb-6">
                                 A Perfect <span className="bg-gradient-to-r from-[#3CAAE5] to-[#99C71E] bg-clip-text text-transparent">EPC Project Partner</span>
                             </h2>
@@ -135,7 +136,6 @@ export default function AboutPage() {
                 </div>
                 <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
                     <div className="text-center mb-20">
-                        <p className="text-lime-400 font-bold tracking-[0.3em] uppercase text-[10px] mb-4">WHAT DRIVES US</p>
                         <h2 className="text-4xl md:text-5xl font-bold font-outfit">Our Core Values</h2>
                     </div>
 

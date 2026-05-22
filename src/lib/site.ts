@@ -1,4 +1,4 @@
-﻿export const siteContact = {
+export const siteContact = {
   officePhoneDisplay: '(022) 2646 5920',
   officePhoneHref: 'tel:+912226465920',
   emailDisplay: 'info@sparktechprocesses.com',
@@ -8,6 +8,8 @@
     'Sir, Phiroze Shah Mehta Road,',
     'Near Santacruz Railway Station, Mumbai',
   ],
+  whatsappNumber: '+919820513136',
+  whatsappMessage: 'Hello Sparktech Processes, I am interested in your project engineering solutions and would like to discuss our requirements.',
 };
 
 export const siteProof = {
