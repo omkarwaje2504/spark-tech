@@ -2,7 +2,6 @@ import { Metadata } from 'next';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import PageBanner from '@/components/PageBanner';
-import StickyCTA from '@/components/StickyCTA';
 import GalleryGrid from './GalleryGrid';
 
 export const metadata: Metadata = {
@@ -14,7 +13,7 @@ export default function GalleryPage() {
     return (
         <>
             <Header />
-            <StickyCTA />
+      
 
             <PageBanner
                 title="Our Projects"

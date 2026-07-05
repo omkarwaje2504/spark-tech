@@ -3,8 +3,6 @@ import Image from 'next/image';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import PageBanner from '@/components/PageBanner';
-import StickyCTA from '@/components/StickyCTA';
-
 const coreValues = [
     { icon: '/images/About Us/Our Core Values Icon/Quality.png', title: 'Quality', desc: 'Uncompromising quality in every product we deliver' },
     { icon: '/images/About Us/Our Core Values Icon/Innovation.png', title: 'Innovation', desc: 'Continuous improvement and technological advancement' },
@@ -33,7 +31,7 @@ export default function AboutPage() {
     return (
         <>
             <Header />
-            <StickyCTA />
+       
 
             <PageBanner
                 title="About Us"

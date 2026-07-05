@@ -7,7 +7,7 @@ export default function WhatsAppFloat() {
   const whatsappUrl = `https://wa.me/${siteContact.whatsappNumber.replace(/[^0-9]/g, '')}?text=${encodedMessage}`;
 
   return (
-    <div className="fixed bottom-6 right-6 z-50 flex items-center gap-3 md:bottom-28 group">
+    <div className="fixed bottom-10 right-6 z-50 flex items-center gap-3 group">
       {/* Tooltip */}
       <div className="pointer-events-none hidden md:block opacity-0 translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 bg-gray-900 text-white text-xs font-semibold px-4 py-2.5 rounded-xl shadow-[0_10px_30px_rgba(15,23,42,0.12)] border border-white/10 select-none whitespace-nowrap">
         Chat with our experts

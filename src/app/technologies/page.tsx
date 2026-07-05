@@ -4,7 +4,6 @@ import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import PageBanner from '@/components/PageBanner';
-import StickyCTA from '@/components/StickyCTA';
 
 export const metadata: Metadata = {
     title: 'Technologies | Sparktech Processes LLP',
@@ -102,7 +101,7 @@ export default function TechnologiesPage() {
     return (
         <>
             <Header />
-            <StickyCTA />
+          
 
             <PageBanner
                 title="Technologies"

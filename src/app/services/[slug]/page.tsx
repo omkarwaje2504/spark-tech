@@ -4,7 +4,6 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import StickyCTA from '@/components/StickyCTA';
 import ServiceCookieTracker from '@/components/ServiceCookieTracker';
 
 // Complete service data from client content
@@ -598,7 +597,7 @@ export default async function ServiceDetailPage({ params }: Props) {
     return (
         <>
             <Header />
-            <StickyCTA />
+          
             <ServiceCookieTracker slug={slug} />
 
             {/* Hero Banner */}

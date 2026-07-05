@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter, Outfit } from "next/font/google";
 import "./globals.css";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
+import StickyCTA from "@/components/StickyCTA";
+import Header from "@/components/Header";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -17,16 +19,20 @@ const outfit = Outfit({
 
 export const metadata: Metadata = {
   title: "Sparktech Processes LLP | Edible Oil Extraction & Refinery Equipment",
-  description: "Leading manufacturer and exporter of industrial machinery for edible oil extraction, refinery plants, and food processing equipment. A Perfect EPC Project Partner since 2007.",
-  keywords: "oil extraction plant, edible oil refinery, solvent extraction, vegetable oil, oil processing equipment, Mumbai, India",
+  description:
+    "Leading manufacturer and exporter of industrial machinery for edible oil extraction, refinery plants, and food processing equipment. A Perfect EPC Project Partner since 2007.",
+  keywords:
+    "oil extraction plant, edible oil refinery, solvent extraction, vegetable oil, oil processing equipment, Mumbai, India",
   authors: [{ name: "Sparktech Processes LLP" }],
   icons: {
     icon: "/images/Sparktech logo.png",
     apple: "/images/Sparktech logo.png",
   },
   openGraph: {
-    title: "Sparktech Processes LLP | Edible Oil Extraction & Refinery Equipment",
-    description: "Leading manufacturer and exporter of industrial machinery for edible oil extraction and refinery plants.",
+    title:
+      "Sparktech Processes LLP | Edible Oil Extraction & Refinery Equipment",
+    description:
+      "Leading manufacturer and exporter of industrial machinery for edible oil extraction and refinery plants.",
     type: "website",
   },
 };
@@ -37,10 +43,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${outfit.variable} scroll-smooth`}>
+    <html
+      lang="en"
+      className={`${inter.variable} ${outfit.variable} scroll-smooth`}
+    >
       <body className="antialiased min-h-screen flex flex-col">
+          <Header />
         {children}
-        <WhatsAppFloat />
+        <div>
+          <WhatsAppFloat />
+          {/* <StickyCTA /> */}
+        </div>
       </body>
     </html>
   );
