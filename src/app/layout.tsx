@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import { Inter, Outfit } from "next/font/google";
 import "./globals.css";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
-import StickyCTA from "@/components/StickyCTA";
+// import StickyCTA from "@/components/StickyCTA";
 import Header from "@/components/Header";
+import Footer from "../components/Footer";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -47,13 +48,17 @@ export default function RootLayout({
       lang="en"
       className={`${inter.variable} ${outfit.variable} scroll-smooth`}
     >
+      <head>
+        <meta name="apple-mobile-web-app-title" content="SparkTech" />
+      </head>
       <body className="antialiased min-h-screen flex flex-col">
-          <Header />
+        <Header />
         {children}
         <div>
           <WhatsAppFloat />
           {/* <StickyCTA /> */}
         </div>
+        <Footer />
       </body>
     </html>
   );

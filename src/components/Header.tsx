@@ -6,6 +6,13 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { siteContact } from "@/lib/site";
 import { isArchivedServiceSlug } from "@/lib/serviceVisibility";
+import { FiPhone, FiMail } from "react-icons/fi";
+import {
+  FaLinkedinIn,
+  FaFacebookF,
+  FaTwitter,
+  FaInstagram,
+} from "react-icons/fa";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -91,6 +98,29 @@ export default function Header() {
     { name: "Contact", href: "/contact" },
   ];
 
+  const SOCIAL_LINKS = [
+    {
+      name: "LinkedIn",
+      href: "https://linkedin.com/company/sparktech",
+      icon: FaLinkedinIn,
+    },
+    {
+      name: "Facebook",
+      href: "https://facebook.com/sparktech",
+      icon: FaFacebookF,
+    },
+    {
+      name: "Twitter",
+      href: "https://twitter.com/sparktech",
+      icon: FaTwitter,
+    },
+    {
+      name: "Instagram",
+      href: "https://instagram.com/sparktech",
+      icon: FaInstagram,
+    },
+  ] as const;
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
@@ -99,6 +129,44 @@ export default function Header() {
           : "bg-white shadow-sm"
       }`}
     >
+      <div className="w-full bg-slate-200 ">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex w-full justify-end items-center gap-4">
+          <div className="flex justify-end items-center py-1 ">
+            <FiPhone className="text-slate-700" />
+            <span className="text-slate-700 ml-2 text-sm">
+              {siteContact.officePhoneDisplay}
+            </span>
+          </div>
+          <div className="h-4 w-0.5 bg-slate-700" />
+          <div className="flex justify-end items-center py-1 ">
+            <FiMail className="text-slate-700" />
+            <span className="text-slate-700  ml-2 text-sm">
+              amitw@sparktech.biz / sparktech@sparktech.biz
+            </span>
+          </div>
+           <div className="h-4 w-0.5 bg-slate-700" />
+          <div>
+            <div className="flex items-center gap-4">
+
+              {SOCIAL_LINKS.map((link) => {
+                const IconComponent = link.icon;
+                return (
+                  <a
+                    key={link.name}
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-600 hover:text-sky-600 transition-colors"
+                    aria-label={link.name}
+                  >
+                    <IconComponent className="h-4 w-4" />
+                  </a>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      </div>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div
           className={`flex justify-between items-center transition-all duration-500 py-1`}
@@ -224,7 +292,6 @@ export default function Header() {
               <span className="text-xs font-light">Send your Enquiry on</span>
               {siteContact.officePhoneDisplay}
             </span>
-
           </Link>
 
           {/* Mobile toggle */}
