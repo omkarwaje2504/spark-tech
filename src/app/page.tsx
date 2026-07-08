@@ -91,7 +91,6 @@ const SERVICES = [
     href: "/services/hydrogenation",
     image: "/images/services/thumbnails/hydrogenation.png",
   },
-  
   {
     id: "interesterification",
     title: "Interesterification Plant",
