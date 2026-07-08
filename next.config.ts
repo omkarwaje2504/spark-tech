@@ -5,6 +5,7 @@ const nextConfig: NextConfig = {
   allowedDevOrigins: ["172.16.92.110"],
   output: "export",
   distDir: "dist",
+  images: { unoptimized: true }
 };
 
 export default nextConfig;
