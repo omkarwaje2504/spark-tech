@@ -1,7 +1,9 @@
+"use client";
 import Link from "next/dist/client/link";
 import Image from "next/image";
 import { siteContact } from "@/lib/site";
 import { isArchivedServiceSlug } from "@/lib/serviceVisibility";
+import React, { useRef, useState, useEffect } from "react";
 
 // ============================================================================
 // EXTRACTED CONSTANTS - Cleaner separation of concerns
@@ -102,28 +104,33 @@ const SERVICES = [
   },
 ] as const;
 
-const PROCESS_STEPS = [
+const PROCESS_STEPS_DATA = [
   {
+    number: "01",
     title: "Consultation and plant brief",
     description:
       "Capture capacity targets, feedstock, product mix, utilities, and expansion goals before engineering starts.",
   },
   {
+    number: "02",
     title: "Process design and detailed engineering",
     description:
       "Translate business requirements into practical process flow, equipment scope, and execution-ready planning.",
   },
   {
+    number: "03",
     title: "Procurement and fabrication",
     description:
       "Align materials, equipment, and fabrication decisions with the approved process and delivery schedule.",
   },
   {
+    number: "04",
     title: "Installation and commissioning",
     description:
       "Coordinate site execution, startup, and performance stabilization with fewer handoff gaps.",
   },
   {
+    number: "05",
     title: "Training and post-handover support",
     description:
       "Equip operators and maintenance teams to run the plant with confidence after commissioning.",
@@ -554,7 +561,7 @@ const AboutSection = () => (
 
 const ServicesSection = () => {
   return (
-    <section id="services-section" className=" py-12 lg:py-16">
+    <section id="services-section" className=" py-10">
       <div className="mx-auto container px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="mb-12 flex flex-col items-start justify-between gap-6 lg:flex-row lg:items-end">
@@ -595,78 +602,135 @@ const ServicesSection = () => {
 // PROCESS SECTION
 // ============================================================================
 
-const ProcessSection = () => (
-  <section id="process-flow-section" className="bg-[#f6f8fb] py-12 lg:py-16">
-    <div className="mx-auto container px-4 sm:px-6 lg:px-8">
-      <div className="grid gap-10 lg:grid-cols-[minmax(0,1.1fr)_360px] lg:items-start">
-        {/* Steps */}
-        <div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-950">
-            Process clarity reduces buying friction
-          </h2>
-          <p className="mt-6 text-base sm:text-lg leading-relaxed text-gray-600">
-            B2B buyers want to understand how a project moves from discussion to
-            delivery. A visible process builds confidence before the first call.
-          </p>
+const ProcessSection = () => {
+  const [activeStep, setActiveStep] = useState(0);
+  const [progress, setProgress] = useState(0);
+  const [maxTranslate, setMaxTranslate] = useState(0);
+  const sectionRef = useRef<HTMLElement>(null);
+  const trackRef = useRef<HTMLDivElement>(null);
+  const viewportRef = useRef<HTMLDivElement>(null);
 
-          <div className="mt-8 space-y-4">
-            {PROCESS_STEPS.map((step, index) => (
-              <StepCard
-                key={step.title}
-                index={index}
-                title={step.title}
-                description={step.description}
-              />
-            ))}
-          </div>
-        </div>
+  // Measure how far the track must travel (responsive)
+  useEffect(() => {
+    const measure = () => {
+      const track = trackRef.current;
+      const viewport = viewportRef.current;
+      if (!track || !viewport) return;
+      const dist = track.scrollWidth - viewport.clientWidth;
+      setMaxTranslate(Math.max(0, dist));
+    };
+    measure();
+    window.addEventListener("resize", measure);
+    const ro = new ResizeObserver(measure);
+    if (trackRef.current) ro.observe(trackRef.current);
+    return () => {
+      window.removeEventListener("resize", measure);
+      ro.disconnect();
+    };
+  }, []);
 
-        {/* Sidebar with triggers and benefits */}
-        <div className="rounded-[2rem] border border-gray-200 bg-white p-6 shadow-sm lg:sticky lg:top-28">
-          <p className="text-xs font-bold uppercase tracking-[0.2em] text-sky-600">
-            Typical triggers
-          </p>
-          <div className="mt-4 space-y-3">
-            {PROCESS_TRIGGERS.map((trigger) => (
-              <div
-                key={trigger}
-                className="rounded-2xl border border-gray-200 bg-gray-50 px-4 py-3.5 text-sm font-medium text-gray-700"
-              >
-                {trigger}
-              </div>
-            ))}
-          </div>
+  // Drive horizontal scroll from vertical scroll progress
+  useEffect(() => {
+    const section = sectionRef.current;
+    if (!section) return;
+    let raf = 0;
+    const onScroll = () => {
+      cancelAnimationFrame(raf);
+      raf = requestAnimationFrame(() => {
+        const rect = section.getBoundingClientRect();
+        const total = section.offsetHeight - window.innerHeight;
+        let p = -rect.top / total;
+        p = Math.min(1, Math.max(0, p));
+        setProgress(p);
+        const step = Math.round(p * (PROCESS_STEPS_DATA.length - 1));
+        setActiveStep(Math.min(step, PROCESS_STEPS_DATA.length - 1));
+      });
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+    onScroll();
+    return () => {
+      cancelAnimationFrame(raf);
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+    };
+  }, []);
 
-          {/* Benefits box */}
-          <div className="mt-6 rounded-[1.75rem] bg-gray-950 px-5 py-5 text-white">
-            <p className="text-xs font-bold uppercase tracking-[0.2em] text-sky-300">
-              What buyers get
+  const translateX = -progress * maxTranslate;
+
+  return (
+    <section
+      ref={sectionRef}
+      id="process-section"
+      className="relative bg-linear-to-r to-[#B0D10E]/30 from-[#6EC0EF]/30"
+      style={{ height: `${PROCESS_STEPS_DATA.length * 20 + 100}vh` }}
+    >
+      <div className="sticky top-0 flex h-screen flex-col justify-center  overflow-hidden">
+        <div className="mx-auto w-full container px-4 sm:px-6 lg:px-8">
+          {/* Header */}
+          <div className="mb-6 sm:mb-8">
+            <h2 className="text-2xl md:text-4xl font-bold text-gray-800 leading-7 md:leading-8 lg:leading-none text-center">
+              From concept to commissioning
+            </h2>
+            <p className="text-lg lg:text-xl text-gray-800 mt-2">
+              A structured approach that covers every phase of your project —
+              from initial consultation through training and support after
+              installation.
             </p>
-            <ul className="mt-3 space-y-2.5 text-sm leading-relaxed text-gray-200">
-              <li className="flex items-start gap-2">
-                <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-sky-400" />
-                <span>Clearer scope before procurement decisions</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-sky-400" />
-                <span>
-                  Fewer execution handoffs across the project lifecycle
-                </span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-sky-400" />
-                <span>
-                  One accountable engineering partner through commissioning
-                </span>
-              </li>
-            </ul>
+          </div>
+
+          {/* Viewport (clips the track) */}
+          <div ref={viewportRef} className="mt-24">
+            <div
+              ref={trackRef}
+              className="relative flex gap-4 sm:gap-6 will-change-transform"
+              style={{ transform: `translateX(${translateX}px)` }}
+            >
+              {PROCESS_STEPS_DATA.map((step, index) => {
+                const isActive = activeStep === index;
+                const isTop = index % 2 === 0;
+                const Card = (
+                  <div
+                    className={`w-full rounded-2xl border-2 pb-48 pt-32 px-10 transition-all duration-300 ${
+                      isActive
+                        ? "border-sky-500 bg-sky-50 shadow-lg shadow-sky-500/20"
+                        : "border-gray-200 bg-white"
+                    }`}
+                  >
+                    <h3 className="text-lg sm:text-xl font-bold text-gray-900">
+                      {step.number}) {step.title}
+                    </h3>
+                    <p className="text-sm sm:text-base leading-relaxed text-gray-600">
+                      {step.description}
+                    </p>
+                  </div>
+                );
+                return (
+                  <div
+                    key={index}
+                    className="w-[78vw] sm:w-80 lg:w-96 shrink-0"
+                  >
+                    <div className="grid grid-rows-[1fr_5rem_1fr] h-96 sm:h-104">
+                      {/* TOP card slot */}
+                      <div className="flex items-end justify-center">
+                        {isTop && Card}
+                      </div>
+
+                      {/* BOTTOM card slot */}
+                      <div className="flex items-start justify-center pt-4 sm:pt-16">
+                        {!isTop && Card}
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-);
-
+    </section>
+  );
+};
 // ============================================================================
 // GALLERY SECTION
 // ============================================================================
