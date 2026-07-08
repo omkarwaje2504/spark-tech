@@ -41,7 +41,7 @@ const SERVICES = [
     description:
       "Modern oil recovery technology for maximum yield from oil-bearing materials with controlled extraction, effective desolventizing, and solvent recovery.",
     href: "/services/solvent-extraction",
-    image: "/images/services/thumbnails/solvent-extraction.png",
+    image: "/images/services/solvent-extraction.png",
   },
   {
     id: "oil-refinery",
@@ -49,7 +49,7 @@ const SERVICES = [
     description:
       "Complete chemical and physical refining solutions removing phosphatides, free fatty acids, pigments, odors, and waxes for premium edible oil.",
     href: "/services/oil-refinery",
-    image: "/images/services/thumbnails/oil-refinery.png",
+    image: "/images/services/oil-refinery.png",
   },
   {
     id: "fractionation",
@@ -57,7 +57,7 @@ const SERVICES = [
     description:
       "Custom-designed dry fractionation technology separating triglycerides into components with precise melting ranges for diverse food applications.",
     href: "/services/fractionation",
-    image: "/images/services/thumbnails/fractionation.png",
+    image: "/images/services/fractionation.png",
   },
   {
     id: "dewaxing",
@@ -65,7 +65,7 @@ const SERVICES = [
     description:
       "Cold stability solutions preventing crystallization and clouding of waxes in bottled edible oils for long-term clarity and shelf appeal.",
     href: "/services/dewaxing",
-    image: "/images/services/thumbnails/dewaxing.png",
+    image: "/images/services/dewaxing.png",
   },
   {
     id: "lecithin",
@@ -73,7 +73,7 @@ const SERVICES = [
     description:
       "High-performance lecithin recovery for rice bran and soybean processing with unique gentle drying design preventing gum burn.",
     href: "/services/lecithin",
-    image: "/images/services/thumbnails/lecithin.png",
+    image: "/images/services/lecithin.png",
   },
   {
     id: "bakery-shortening",
@@ -81,7 +81,7 @@ const SERVICES = [
     description:
       "Complete processing systems with Essessprocessor technology, glycol cooling, and crystal distribution for premium bakery fats.",
     href: "/services/bakery-shortening",
-    image: "/images/services/thumbnails/bakery-shortening.png",
+    image: "/images/services/bakery-shortening.png",
   },
   {
     id: "hydrogenation",
@@ -89,7 +89,7 @@ const SERVICES = [
     description:
       "Advanced fat modification converting liquid vegetable oils into solid or semi-solid fats for margarine, shortening, and industrial fats.",
     href: "/services/hydrogenation",
-    image: "/images/services/thumbnails/hydrogenation.png",
+    image: "/images/services/hydrogenation.png",
   },
 
   {
@@ -98,7 +98,7 @@ const SERVICES = [
     description:
       "Zero-trans fat modification technology rearranging fatty acids within triglycerides — available in both chemical and enzymatic options.",
     href: "/services/interesterification",
-    image: "/images/services/thumbnails/interesterification.png",
+    image: "/images/services/interesterification.png",
   },
 ] as const;
 
