@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 export default function ServiceBackupIndexPage() {
     return (
         <>
-            <Header />
+            
 
             <section className="bg-gray-950 pt-40 pb-20 text-white">
                 <div className="mx-auto max-w-5xl px-6 lg:px-8">
@@ -48,7 +48,7 @@ export default function ServiceBackupIndexPage() {
                 </div>
             </section>
 
-            <Footer />
+     
         </>
     );
 }

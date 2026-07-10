@@ -63,7 +63,7 @@ const servicesData: Record<string, {
                 ]
             }
         ],
-        image: '/images/Services/Services Thumnail Images/Continuous Solvent Extraction Plant.jpg',
+        image: '/images/Services/solvent-extraction.webp',
         features: [
             'Single piece Hollow shaft gear box with 0.05 rpm output',
             'Variable frequency drive for finite speed adjustment with data-logging',
@@ -129,7 +129,7 @@ const servicesData: Record<string, {
                 ]
             }
         ],
-        image: '/images/Services/Services Thumnail Images/Vegetable Oil Refinery.jpg',
+        image: '/images/Services/oil-refinery.webp',
         features: [
             'Fully automated handling of various crude oil qualities',
             'Short downtime for raw material changeover',
@@ -183,7 +183,7 @@ const servicesData: Record<string, {
                 ]
             }
         ],
-        image: '/images/Services/Services Thumnail Images/Fractionation.jpg',
+        image: '/images/Services/fractionation.webp',
         features: [
             'Dry fractionation - no additives required',
             'Physiologically neutral products',
@@ -232,7 +232,7 @@ const servicesData: Record<string, {
                 ]
             }
         ],
-        image: '/images/Services/Services Thumnail Images/Bakery.jpg',
+        image: '/images/Services/bakery-shortening.webp',
         features: [
             'Essessprocessor with glycol cooling system',
             'Internal hard chrome plated cylinders',
@@ -282,7 +282,7 @@ const servicesData: Record<string, {
                 ]
             }
         ],
-        image: '/images/Services/Services Thumnail Images/Vegetable Oil Refinery.jpg',
+        image: '/images/Services/lecithin.webp',
         features: [
             'Gentle drying process without burn',
             'High flow rate operation',
@@ -329,7 +329,7 @@ const servicesData: Record<string, {
                 ]
             }
         ],
-        image: '/images/Technologies/Technologies Thumnail Images/Filtration.jpg',
+        image: '/images/Services/filtration.png',
         features: [
             'Horizontal pressure leaf filter (2-100 mÂ²)',
             'Vertical pressure leaf filter (10-50 mÂ²)',
@@ -378,7 +378,7 @@ const servicesData: Record<string, {
                 ]
             }
         ],
-        image: '/images/Services/Services Thumnail Images/Deodorizing Plant.jpg',
+        image: '/images/Services/dewaxing.webp',
         features: [
             'Continuous countercurrent principle',
             'Heat recovery exceeding 80%',
@@ -420,7 +420,7 @@ const servicesData: Record<string, {
                 ]
             }
         ],
-        image: '/images/Services/Services Thumnail Images/Bleaching Plant.jpg',
+        image: '/images/Services/lecithin.webp',
         features: [
             'Loop reactor technology',
             'Agitator-free operation',
@@ -460,7 +460,7 @@ const servicesData: Record<string, {
                 ]
             }
         ],
-        image: '/images/Services/Services Thumnail Images/De-Waxing.jpg',
+        image: '/images/Services/dewaxing.webp',
         features: [
             'Precise temperature control',
             'Extended maturation period',
@@ -502,7 +502,7 @@ const servicesData: Record<string, {
                 ]
             }
         ],
-        image: '/images/Services/Services Thumnail Images/Hydrogenation.jpg',
+        image: '/images/Services/hydrogenation.webp',
         features: [
             'Batch and continuous options',
             'Precise temperature control',
@@ -543,7 +543,7 @@ const servicesData: Record<string, {
                 ]
             }
         ],
-        image: '/images/Services/Services Thumnail Images/Fractionation.jpg',
+        image: '/images/Services/fractionation.webp',
         features: [
             'Zero-trans fat production',
             'Chemical & Enzymatic options',
@@ -596,7 +596,7 @@ export default async function ServiceDetailPage({ params }: Props) {
 
     return (
         <>
-            <Header />
+         
           
             <ServiceCookieTracker slug={slug} />
 
@@ -782,7 +782,7 @@ export default async function ServiceDetailPage({ params }: Props) {
                 </div>
             </section>
 
-            <Footer />
+         
         </>
     );
 }

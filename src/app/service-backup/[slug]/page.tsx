@@ -45,7 +45,7 @@ export default async function ServiceBackupDetailPage({ params }: PageProps) {
 
     return (
         <>
-            <Header />
+           
 
             <section className="relative overflow-hidden bg-gray-950 pt-36 pb-24 text-white">
                 <div className="absolute inset-0 opacity-20">
@@ -135,7 +135,7 @@ export default async function ServiceBackupDetailPage({ params }: PageProps) {
                 </div>
             </section>
 
-            <Footer />
+      
         </>
     );
 }

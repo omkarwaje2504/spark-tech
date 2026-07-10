@@ -17,8 +17,8 @@ const services = [
         title: 'Continuous Solvent Extraction Plant',
         shortDesc: 'Advanced horizontal model with articulated band conveyor assembly for efficient oil extraction.',
         fullDesc: 'Horizontal model comprising of articulated band conveyor assembly, which receives the material from the Feed Hopper and transports it at a very slow predetermined speed from the feed to the discharge end.',
-        image: '/images/Services/Services Thumnail Images/Continuous Solvent Extraction Plant.jpg',
-        icon: 'ðŸ­',
+        image: '/images/Services/solvent-extraction.webp',
+        icon: '',
         features: [
             'Single piece Hollow shaft gear box with 0.05 rpm output',
             'Variable frequency drive for finite speed adjustment',
@@ -34,8 +34,8 @@ const services = [
         title: 'Vegetable Oil Refinery',
         shortDesc: 'Complete chemical and physical refining solutions for crude edible oils.',
         fullDesc: 'In refining, physical and chemical processes are combined to remove undesirable natural as well as environmental-related components from the crude oil including phosphatides, free fatty acids, pigments, odors and waxes.',
-        image: '/images/Services/Services Thumnail Images/Vegetable Oil Refinery.jpg',
-        icon: 'âš—ï¸',
+        image: '/images/Services/oil-refinery.webp',
+        icon: '',
         features: [
             'Degumming for phosphatides removal',
             'Neutralization for free fatty acids removal',
@@ -51,8 +51,8 @@ const services = [
         title: 'Fractionation Plant',
         shortDesc: 'Dry fractionation process for separating fats into different melting point fractions.',
         fullDesc: 'Natural edible oils are multi-component mixtures consisting of various triglycerides. Through fractionation, different components can be separated for various applications in food technology.',
-        image: '/images/Services/Services Thumnail Images/Fractionation.jpg',
-        icon: 'ðŸ”¬',
+        image: '/images/Services/fractionation.webp',
+        icon: '',
         features: [
             'Dry fractionation from melt - no additives',
             'Physiologically neutral products',
@@ -68,8 +68,8 @@ const services = [
         title: 'Deodorization Plant',
         shortDesc: 'Continuous deodorizer for quality-defining process in refining oils and fats.',
         fullDesc: 'Deodorization is the quality-defining process step in refining oils and fats. Free and low-boiling substances are distilled at higher temperatures in a high vacuum with steam stripping.',
-        image: '/images/Services/Services Thumnail Images/Deodorizing Plant.jpg',
-        icon: 'ðŸ’¨',
+        image: '/images/Services/dewaxing.webp',
+        icon: '',
         features: [
             'Continuous countercurrent deodorizer',
             'Gentle cooling under deodorizing conditions',
@@ -85,8 +85,8 @@ const services = [
         title: 'Bleaching Plant',
         shortDesc: 'Continuous bleaching process with loop reactor for intensive mixture and contact.',
         fullDesc: 'Continuous bleaching process characterized by the loop reactor enabling operation without agitator tanks with simultaneous intensive mixture and contact of bleaching earth with the oil.',
-        image: '/images/Services/Services Thumnail Images/Bleaching Plant.jpg',
-        icon: 'âœ¨',
+        image: '/images/Services/lecithin.webp',
+        icon: '',
         features: [
             'Loop reactor technology',
             'Operation under vacuum',
@@ -102,8 +102,8 @@ const services = [
         title: 'De-Waxing / Winterization',
         shortDesc: 'Winterization process to achieve necessary cold stability for bottled edible oils.',
         fullDesc: 'For refining products to be bottled as edible oils, winterization is required to achieve the necessary cold stability. This prevents crystallization & clouding of waxes at ambient temperature.',
-        image: '/images/Services/Services Thumnail Images/De-Waxing.jpg',
-        icon: 'â„ï¸',
+        image: '/images/Services/dewaxing.webp',
+        icon: '',
         features: [
             'Cooling by heat exchange with cold water',
             'Temperature range 5-10Â°C',
@@ -119,8 +119,8 @@ const services = [
         title: 'Lecithin Plant',
         shortDesc: 'High performance plants for dehydration of wet gums from soybean and rice bran.',
         fullDesc: 'SPARKTECH are experts in manufacturing high performance Lecithin Plants for dehydration of wet gums. Our plants feature unique design for gentle drying process without any burn.',
-        image: '/images/Services/Services Thumnail Images/Vegetable Oil Refinery.jpg',
-        icon: 'ðŸŒ¿',
+        image: '/images/Services/lecithin.webp',
+        icon: '',
         features: [
             'Rice Bran Lecithin processing',
             'Soya Lecithin dehydration',
@@ -136,8 +136,8 @@ const services = [
         title: 'Bakery Shortening & Margarine Plant',
         shortDesc: 'Complete plant for producing bakery shortening up to 1,000 kgs/hour.',
         fullDesc: 'Process equipment for bakery shortening processing, capable of producing up to 1,000 kgs/hour when cooling from inlet temperature of 45Â°C to 23-25Â°C suitable for semi-liquid filling.',
-        image: '/images/Services/Services Thumnail Images/Bakery.jpg',
-        icon: 'ðŸ¥',
+        image: '/images/Services/bakery-shortening.webp',
+        icon: '',
         features: [
             'Essess processor heat transfer cylinders',
             'Crystal distribution cum stabilizer',
@@ -153,8 +153,8 @@ const services = [
         title: 'Hydrogenation Plant',
         shortDesc: 'State-of-the-art hydrogenation units for converting liquid oils into solid fats.',
         fullDesc: 'Advanced hydrogenation plants for the conversion of liquid vegetable oils into semi-solid or solid fats through the addition of hydrogen.',
-        image: '/images/Services/Services Thumnail Images/Hydrogenation.jpg',
-        icon: 'âš¡',
+        image: '/images/Services/hydrogenation.webp',
+        icon: '',
         features: [
             'Batch and continuous options',
             'Precise temperature control',
@@ -170,7 +170,7 @@ const services = [
 export default function ServicesPage() {
     return (
         <>
-            <Header />
+       
      
 
             <PageBanner
@@ -304,7 +304,7 @@ export default function ServicesPage() {
                 </div>
             </section>
 
-            <Footer />
+      
         </>
     );
 }

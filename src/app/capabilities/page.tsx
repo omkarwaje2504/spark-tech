@@ -54,7 +54,7 @@ const capabilities = [
             'Performance validation',
             'Documentation and traceability',
         ],
-        image: '/images/Services/Services Thumnail Images/Vegetable Oil Refinery.jpg',
+        image: '/images/Services/thumbnails/Vegetable Oil Refinery.jpg',
     },
     {
         id: 'certification',
@@ -69,7 +69,7 @@ const capabilities = [
             'Environmental standards',
             'Export documentation',
         ],
-        image: '/images/Services/Services Thumnail Images/Fractionation.jpg',
+        image: '/images/Services/thumbnails/Fractionation.jpg',
     },
 ];
 
@@ -99,7 +99,7 @@ const services = [
 export default function CapabilitiesPage() {
     return (
         <>
-            <Header />
+        
           
 
             <PageBanner
@@ -252,7 +252,7 @@ export default function CapabilitiesPage() {
                 </div>
             </section>
 
-            <Footer />
+         
         </>
     );
 }

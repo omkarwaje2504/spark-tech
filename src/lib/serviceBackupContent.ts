@@ -15,7 +15,7 @@ export const archivedServiceBackupContent: Record<string, ArchivedServiceBackup>
         title: 'Deodorization Plant',
         subtitle: 'Continuous High-Vacuum Distillation',
         description: 'Deodorization is the quality-defining process step in refining oils and fats. Free and low-boiling substances are distilled at higher temperatures in a high vacuum with steam stripping.',
-        image: '/images/Services/Services Thumnail Images/Deodorizing Plant.jpg',
+        image: '/images/Services/thumbnails/Deodorizing Plant.jpg',
         sections: [
             {
                 heading: 'Process Principle',
@@ -57,7 +57,7 @@ export const archivedServiceBackupContent: Record<string, ArchivedServiceBackup>
         title: 'Continuous Bleaching Plant',
         subtitle: 'Loop Reactor Technology',
         description: 'Continuous bleaching process characterized by the loop reactor enabling operation without agitator tanks with simultaneous intensive mixture and contact of bleaching earth with the oil.',
-        image: '/images/Services/Services Thumnail Images/Bleaching Plant.jpg',
+        image: '/images/Services/thumbnails/Bleaching Plant.jpg',
         sections: [
             {
                 heading: 'Loop Reactor System',

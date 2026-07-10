@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function GalleryPage() {
     return (
         <>
-            <Header />
+         
       
 
             <PageBanner
@@ -24,7 +24,7 @@ export default function GalleryPage() {
 
             <GalleryGrid />
 
-            <Footer />
+        
         </>
     );
 }

@@ -85,7 +85,7 @@ const technologies = [
         id: 'value-added',
         title: 'Value Added Projects',
         description: 'Specialized plants for lecithin production, bakery shortening, margarine, and other value-added products.',
-        image: '/images/Services/Services Thumnail Images/Bakery.jpg',
+        image: '/images/Services/thumbnails/bakery-shortening.jpg',
         features: [
             'Rice Bran Lecithin Plant',
             'Soya Lecithin Plant',
@@ -100,7 +100,7 @@ const technologies = [
 export default function TechnologiesPage() {
     return (
         <>
-            <Header />
+        
           
 
             <PageBanner
@@ -238,7 +238,7 @@ export default function TechnologiesPage() {
                 </div>
             </section>
 
-            <Footer />
+        
         </>
     );
 }

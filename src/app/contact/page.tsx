@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export default function ContactPage() {
     return (
         <>
-            <Header />
+          
 
             <PageBanner
                 title="Contact Us"
@@ -181,7 +181,7 @@ export default function ContactPage() {
                 </div>
             </section>
 
-            <Footer />
+      
         </>
     );
 }

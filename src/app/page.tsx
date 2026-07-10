@@ -316,9 +316,9 @@ const CTAButton = ({
 };
 
 const Pill = ({ label, index }: { label: string; index?: number }) => (
-  <span className="inline-flex items-center gap-2 rounded-full bg-[#B0D10E] px-4 py-2 text-sm font-bold text-black">
+  <span className="inline-flex items-center gap-2 rounded-full bg-[#B0D10E] px-4 py-2 text-sm md:text-xl lg:text-sm font-bold text-black">
     {index !== undefined && (
-      <span className="text-xs font-semibold text-black">0{index + 1}</span>
+      <span className=" text-sm md:text-xl lg:text-sm font-semibold text-black">0{index + 1}</span>
     )}
     {label}
   </span>
@@ -347,21 +347,21 @@ const HeroSection = () => (
           type="video/mp4"
         />
       </video>
-      <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/10 to-black/0" />
-      <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-transparent to-transparent" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(14,165,233,0.18),_transparent_45%)]" />
+      <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/10 to-black/0" />
+      <div className="absolute inset-0 bg-linear-to-r from-black/70 via-transparent to-transparent" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(14,165,233,0.18),transparent_45%)]" />
     </div>
 
     <div className="relative z-10 mx-auto flex min-h-screen container flex-col justify-between px-6 lg:px-8">
       <motion.div
-        className="pb-16 lg:pb-48 pt-28 lg:pt-60 2xl:pt-72"
+        className="pb-16 lg:pb-48 pt-32 md:pt-40 xl:pt-52 2xl:pt-72"
         variants={stagger}
         initial="hidden"
         animate="show"
       >
         <motion.span
           variants={fadeUp}
-          className="flex items-center gap-2 mb-3 w-fit rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.22em] text-sky-200 backdrop-blur-sm"
+          className="flex items-center gap-2 mb-3 w-fit rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-[10px] font-semibold uppercase  text-sky-200 backdrop-blur-sm"
         >
           <span className="relative flex h-1.5 w-1.5">
             <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-sky-400 opacity-75" />
@@ -372,7 +372,7 @@ const HeroSection = () => (
 
         <motion.h1
           variants={fadeUp}
-          className="text-4xl font-bold leading-[1.05] sm:text-5xl lg:text-6xl 2xl:text-7xl"
+          className="text-4xl font-bold leading-[1.05] md:text-6xl lg:text-6xl 2xl:text-7xl"
         >
           Processing Oil, Fats
           <span className="block bg-gradient-to-r from-sky-300 via-white to-lime-300 bg-clip-text text-transparent">
@@ -382,14 +382,14 @@ const HeroSection = () => (
 
         <motion.p
           variants={fadeUp}
-          className="lg:mt-4 2xl:mt-6 max-w-xl text-base leading-relaxed text-gray-200 sm:text-lg"
+          className="md:mt-6 lg:mt-4 2xl:mt-6 max-w-xl text-base leading-relaxed text-gray-200  md:text-xl lg:text-lg"
         >
           Specialized in the supply and initialization of oil extraction,
           refinery &amp; food processing units — engineered from concept to
           commissioning.
         </motion.p>
 
-        <motion.div variants={fadeUp} className="mt-8 flex flex-wrap gap-2.5">
+        <motion.div variants={fadeUp} className="mt-8 flex flex-wrap gap-1.5 md:gap-2.5">
           {SPECIALIZATIONS.map((item, i) => (
             <Pill key={item} label={item} index={i} />
           ))}
@@ -397,17 +397,17 @@ const HeroSection = () => (
 
         <motion.div
           variants={fadeUp}
-          className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center"
+          className="mt-10 md:mt-20 lg:mt-10 flex flex-col gap-2 md:gap-4 sm:flex-row sm:items-center"
         >
           <CTAButton
             href="/contact"
-            className="inline-flex items-center gap-3 self-start rounded-full border border-sky-400 px-4 py-2 md:px-6 md:py-3 text-xs md:text-sm font-semibold uppercase text-sky-600 transition hover:bg-sky-50"
+            className="inline-flex items-center gap-3 self-start rounded-full border border-sky-400 px-4 py-2 md:px-6 md:py-3 text-xs md:text-lg lg:text-sm  font-semibold uppercase text-sky-600 transition hover:bg-sky-50"
           >
             Send Your Enquiry
           </CTAButton>
           <a
             href={siteContact.officePhoneHref}
-            className="inline-flex items-center justify-center gap-3 rounded-full border border-white/25 bg-white/5 px-7 py-4 text-xs font-semibold uppercase text-white backdrop-blur-md transition hover:border-white/50 hover:bg-white/10"
+            className="inline-flex w-fit items-center justify-center gap-3 rounded-full border border-white/25 bg-white/5 px-7 py-2 md:py-3 text-xs md:text-lg lg:text-sm font-semibold uppercase text-white backdrop-blur-md transition hover:border-white/50 hover:bg-white/10"
           >
             Ask Our Experts
           </a>
@@ -581,7 +581,7 @@ const ServicesSection = () => (
       </Reveal>
 
       <motion.div
-        className="grid gap-2 md:grid-cols-2 lg:grid-cols-4"
+        className="grid gap-2 md:grid-cols-3 lg:grid-cols-4"
         variants={stagger}
         initial="hidden"
         whileInView="show"
@@ -665,7 +665,7 @@ const ProcessSection = () => {
                 </div>
 
                 {/* Icon tile */}
-                <div className="mt-6 flex h-40 w-40 items-center justify-center rounded-full transition-all duration-300">
+                <div className="mt-6 flex h-28 w-28 md:h-40 md:w-40 items-center justify-center rounded-full transition-all duration-300">
                   <StepIcon
                     index={index}
                     color={isActive ? "#ffffff" : color}
@@ -673,12 +673,12 @@ const ProcessSection = () => {
                 </div>
 
                 {/* Title */}
-                <h3 className="text-2xl font-semibold leading-tight text-gray-900">
+                <h3 className="text-xl md:text-xl lg:text-2xl font-semibold leading-tight text-gray-900">
                   {step.title}
                 </h3>
 
                 {/* Description */}
-                <p className="mt-2 px-1 text-md leading-relaxed text-gray-600">
+                <p className="mt-2 px-1 text-sm md:text-md leading-relaxed text-gray-600">
                   {step.description}
                 </p>
               </motion.button>
