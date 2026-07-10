@@ -130,24 +130,14 @@ export default function Header() {
       }`}
     >
       <div className="w-full bg-slate-200 ">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex w-full justify-end items-center gap-4">
-          <div className="flex justify-end items-center py-1 ">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row w-full justify-end items-ends lg:items-center lg:gap-4 py-1 lg:py-0">
+          <div className="flex justify-end items-center lg:py-1 ">
             <FiPhone className="text-slate-700" />
-            <span className="text-slate-700 ml-2 text-sm">
+            <span className="text-slate-700 ml-2 text-xs lg:text-sm">
               {siteContact.officePhoneDisplay}
             </span>
-          </div>
-          <div className="h-4 w-0.5 bg-slate-700" />
-          <div className="flex justify-end items-center py-1 ">
-            <FiMail className="text-slate-700" />
-            <span className="text-slate-700  ml-2 text-sm">
-              amitw@sparktech.biz / sparktech@sparktech.biz
-            </span>
-          </div>
-           <div className="h-4 w-0.5 bg-slate-700" />
-          <div>
-            <div className="flex items-center gap-4">
-
+            <div className="h-4 w-0.5 bg-slate-700 lg:hidden mx-3" />
+            <div className="flex items-center gap-2 lg:hidden">
               {SOCIAL_LINKS.map((link) => {
                 const IconComponent = link.icon;
                 return (
@@ -159,11 +149,36 @@ export default function Header() {
                     className="text-gray-600 hover:text-sky-600 transition-colors"
                     aria-label={link.name}
                   >
-                    <IconComponent className="h-4 w-4" />
+                    <IconComponent className="h-3 w-3" />
                   </a>
                 );
               })}
             </div>
+          </div>
+          <div className="h-4 w-0.5 bg-slate-700 hidden lg:flex" />
+          <div className="flex justify-end items-center lg:py-1 ">
+            <FiMail className="text-slate-700" />
+            <span className="text-slate-700  ml-2 text-xs lg:text-sm">
+              amitw@sparktech.biz / sparktech@sparktech.biz
+            </span>
+          </div>
+          <div className="h-4 w-0.5 bg-slate-700 hidden lg:flex" />
+          <div className="items-center gap-4 hidden lg:flex">
+            {SOCIAL_LINKS.map((link) => {
+              const IconComponent = link.icon;
+              return (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-600 hover:text-sky-600 transition-colors"
+                  aria-label={link.name}
+                >
+                  <IconComponent className="h-4 w-4" />
+                </a>
+              );
+            })}
           </div>
         </div>
       </div>
@@ -179,7 +194,7 @@ export default function Header() {
               width={1000}
               height={1000}
               className={`w-auto transition-all duration-500 group-hover:scale-105 ${
-                isScrolled ? "h-10 lg:h-16" : "h-12 lg:h-18"
+                isScrolled ? "h-13 lg:h-16" : "h-14 lg:h-18"
               }`}
               priority
             />
