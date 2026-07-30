@@ -449,7 +449,7 @@ const AboutSection = () => (
           <div className="absolute -left-6 top-8 h-40 w-40 rounded-full bg-sky-100 blur-3xl" />
           <div className="relative overflow-hidden rounded-3xl border border-gray-100 bg-gray-100 shadow-[0_30px_80px_rgba(15,23,42,0.12)]">
             <Image
-              src="/images/About Us/About Us Thumbnail Image.jpg"
+              src="/images/about-us/About Us Thumbnail Image.jpg"
               alt="Sparktech edible oil plant engineering"
               width={1200}
               height={900}
