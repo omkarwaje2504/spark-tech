@@ -16,7 +16,7 @@ export default function ContactForm() {
 
     // Auto-fill service interest from cookie (set when user visits a service page)
     useEffect(() => {
-        const match = document.cookie.match(/sparktech_service_interest=([^;]+)/);
+        const match = document.cookie.match(/SPARKTECH_service_interest=([^;]+)/);
         if (match) {
             const serviceName = decodeURIComponent(match[1]);
             // eslint-disable-next-line react-hooks/set-state-in-effect

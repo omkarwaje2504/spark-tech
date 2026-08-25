@@ -6,7 +6,7 @@ import Footer from '@/components/Footer';
 import PageBanner from '@/components/PageBanner';
 
 export const metadata: Metadata = {
-    title: 'Capabilities | Sparktech Processes LLP',
+    title: 'Capabilities | SPARKTECH Processes LLP',
     description: 'Explore our engineering capabilities - Design & Development, Manufacturing, Quality Testing, and Certification. End-to-end EPC solutions.',
 };
 

@@ -6,7 +6,7 @@ import Footer from '@/components/Footer';
 import PageBanner from '@/components/PageBanner';
 
 export const metadata: Metadata = {
-    title: 'Technologies | Sparktech Processes LLP',
+    title: 'Technologies | SPARKTECH Processes LLP',
     description: 'Explore our advanced technologies for oil seed preparation, extraction, refining, and processing. State-of-the-art solutions for edible oil industry.',
 };
 

@@ -7,7 +7,7 @@ import PageBanner from '@/components/PageBanner';
 import { isArchivedServiceSlug } from '@/lib/serviceVisibility';
 
 export const metadata: Metadata = {
-    title: 'Services | Sparktech Processes LLP',
+    title: 'Services | SPARKTECH Processes LLP',
     description: 'Complete range of edible oil processing equipment - Solvent Extraction, Refinery, Fractionation, Lecithin Plants, and Bakery Shortening.',
 };
 
@@ -251,7 +251,7 @@ export default function ServicesPage() {
             <section className="py-20 bg-gray-50">
                 <div className="container mx-auto px-4">
                     <div className="text-center mb-16">
-                        <p className="text-[#3CAAE5] font-semibold tracking-wider uppercase mb-2">Why Sparktech</p>
+                        <p className="text-[#3CAAE5] font-semibold tracking-wider uppercase mb-2">Why SPARKTECH</p>
                         <h2 className="text-4xl font-bold text-gray-900">Why Choose Our Services?</h2>
                     </div>
 
@@ -292,7 +292,7 @@ export default function ServicesPage() {
                             </svg>
                         </Link>
                         <a
-                            href="tel:+912226465920"
+                            href="tel:+91 88500 58985"
                             className="inline-flex items-center gap-2 bg-gray-900 text-white px-8 py-4 rounded-lg font-semibold hover:bg-gray-800 transition-all"
                         >
                             <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">

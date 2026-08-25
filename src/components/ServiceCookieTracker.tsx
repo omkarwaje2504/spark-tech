@@ -23,7 +23,7 @@ export default function ServiceCookieTracker({ slug }: { slug: string }) {
         if (serviceName) {
             // Set cookie that expires in 30 days
             const expires = new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toUTCString();
-            document.cookie = `sparktech_service_interest=${encodeURIComponent(serviceName)}; path=/; expires=${expires}; SameSite=Lax`;
+            document.cookie = `SPARKTECH_service_interest=${encodeURIComponent(serviceName)}; path=/; expires=${expires}; SameSite=Lax`;
         }
     }, [slug]);
 

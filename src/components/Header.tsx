@@ -101,22 +101,22 @@ export default function Header() {
   const SOCIAL_LINKS = [
     {
       name: "LinkedIn",
-      href: "https://linkedin.com/company/sparktech",
+      href: "https://linkedin.com/company/SPARKTECH",
       icon: FaLinkedinIn,
     },
     {
       name: "Facebook",
-      href: "https://facebook.com/sparktech",
+      href: "https://facebook.com/SPARKTECH",
       icon: FaFacebookF,
     },
     {
       name: "Twitter",
-      href: "https://twitter.com/sparktech",
+      href: "https://twitter.com/SPARKTECH",
       icon: FaTwitter,
     },
     {
       name: "Instagram",
-      href: "https://instagram.com/sparktech",
+      href: "https://instagram.com/SPARKTECH",
       icon: FaInstagram,
     },
   ] as const;
@@ -189,8 +189,8 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group shrink-0">
             <Image
-              src="/images/Sparktech logo.png"
-              alt="Sparktech Processes LLP"
+              src="/images/SPARKTECH logo.png"
+              alt="SPARKTECH Processes LLP"
               width={1000}
               height={1000}
               className={`w-auto transition-all duration-500 group-hover:scale-105 ${

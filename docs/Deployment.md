@@ -1,6 +1,6 @@
-# Deployment & Hosting Guide - Sparktech Processes LLP
+# Deployment & Hosting Guide - SPARKTECH Processes LLP
 
-This document provides complete instructions for building, running locally, and deploying the Sparktech Processes Next.js website to various hosting platforms.
+This document provides complete instructions for building, running locally, and deploying the SPARKTECH Processes Next.js website to various hosting platforms.
 
 ---
 
@@ -58,7 +58,7 @@ Next.js projects compile to standard node formats, allowing flexible deployment 
 Vercel is the creator of Next.js and provides instant globally-distributed serverless delivery.
 
 1. **GitHub Integration:** Commit and push this repository to your GitHub team account.
-2. **Connect Project:** Log in to Vercel and import the `sparktech-website` repository.
+2. **Connect Project:** Log in to Vercel and import the `SPARKTECH-website` repository.
 3. **Deployment Settings:**
    * **Framework Preset:** `Next.js`
    * **Build Command:** `npm run build`
@@ -75,7 +75,7 @@ For hosting environments using standalone Linux servers:
 2. **Build the Project:** Run `npm run build` on the server.
 3. **Configure PM2 Process Manager:** Start the server using the compiled bundle.
    ```bash
-   pm2 start npm --name "sparktech-website" -- start
+   pm2 start npm --name "SPARKTECH-website" -- start
    ```
 4. **Setup Reverse Proxy:** Configure Nginx or Apache to proxy requests from port 80/443 to the Node port (usually `3000`).
 
@@ -86,8 +86,8 @@ For hosting environments using standalone Linux servers:
 The application operates without complex variables out-of-the-box. However, if third-party B2B services are added (such as Google Maps APIs or HubSpot trackers), define them inside a `.env.production` file:
 
 ```ini
-# Sparktech Processes Website Configuration
-NEXT_PUBLIC_APP_URL=https://sparktechprocesses.com
+# SPARKTECH Processes Website Configuration
+NEXT_PUBLIC_APP_URL=https://SPARKTECHprocesses.com
 NEXT_PUBLIC_GA_ID=G-XXXXXXXXXX
 ```
 

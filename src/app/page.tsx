@@ -343,7 +343,7 @@ const HeroSection = () => (
         className="h-full w-full object-cover"
       >
         <source
-          src="/images/Home-banner/sparktech_video_compressed.mp4"
+          src="/images/Home-banner/SPARKTECH_video_compressed.mp4"
           type="video/mp4"
         />
       </video>
@@ -450,7 +450,7 @@ const AboutSection = () => (
           <div className="relative overflow-hidden rounded-3xl border border-gray-100 bg-gray-100 shadow-[0_30px_80px_rgba(15,23,42,0.12)]">
             <Image
               src="/images/about-us/About Us Thumbnail Image.jpg"
-              alt="Sparktech edible oil plant engineering"
+              alt="SPARKTECH edible oil plant engineering"
               width={1200}
               height={900}
               className="w-full object-cover md:h-64 lg:h-full"
@@ -463,7 +463,7 @@ const AboutSection = () => (
                 Leading the future of edible oil processing
               </h2>
               <p className="text-xs text-gray-100 md:text-sm">
-                Sparktech combines engineering depth with execution discipline
+                SPARKTECH combines engineering depth with execution discipline
                 so buyers can move from idea to production with less friction
                 and more clarity.
               </p>
@@ -930,7 +930,7 @@ const TechnologiesCTASection = () => {
               </h3>
               <p className="mt-2 text-xs md:text-sm leading-relaxed text-gray-300 sm:text-base">
                 Share your capacity target, feedstock, and output goals.
-                Sparktech can help scope the right engineering path before you
+                SPARKTECH can help scope the right engineering path before you
                 commit to execution.
               </p>
               <a

@@ -1,12 +1,12 @@
-# Database & Data Model Guide - Sparktech Processes LLP
+# Database & Data Model Guide - SPARKTECH Processes LLP
 
-This document outlines how data is managed, structured, and serialized inside the Sparktech Processes website, detailing the static data model, inquiry schemas, and integration paths.
+This document outlines how data is managed, structured, and serialized inside the SPARKTECH Processes website, detailing the static data model, inquiry schemas, and integration paths.
 
 ---
 
 ## 1. Architectural Philosophy: Why Static-First?
 
-Industrial B2B project engineering sites require extremely high reliability, maximum speed, and optimal search ranking. To meet these targets, the Sparktech website avoids the latency overhead and complexity of a dynamic relational database (like MySQL or PostgreSQL) for content delivery.
+Industrial B2B project engineering sites require extremely high reliability, maximum speed, and optimal search ranking. To meet these targets, the SPARKTECH website avoids the latency overhead and complexity of a dynamic relational database (like MySQL or PostgreSQL) for content delivery.
 
 ### Key Advantages:
 1. **Zero Database Downtime:** Page content is compiled at build-time. The site cannot crash due to database connection pool exhaustion or network failures.
@@ -20,7 +20,7 @@ Industrial B2B project engineering sites require extremely high reliability, max
 All dynamic-looking contents (e.g. Services, Technical Specs, and Archived Backups) are represented as typed TypeScript data models.
 
 ### A. Dynamic Service Model (`servicesData`)
-Defined inside [page.tsx](file:///c:/Nitya%20Marketing%20projects/Sparktech%20Nextjs/sparktech-website/src/app/services/%5Bslug%5D/page.tsx):
+Defined inside [page.tsx](file:///c:/Nitya%20Marketing%20projects/SPARKTECH%20Nextjs/SPARKTECH-website/src/app/services/%5Bslug%5D/page.tsx):
 
 ```typescript
 interface ServiceRecord {
@@ -43,11 +43,11 @@ interface ServiceRecord {
 ```
 
 ### B. Global Contact Details (`siteContact`)
-Structured inside [site.ts](file:///c:/Nitya%20Marketing%20projects/Sparktech%20Nextjs/sparktech-website/src/lib/site.ts):
+Structured inside [site.ts](file:///c:/Nitya%20Marketing%20projects/SPARKTECH%20Nextjs/SPARKTECH-website/src/lib/site.ts):
 
 ```typescript
 export const siteContact = {
-  officePhoneDisplay: string, // Display formatted phone number (e.g. (022) 2646 5920)
+  officePhoneDisplay: string, // Display formatted phone number
   officePhoneHref: string,    // Tel link prefix for direct dialing
   emailDisplay: string,       // Public contact email
   emailHref: string,          // Mailto action link
@@ -65,7 +65,7 @@ export const siteContact = {
 The contact form handles lead qualification and captures the user's intent.
 
 ### A. Captured Fields (`InquirySchema`)
-Defined in [ContactForm.tsx](file:///c:/Nitya%20Marketing%20projects/Sparktech%20Nextjs/sparktech-website/src/app/contact/ContactForm.tsx):
+Defined in [ContactForm.tsx](file:///c:/Nitya%20Marketing%20projects/SPARKTECH%20Nextjs/SPARKTECH-website/src/app/contact/ContactForm.tsx):
 
 | Field Name | Type | Requirement | Description |
 |---|---|---|---|
@@ -77,7 +77,7 @@ Defined in [ContactForm.tsx](file:///c:/Nitya%20Marketing%20projects/Sparktech%2
 | `message` | `string` | Required | Detailed description of process capacity and requirements |
 
 ### B. Client Cookie Memory Schema
-The [ServiceCookieTracker.tsx](file:///c:/Nitya%20Marketing%20projects/Sparktech%20Nextjs/sparktech-website/src/components/ServiceCookieTracker.tsx) tracks user interest.
+The [ServiceCookieTracker.tsx](file:///c:/Nitya%20Marketing%20projects/SPARKTECH%20Nextjs/SPARKTECH-website/src/components/ServiceCookieTracker.tsx) tracks user interest.
 
 * **Cookie Name:** `selected_service`
 * **Format:** Raw String matching the `slug` parameter (e.g. `solvent-extraction`).
@@ -87,7 +87,7 @@ The [ServiceCookieTracker.tsx](file:///c:/Nitya%20Marketing%20projects/Sparktech
 
 ## 4. Next-Phase Database Migration Path
 
-If Sparktech decides to implement an admin panel to dynamically edit service parameters or save inquiries on a dedicated server database, use the following layout:
+If SPARKTECH decides to implement an admin panel to dynamically edit service parameters or save inquiries on a dedicated server database, use the following layout:
 
 ```mermaid
 graph TD

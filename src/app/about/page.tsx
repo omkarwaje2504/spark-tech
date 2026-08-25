@@ -90,14 +90,22 @@ const CARDS = [
     num: "01",
     title: "Engineering",
     gradient: "from-sky-500 to-sky-400",
-    points: ["CAD", "3D Design", "Stress Analysis"],
+    points: [
+      "Process Engineering",
+      "Plant Layout & Design",
+      "Engineering Documentation",
+    ],
     d: "M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23-.693L5 14.5m14.8.8l1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0112 21c-2.773 0-5.491-.235-8.135-.687-1.718-.293-2.3-2.379-1.067-3.61L5 14.5",
   },
   {
     num: "02",
     title: "Procurement",
     gradient: "from-cyan-500 to-teal-400",
-    points: ["Vendor Network", "Material Planning", "Cost Optimization"],
+    points: [
+      "Strategic Vendor Management",
+      "Material Sourcing & Planning",
+      "Cost & Supply Optimization",
+    ],
     d: "M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z",
   },
   {
@@ -105,17 +113,21 @@ const CARDS = [
     title: "Manufacturing",
     gradient: "from-lime-500 to-green-400",
     points: [
-      "Precision Fabrication",
-      "Quality Inspection",
-      "Advanced Machinery",
+      "Precision Equipment Fabrication",
+      "Quality Assurance & Inspection",
+      "Modern Manufacturing Facilities",
     ],
     d: "M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437l1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008z",
   },
   {
     num: "04",
-    title: "Construction",
+    title: "Consultancy",
     gradient: "from-lime-400 to-emerald-500",
-    points: ["Installation", "Commissioning", "After-sales Support"],
+    points: [
+      "Technical,Process & Plant Consulting",
+      "Project Planning & Technical Advisory",
+      "Commissioning & Operational Support",
+    ],
     d: "M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008z",
   },
 ] as const;
@@ -193,8 +205,9 @@ const STATS = [
 ];
 
 const JOURNEY = [
+  { year: "2007", title: "Company Founded" },
   { year: "2016", title: "Company Founded" },
-  { year: "2018", title: "Manufacturing Expansion" },
+  { year: "2018", title: "Manufacturing Expansion", growth: true },
   { year: "2020", title: "Large Scale EPC Projects" },
   { year: "2023", title: "Automation Integration" },
   { year: "2026", title: "Serving Industries Across India" },
@@ -245,35 +258,16 @@ const SERVICES = [
 
 const INDUSTRIES = [
   {
-    title: "Food Processing",
-    img: "/images/about-us/industries-we-serve/food-processing.webp",
-  },
-  {
-    title: "Chemical",
-    img: "/images/about-us/industries-we-serve/chemicals.webp",
-  },
-  {
-    title: "Pharmaceutical",
-    img: "/images/about-us/industries-we-serve/pharmaceutical.webp",
-  },
-  {
-    title: "Oil & Gas",
+    title: "Oil Industries",
     img: "/images/about-us/industries-we-serve/oil-and-gas.webp",
   },
   {
-    title: "Water Treatment",
-    img: "/images/about-us/industries-we-serve/water-treatment.webp",
-  },
-  { title: "Power", img: "/images/about-us/industries-we-serve/power.webp" },
-  { title: "Cement", img: "/images/about-us/industries-we-serve/cement.webp" },
-  { title: "Steel", img: "/images/about-us/industries-we-serve/steel.webp" },
-  {
-    title: "Packaging",
-    img: "/images/about-us/industries-we-serve/packaging.webp",
+    title: "Fats Industries",
+    img: "/images/about-us/industries-we-serve/chemicals.webp",
   },
   {
-    title: "Renewable Energy",
-    img: "/images/about-us/industries-we-serve/renewable-energy.webp",
+    title: "Derivatives Industries",
+    img: "/images/about-us/industries-we-serve/pharmaceutical.webp",
   },
 ];
 
@@ -340,28 +334,28 @@ const FACILITY = [
 
 const QUALITY = [
   {
-    title: "ISO Certifications",
-    desc: "Internationally recognized quality management systems.",
+    title: "Quality Assurance Systems",
+    desc: "Structured quality processes and inspection controls ensure consistent workmanship and compliance with project requirements.",
   },
   {
-    title: "Quality Control",
-    desc: "Multi-stage checks across every production phase.",
+    title: "Fabrication Quality Control",
+    desc: "Controlled fabrication and dimensional inspections help maintain accuracy, consistency and required workmanship standards.",
   },
   {
-    title: "Material Traceability",
-    desc: "Full documentation from raw material to dispatch.",
+    title: "Material & Documentation Control",
+    desc: "Systematic control of materials, specifications, certificates and records ensures complete project traceability.",
   },
   {
-    title: "Factory Testing",
-    desc: "Rigorous performance validation before delivery.",
+    title: "Testing & Inspection",
+    desc: "Inspection and testing at defined stages verify equipment quality, performance and compliance before dispatch.",
   },
   {
-    title: "Safety Standards",
-    desc: "Compliant, safe practices across all operations.",
+    title: "Safety Compliance",
+    desc: "Established safety procedures support safe fabrication, assembly, testing and site activities throughout the project.",
   },
   {
-    title: "International Practices",
-    desc: "Global engineering benchmarks and methodologies.",
+    title: "Standards & Compliance",
+    desc: "Project activities follow applicable industry standards, technical specifications and client-defined quality requirements.",
   },
 ];
 
@@ -457,7 +451,7 @@ export default function AboutPage() {
         <div className="absolute inset-0">
           <Image
             src="/images/about-us/banner.png"
-            alt="Sparktech industrial project"
+            alt="SPARKTECH industrial project"
             fill
             priority
             className="object-cover"
@@ -548,7 +542,7 @@ export default function AboutPage() {
               <div className="relative overflow-hidden rounded-[2rem] border border-white/10 shadow-[0_40px_100px_rgba(0,0,0,0.5)] [animation:float_6s_ease-in-out_infinite]">
                 <Image
                   src="/images/about-us/banner.png"
-                  alt="Sparktech manufacturing plant"
+                  alt="SPARKTECH manufacturing plant"
                   width={900}
                   height={1100}
                   className="lg:h-[23rem] 2xl:h-[30rem] w-full object-cover"
@@ -593,7 +587,7 @@ export default function AboutPage() {
 
       {/* ABOUT SPARKTECH */}
       <section
-        id="about-sparktech"
+        id="about-SPARKTECH"
         className="relative overflow-hidden bg-gray-50 py-10"
       >
         <div className="pointer-events-none absolute -right-24 top-10 h-80 w-80 rounded-full bg-sky-100 blur-3xl" />
@@ -602,7 +596,7 @@ export default function AboutPage() {
         <div className="container relative mx-auto px-4 sm:px-6 lg:px-8">
           <Reveal className="mx-auto mb-6 md:mb-12 max-w-3xl text-center">
             <span className="mb-1 inline-flex items-center gap-2 rounded-full border border-sky-200 bg-white px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.22em] text-sky-600">
-              About SparkTech
+              About SPARKTECH
             </span>
             <h2 className="flex-1 text-2xl font-bold leading-7 text-gray-800 md:text-4xl md:leading-8 lg:leading-none">
               Engineering Beyond{" "}
@@ -617,7 +611,7 @@ export default function AboutPage() {
               <div className="relative md:h-[15rem] lg:h-[23rem] 2xl:h-[24rem] h-[15rem] overflow-hidden rounded-[2rem] border border-gray-100 shadow-[0_30px_80px_rgba(15,23,42,0.12)] lg:h-full">
                 <Image
                   src="/images/about-us/who-we-are.png"
-                  alt="SparkTech industrial manufacturing plant"
+                  alt="SPARKTECH industrial manufacturing plant"
                   fill
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 60vw"
@@ -631,7 +625,7 @@ export default function AboutPage() {
               className="flex flex-col justify-center lg:col-span-5"
             >
               <p className="text-base leading-relaxed text-gray-600">
-                SparkTech is a trusted Engineering, Procurement and Construction
+                SPARKTECH is a trusted Engineering, Procurement and Consultants
                 (EPC) project partner specializing in designing, manufacturing
                 and delivering complete industrial plants and process solutions.
                 We combine engineering expertise, modern manufacturing
@@ -649,10 +643,11 @@ export default function AboutPage() {
                 </div>
                 <div className="border-l-2 border-lime-400 pl-4">
                   <p className="text-sm leading-relaxed text-gray-600">
-                    Whether it&apos;s a new plant installation, process
-                    optimization or turnkey industrial solution, SparkTech
-                    delivers engineering excellence that drives operational
-                    success.
+                    From plant development and process optimization to
+                    integrated industrial solutions, SPARKTECH provides
+                    comprehensive engineering expertise and project execution
+                    capabilities focused on efficiency, reliability and
+                    long-term operational performance.
                   </p>
                 </div>
               </div>
@@ -708,7 +703,7 @@ export default function AboutPage() {
               viewport={{ once: true, amount: 0.4 }}
               transition={{ duration: 1, ease: EASE }}
             />
-            <RevealGroup className="relative grid grid-cols-5">
+            <RevealGroup className="relative grid grid-cols-6">
               {JOURNEY.map((item, i) => {
                 const isTop = i % 2 === 0;
                 const color = i % 2 === 0 ? "#3CAAE5" : "#99C71E";
@@ -718,7 +713,7 @@ export default function AboutPage() {
                     variants={fadeUp}
                     className="relative flex flex-col items-center"
                   >
-                    <div className="grid h-72 grid-rows-[1fr_auto_1fr] items-center">
+                    <div className="grid h-72 grid-rows-[1fr_auto_auto_1fr] items-center">
                       <div className="flex items-end justify-center px-3 pb-6">
                         {isTop && (
                           <div className="w-full rounded-2xl border border-gray-200 bg-white p-5 text-center shadow-lg transition-transform duration-300 hover:-translate-y-1">
@@ -729,6 +724,36 @@ export default function AboutPage() {
                               {item.title}
                             </p>
                           </div>
+                        )}
+                      </div>
+                      <div className="flex items-center justify-center pb-1">
+                        {item.growth && (
+                          <motion.span
+                            initial={{ opacity: 0, y: 6 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{
+                              duration: 0.5,
+                              delay: 0.4,
+                              ease: EASE,
+                            }}
+                            className="flex items-center gap-1 rounded-full border border-lime-300 bg-lime-50 px-2 py-1 text-[10px] font-bold uppercase tracking-wide text-lime-600 shadow-sm"
+                          >
+                            <svg
+                              className="h-3 w-3"
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2.5}
+                                d="M4.5 19.5l6-6 4 4L19.5 8.5M19.5 8.5H14M19.5 8.5V14"
+                              />
+                            </svg>
+                            Growth
+                          </motion.span>
                         )}
                       </div>
                       <div className="flex items-center justify-center">
@@ -761,23 +786,43 @@ export default function AboutPage() {
           {/* Mobile timeline */}
           <div className="relative lg:hidden">
             <div className="absolute bottom-0 left-4 top-0 w-0.5 bg-gradient-to-b from-[#3CAAE5] to-[#99C71E]" />
-            <RevealGroup className="space-y-2 md:space-y-4">
+            <RevealGroup className="relative">
               {JOURNEY.map((item, i) => {
                 const color = i % 2 === 0 ? "#3CAAE5" : "#99C71E";
                 return (
                   <motion.div
                     key={item.year}
                     variants={fadeUp}
-                    className="relative pl-8 md:pl-12"
+                    className="relative pl-8 md:pl-12 mb-4"
                   >
                     <span
                       className="absolute left-[9px] top-2 flex h-4 w-4 items-center justify-center rounded-full border-2 border-white shadow"
                       style={{ background: color }}
                     />
                     <div className="rounded-2xl border border-gray-200 bg-white p-2 pl-4 md:p-5 shadow-md">
-                      <p className="text-xl font-bold" style={{ color }}>
-                        {item.year}
-                      </p>
+                      <div className="flex items-center gap-2">
+                        <p className="text-xl font-bold" style={{ color }}>
+                          {item.year}
+                        </p>
+                        {item.growth && (
+                          <span className="inline-flex items-center gap-1 rounded-full border border-lime-300 bg-lime-50 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-lime-600">
+                            <svg
+                              className="h-3 w-3"
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2.5}
+                                d="M4.5 19.5l6-6 4 4L19.5 8.5M19.5 8.5H14M19.5 8.5V14"
+                              />
+                            </svg>
+                            Growth
+                          </span>
+                        )}
+                      </div>
                       <p className="md:mt-1 text-sm md:text-lg font-semibold text-gray-800">
                         {item.title}
                       </p>
@@ -813,22 +858,15 @@ export default function AboutPage() {
 
         <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
           <Reveal className="mx-auto mb-8 max-w-3xl text-center">
-            <span className="mb-1 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.22em] text-sky-200 backdrop-blur-sm">
-              Our Capabilities
-            </span>
             <h2 className="text-2xl font-bold leading-7 text-white md:text-4xl md:leading-8 lg:leading-none">
-              Engineering{" "}
+              Integrated{" "}
               <span className="bg-gradient-to-r from-sky-300 via-white to-lime-300 bg-clip-text text-transparent">
-                Excellence
+                Project Capabilities
               </span>
             </h2>
-            <p className="mx-auto mt-4 max-w-2xl text-base text-gray-300">
-              Complete EPC capability under one roof — from design through
-              commissioning and lifetime support.
-            </p>
           </Reveal>
 
-          <RevealGroup className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <RevealGroup className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
             {CARDS.map((card) => (
               <motion.div
                 key={card.num}
@@ -865,7 +903,7 @@ export default function AboutPage() {
                   {card.points.map((point) => (
                     <li
                       key={point}
-                      className="flex items-center gap-3 text-sm text-gray-300"
+                      className="flex items-center gap-3 text-md text-gray-300"
                     >
                       <svg
                         className="h-4 w-4 shrink-0 text-sky-400"
@@ -890,93 +928,24 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* OUR SERVICES */}
-      <section id="our-services" className="bg-white py-10">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <Reveal className="mx-auto mb-14 max-w-3xl text-center">
-            <span className="mb-1 inline-flex items-center gap-2 rounded-full border border-sky-200 bg-sky-50 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.22em] text-sky-600">
-              Our Services
-            </span>
-            <h2 className="flex-1 text-2xl font-bold leading-7 text-gray-800 md:text-4xl md:leading-8 lg:leading-none">
-              End-to-end{" "}
-              <span className="bg-gradient-to-r from-[#3CAAE5] to-[#99C71E] bg-clip-text text-transparent">
-                industrial services
-              </span>
-            </h2>
-          </Reveal>
-
-          <RevealGroup className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {SERVICES.map((service) => (
-              <motion.div
-                key={service.title}
-                variants={fadeUp}
-                className="group relative overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-sm transition-all duration-500 hover:-translate-y-2 hover:border-sky-300 hover:shadow-xl"
-              >
-                <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-sky-50 to-lime-50 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
-                <div className="relative flex h-40 items-center justify-center overflow-hidden bg-gray-50 transition-colors duration-500 group-hover:bg-transparent">
-                  <Image
-                    src={service.img}
-                    alt={service.title}
-                    width={220}
-                    height={160}
-                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
-                  />
-                  <span className="absolute left-0 top-0 h-full w-1 bg-gradient-to-b from-[#3CAAE5] to-[#99C71E] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
-                </div>
-                <div className="relative p-2 px-6">
-                  <h3 className="text-lg font-bold leading-tight text-gray-900">
-                    {service.title}
-                  </h3>
-                  <span className="mt-1 block h-0.5 w-8 rounded-full bg-gradient-to-r from-[#3CAAE5] to-[#99C71E] transition-all duration-500 group-hover:w-14" />
-                  <div className="grid grid-rows-[0fr] transition-all duration-500 group-hover:grid-rows-[1fr]">
-                    <p className="overflow-hidden text-sm leading-relaxed text-gray-600 opacity-0 transition-opacity duration-500 group-hover:mt-3 group-hover:opacity-100">
-                      {service.desc}
-                    </p>
-                  </div>
-                  <div className="mt-1 inline-flex items-center gap-2 text-sm font-semibold text-sky-600 opacity-0 transition-all duration-500 group-hover:opacity-100">
-                    Learn more
-                    <svg
-                      className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M17 8l4 4m0 0l-4 4m4-4H3"
-                      />
-                    </svg>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </RevealGroup>
-        </div>
-      </section>
-
       {/* INDUSTRIES WE SERVE */}
       <section id="industries" className="bg-white py-10">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <Reveal className="mx-auto mb-8 max-w-3xl text-center">
-            <span className="mb-1 inline-flex items-center gap-2 rounded-full border border-sky-200 bg-sky-50 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.22em] text-sky-600">
-              Industries We Serve
-            </span>
             <h2 className="text-2xl font-bold leading-7 text-gray-900 md:text-4xl md:leading-8 lg:leading-none">
-              Engineering solutions across{" "}
+              Industries{" "}
               <span className="bg-gradient-to-r from-[#3CAAE5] to-[#99C71E] bg-clip-text text-transparent">
-                every sector
+                We Serve
               </span>
             </h2>
           </Reveal>
 
-          <RevealGroup className="grid grid-cols-2 gap-1 sm:grid-cols-3 lg:grid-cols-10">
+          <RevealGroup className="grid grid-cols-2 gap-1 sm:grid-cols-3">
             {INDUSTRIES.map((industry) => (
               <motion.div
                 key={industry.title}
                 variants={fadeUp}
-                className="group relative aspect-[5/5] md:aspect-[3/5] overflow-hidden rounded-2xl border border-gray-200 shadow-md"
+                className="group relative aspect-[5/5] md:h-[20rem] md:w-full overflow-hidden rounded-2xl border border-gray-200 shadow-md"
               >
                 <Image
                   src={industry.img}
@@ -988,7 +957,7 @@ export default function AboutPage() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent" />
                 <div className="absolute inset-x-0 bottom-0 p-4">
                   <span className="mb-2 block h-0.5 w-6 rounded-full bg-[#99C71E] transition-all duration-500 group-hover:w-10" />
-                  <h3 className="text-sm font-bold leading-tight text-white lg:text-base">
+                  <h3 className="text-sm font-bold leading-tight text-white lg:text-2xl">
                     {industry.title}
                   </h3>
                 </div>
@@ -1017,12 +986,12 @@ export default function AboutPage() {
         <div className="container relative mx-auto px-4 sm:px-6 lg:px-8">
           <Reveal className="mx-auto mb-8 max-w-3xl text-center">
             <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.22em] text-sky-200 backdrop-blur-sm">
-              Our EPC Process
+              Our Project Delivery Process
             </span>
             <h2 className="flex-1 text-2xl font-bold leading-7 text-white md:text-4xl md:leading-8 lg:leading-none">
-              From requirement to{" "}
+              From initial requirements to{" "}
               <span className="bg-gradient-to-r from-sky-300 via-white to-lime-300 bg-clip-text text-transparent">
-                commissioning
+                commissioning and ongoing support
               </span>
             </h2>
           </Reveal>
@@ -1096,89 +1065,20 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* WHY CHOOSE SPARKTECH */}
-      <section id="why-sparktech" className="bg-white py-10">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
-            <Reveal variant={fadeLeft} className="relative">
-              <div className="absolute -left-6 -top-6 h-40 w-40 rounded-full bg-sky-100 blur-3xl" />
-              <div className="absolute -bottom-6 -right-6 h-40 w-40 rounded-full bg-lime-100 blur-3xl" />
-              <div className="relative overflow-hidden rounded-[2rem] border border-gray-100 shadow-[0_30px_80px_rgba(15,23,42,0.12)]">
-                <Image
-                  src="/images/about-us/why-choose-us.webp"
-                  alt="SparkTech manufacturing facility"
-                  width={1000}
-                  height={900}
-                  className="h-[20rem] w-full object-cover lg:h-[28rem]"
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                />
-                <div className="absolute bottom-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#3CAAE5] to-[#99C71E]" />
-              </div>
-            </Reveal>
-
-            <div>
-              <Reveal>
-                <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-sky-200 bg-sky-50 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.22em] text-sky-600">
-                  Why SparkTech
-                </span>
-                <h2 className="flex-1 text-2xl font-bold leading-7 text-gray-900 md:text-4xl md:leading-8 lg:leading-none">
-                  Why companies choose{" "}
-                  <span className="bg-gradient-to-r from-[#3CAAE5] to-[#99C71E] bg-clip-text text-transparent">
-                    SparkTech
-                  </span>
-                </h2>
-              </Reveal>
-
-              <RevealGroup className="mt-8 grid gap-x-6 gap-y-5 sm:grid-cols-2">
-                {WHY_REASONS.map((reason) => (
-                  <motion.div
-                    key={reason}
-                    variants={fadeUp}
-                    className="group flex items-start gap-3"
-                  >
-                    <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-[#3CAAE5] to-[#99C71E] shadow transition-transform duration-300 group-hover:scale-110">
-                      <svg
-                        className="h-3.5 w-3.5 text-white"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={3}
-                          d="M5 13l4 4L19 7"
-                        />
-                      </svg>
-                    </span>
-                    <span className="text-lg font-medium text-gray-700 transition-colors group-hover:text-gray-900">
-                      {reason}
-                    </span>
-                  </motion.div>
-                ))}
-              </RevealGroup>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* MANUFACTURING FACILITY */}
       <section
         id="manufacturing-facility"
-        className="relative overflow-hidden bg-gray-950 py-10 text-white"
+        className="relative overflow-hidden  py-10 text-white"
       >
         <div className="pointer-events-none absolute -left-24 top-0 h-96 w-96 rounded-full bg-sky-500/10 blur-[120px]" />
         <div className="pointer-events-none absolute -right-24 bottom-0 h-96 w-96 rounded-full bg-lime-400/10 blur-[120px]" />
 
         <div className="container relative mx-auto px-4 sm:px-6 lg:px-8">
           <Reveal className="mx-auto mb-14 max-w-3xl text-center">
-            <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.22em] text-sky-200 backdrop-blur-sm">
-              Manufacturing Facility
-            </span>
-            <h2 className="flex-1 text-2xl font-bold leading-7 text-white md:text-4xl md:leading-8 lg:leading-none">
-              Built in-house, from{" "}
-              <span className="bg-gradient-to-r from-sky-300 via-white to-lime-300 bg-clip-text text-transparent">
-                metal to machine
+            <h2 className="text-2xl font-bold leading-7 text-gray-900 md:text-4xl md:leading-8 lg:leading-none">
+              Our Inhouse{" "}
+              <span className="bg-gradient-to-r from-[#3CAAE5] to-[#99C71E] bg-clip-text text-transparent">
+                Facilities
               </span>
             </h2>
           </Reveal>
@@ -1220,13 +1120,10 @@ export default function AboutPage() {
 
         <div className="container relative mx-auto px-4 sm:px-6 lg:px-8">
           <Reveal className="mx-auto mb-14 max-w-3xl text-center">
-            <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.22em] text-sky-200 backdrop-blur-sm">
-              Quality &amp; Safety
-            </span>
             <h2 className="flex-1 text-2xl font-bold leading-7 text-white md:text-4xl md:leading-8 lg:leading-none">
-              Engineered to the{" "}
+              Quality, Safety &{" "}
               <span className="bg-gradient-to-r from-sky-300 via-white to-lime-300 bg-clip-text text-transparent">
-                highest standards
+                Compliance
               </span>
             </h2>
           </Reveal>
@@ -1269,7 +1166,7 @@ export default function AboutPage() {
       </section>
 
       {/* VISION & MISSION */}
-      <section
+      {/* <section
         id="vision-mission"
         className="relative overflow-hidden bg-white py-10"
       >
@@ -1310,7 +1207,7 @@ export default function AboutPage() {
             ))}
           </RevealGroup>
         </div>
-      </section>
+      </section> */}
 
       {/* LEADERSHIP */}
       <section id="leadership" className="bg-white py-10">
@@ -1351,7 +1248,7 @@ export default function AboutPage() {
                 <path d="M9.983 3v7.391c0 5.704-3.731 9.57-8.983 10.609l-.995-2.151c2.432-.917 3.995-3.638 3.995-5.849h-4v-10h9.983zm14.017 0v7.391c0 5.704-3.748 9.571-9 10.609l-.996-2.151c2.433-.917 3.996-3.638 3.996-5.849h-3.983v-10h9.983z" />
               </svg>
               <p className="text-xl font-light leading-relaxed text-gray-700 lg:text-2xl">
-                At SparkTech, engineering is more than construction — it&apos;s
+                At SPARKTECH, engineering is more than construction — it&apos;s
                 a commitment to precision, reliability and long-term
                 partnership. Every project we deliver reflects our belief that
                 industrial growth is built on trust, quality and relentless
@@ -1365,7 +1262,7 @@ export default function AboutPage() {
               <div className="mt-8">
                 <p className="font-bold text-gray-900">Amit Waghmare</p>
                 <p className="text-sm text-gray-500">
-                  Founder &amp; Managing Director, SparkTech Processes LLP
+                  Founder &amp; Managing Director, SPARKTECH Processes LLP
                 </p>
               </div>
             </Reveal>

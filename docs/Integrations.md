@@ -1,6 +1,6 @@
-# System Integrations Guide - Sparktech Processes LLP
+# System Integrations Guide - SPARKTECH Processes LLP
 
-This document details the third-party integrations, cookie systems, and communication channels built into the Sparktech Processes website.
+This document details the third-party integrations, cookie systems, and communication channels built into the SPARKTECH Processes website.
 
 ---
 
@@ -11,8 +11,8 @@ To minimize B2B sales cycles, the site integrates an interactive floating WhatsA
 * **Component:** `src/components/WhatsAppFloat.tsx`
 * **Trigger:** Floating button positioned at the bottom right corner of all viewport resolutions (hidden under heavy mobile headers/keyboards where necessary).
 * **Business Parameter Mapping:**
-  * **Phone Number:** `+919820513136` (Configured in [site.ts](file:///c:/Nitya%20Marketing%20projects/Sparktech%20Nextjs/sparktech-website/src/lib/site.ts)).
-  * **Predefined Pitch Text:** `"Hello Sparktech Processes, I am interested in your project engineering solutions and would like to discuss our requirements."`
+  * **Phone Number:** `+919820513136` (Configured in [site.ts](file:///c:/Nitya%20Marketing%20projects/SPARKTECH%20Nextjs/SPARKTECH-website/src/lib/site.ts)).
+  * **Predefined Pitch Text:** `"Hello SPARKTECH Processes, I am interested in your project engineering solutions and would like to discuss our requirements."`
 * **Conversion Impact:** Allows immediate mobile engagement for high-intent visitors who want to chat with engineers directly rather than wait for email replies.
 
 ---
@@ -92,8 +92,8 @@ Deploy a Next.js Server Action or route API endpoint at `/api/contact/route.ts` 
 
      try {
        await transporter.sendMail({
-         from: '"Sparktech Web Lead" <nityamaketingmanagement@gmail.com>',
-         to: 'info@sparktechprocesses.com',
+         from: '"SPARKTECH Web Lead" <nityamaketingmanagement@gmail.com>',
+         to: 'info@SPARKTECHprocesses.com',
          subject: `New B2B Lead: ${body.service} from ${body.company || body.name}`,
          text: `Name: ${body.name}\nEmail: ${body.email}\nPhone: ${body.phone}\nCompany: ${body.company}\nMessage: ${body.message}`,
        });
@@ -110,5 +110,5 @@ Deploy a Next.js Server Action or route API endpoint at `/api/contact/route.ts` 
 
 The `/contact` page includes a highly detailed geolocation block:
 * **Target Address:** Santacruz Railway Station, Mumbai, India.
-* **Implementation:** An embedded iframe mapping the location coordinates for Sparktech's physical offices.
+* **Implementation:** An embedded iframe mapping the location coordinates for SPARKTECH's physical offices.
 * **Fallback:** A vector card mapping the directions is integrated, along with primary contact numbers for direct calling.

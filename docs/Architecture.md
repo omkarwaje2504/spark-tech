@@ -1,6 +1,6 @@
-# Application Architecture Guide - Sparktech Processes LLP
+# Application Architecture Guide - SPARKTECH Processes LLP
 
-This document outlines the software architecture, engineering design patterns, and codebase directory layout for the Sparktech Processes website.
+This document outlines the software architecture, engineering design patterns, and codebase directory layout for the SPARKTECH Processes website.
 
 ---
 
@@ -21,14 +21,14 @@ The application is built on modern, high-performance web standards prioritizing 
 Below is the annotated file structure of the workspace, detailing the role of each directory and system module:
 
 ```
-sparktech-website/
+SPARKTECH-website/
 ├── docs/                      # Onboarding & Knowledge Transfer documentation (This folder)
 ├── public/                    # Static assets (compressed images, videos, vector logos)
 │   └── images/
 │       ├── About Us/          # Imagery for the About page
 │       ├── Services/          # Service thumbnails and diagrams
 │       ├── Technologies/      # Technical diagrams & capability graphics
-│       └── Sparktech logo.png # Primary company branding logo
+│       └── SPARKTECH logo.png # Primary company branding logo
 ├── src/                       # Main application source directory
 │   ├── app/                   # Next.js App Router page routes & layouts
 │   │   ├── about/             # "About Us" page component (Company Story, Core Values)
@@ -48,7 +48,7 @@ sparktech-website/
 │   │   ├── Header.tsx         # Navigation bar with active state & CTA route pre-fills
 │   │   ├── Footer.tsx         # Multi-column descriptive footer and CTA links
 │   │   ├── Hero.tsx           # Prominent landing section with buyer trust stats
-│   │   ├── About.tsx          # Homepage "Why Sparktech" differentiator overview
+│   │   ├── About.tsx          # Homepage "Why SPARKTECH" differentiator overview
 │   │   ├── Services.tsx       # Main services grid blocks
 │   │   ├── ProcessFlow.tsx    # Step-by-step EPC execution roadmap
 │   │   ├── QuickInquiry.tsx   # Inline mid-page lead capture form

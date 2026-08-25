@@ -32,7 +32,7 @@ export default function QuickInquiry() {
           <div className="rounded-[1.75rem] bg-gray-50 p-6 lg:p-8">
             <h3 className="text-2xl font-semibold text-gray-950">Send Your Enquiry</h3>
             <p className="mt-2 text-sm leading-6 text-gray-600">
-              Fill in the basics and Sparktech can respond with the right service path and discussion scope.
+              Fill in the basics and SPARKTECH can respond with the right service path and discussion scope.
             </p>
             <div className="mt-6">
               <ContactForm />

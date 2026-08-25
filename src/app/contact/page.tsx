@@ -6,8 +6,8 @@ import ContactForm from './ContactForm';
 import { siteContact } from '@/lib/site';
 
 export const metadata: Metadata = {
-    title: 'Contact Us | Sparktech Processes LLP',
-    description: 'Get in touch with Sparktech Processes LLP for inquiries about oil extraction plants, refineries, and processing equipment. Mumbai, India.',
+    title: 'Contact Us | SPARKTECH Processes LLP',
+    description: 'Get in touch with SPARKTECH Processes LLP for inquiries about oil extraction plants, refineries, and processing equipment. Mumbai, India.',
 };
 
 export default function ContactPage() {
@@ -106,7 +106,7 @@ export default function ContactPage() {
                                     allowFullScreen
                                     loading="lazy"
                                     referrerPolicy="no-referrer-when-downgrade"
-                                    title="Sparktech Location"
+                                    title="SPARKTECH Location"
                                 ></iframe>
                             </div>
 
@@ -167,7 +167,7 @@ export default function ContactPage() {
                             Call Office
                         </a>
                         <a
-                            href="https://www.linkedin.com/company/sparktech-processes"
+                            href="https://www.linkedin.com/company/SPARKTECH-processes"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="flex items-center gap-3 bg-[#0A66C2] text-white px-8 py-4 rounded-xl font-semibold hover:shadow-lg hover:shadow-[#0A66C2]/30 transition-all"

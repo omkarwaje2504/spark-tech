@@ -3,7 +3,7 @@
   "configVersion": 0,
   "workspaces": {
     "": {
-      "name": "sparktech-website",
+      "name": "SPARKTECH-website",
       "dependencies": {
         "framer-motion": "^12.42.2",
         "install": "^0.13.0",

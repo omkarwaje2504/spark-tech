@@ -80,8 +80,8 @@ export default function Footer() {
           <div className="space-y-8">
             <Link href="/">
               <Image
-                src="/images/Sparktech logo.png"
-                alt="Sparktech Processes LLP"
+                src="/images/SPARKTECH logo.png"
+                alt="SPARKTECH Processes LLP"
                 width={1000}
                 height={1000}
                 className={`w-auto transition-all duration-500 group-hover:scale-105 -ml-5`}
@@ -175,7 +175,7 @@ export default function Footer() {
       <div className="relative border-t border-white/10">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 py-4 md:flex-row lg:px-8">
           <p className="text-xs font-light text-gray-500">
-            © {new Date().getFullYear()} Sparktech Processes LLP. All rights
+            © {new Date().getFullYear()} SPARKTECH Processes LLP. All rights
             reserved.
           </p>
           <div className="flex items-center gap-8">

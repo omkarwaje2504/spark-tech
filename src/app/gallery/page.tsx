@@ -5,7 +5,7 @@ import PageBanner from '@/components/PageBanner';
 import GalleryGrid from './GalleryGrid';
 
 export const metadata: Metadata = {
-    title: 'Project Gallery | Sparktech Processes LLP',
+    title: 'Project Gallery | SPARKTECH Processes LLP',
     description: 'Explore our completed projects worldwide - Oil refineries, extraction plants, and processing facilities in India, Bangladesh, Nepal, Sri Lanka and more.',
 };
 

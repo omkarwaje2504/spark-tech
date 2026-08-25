@@ -573,11 +573,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const service = servicesData[slug];
 
     if (!service) {
-        return { title: 'Service Not Found | Sparktech Processes LLP' };
+        return { title: 'Service Not Found | SPARKTECH Processes LLP' };
     }
 
     return {
-        title: `${service.title} | Sparktech Processes LLP`,
+        title: `${service.title} | SPARKTECH Processes LLP`,
         description: service.description,
     };
 }
@@ -738,18 +738,18 @@ export default async function ServiceDetailPage({ params }: Props) {
                                     Send Your Enquiry
                                 </Link>
                                 <div className="mt-6 pt-6 border-t border-sky-400 space-y-3">
-                                    <a href="tel:+912226465920" className="flex items-center gap-3 text-sky-100 hover:text-white transition-colors">
+                                    <a href="tel:+91 88500 58985" className="flex items-center gap-3 text-sky-100 hover:text-white transition-colors">
                                         <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                                             <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                                         </svg>
-                                        (022) 2646 5920
+                                        +91 88500 58985
                                     </a>
-                                    <a href="mailto:info@sparktechprocesses.com" className="flex items-center gap-3 text-sky-100 hover:text-white transition-colors">
+                                    <a href="mailto:info@SPARKTECHprocesses.com" className="flex items-center gap-3 text-sky-100 hover:text-white transition-colors">
                                         <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                                             <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
                                             <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
                                         </svg>
-                                        info@sparktechprocesses.com
+                                        info@SPARKTECHprocesses.com
                                     </a>
                                 </div>
                             </div>

@@ -5,7 +5,7 @@ import Footer from '@/components/Footer';
 import { archivedServiceBackupContent } from '@/lib/serviceBackupContent';
 
 export const metadata: Metadata = {
-    title: 'Service Backup | Sparktech Processes LLP',
+    title: 'Service Backup | SPARKTECH Processes LLP',
     description: 'Backup copies of archived service pages.',
     robots: {
         index: false,

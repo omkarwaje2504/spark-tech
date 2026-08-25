@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     }
 
     return {
-        title: `${service.title} Backup | Sparktech Processes LLP`,
+        title: `${service.title} Backup | SPARKTECH Processes LLP`,
         description: service.description,
         robots: {
             index: false,
