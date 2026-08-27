@@ -967,6 +967,7 @@ export default function AboutPage() {
         </div>
       </section>
 
+
       {/* OUR EPC PROCESS */}
       <section
         id="epc-process"
