@@ -80,7 +80,7 @@ export default function Footer() {
           <div className="space-y-8">
             <Link href="/">
               <Image
-                src="/images/SPARKTECH logo.png"
+                src="/images/sparktech-logo.png"
                 alt="SPARKTECH Processes LLP"
                 width={1000}
                 height={1000}

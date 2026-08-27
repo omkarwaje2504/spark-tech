@@ -189,7 +189,7 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group shrink-0">
             <Image
-              src="/images/SPARKTECH logo.png"
+              src="/images/sparktech-logo.png"
               alt="SPARKTECH Processes LLP"
               width={1000}
               height={1000}

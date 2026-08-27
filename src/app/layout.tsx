@@ -26,8 +26,8 @@ export const metadata: Metadata = {
     "oil extraction plant, edible oil refinery, solvent extraction, vegetable oil, oil processing equipment, Mumbai, India",
   authors: [{ name: "SPARKTECH Processes LLP" }],
   icons: {
-    icon: "/images/SPARKTECH logo.png",
-    apple: "/images/SPARKTECH logo.png",
+    icon: "/images/sparktech-logo.png",
+    apple: "/images/sparktech-logo.png",
   },
   openGraph: {
     title:
