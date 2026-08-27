@@ -206,7 +206,7 @@ const STATS = [
 
 const JOURNEY = [
   { year: "2007", title: "Company Founded" },
-  { year: "2016", title: "Company Founded" },
+  { year: "2016", title: "Steady Operations" },
   { year: "2018", title: "Manufacturing Expansion", growth: true },
   { year: "2020", title: "Large Scale EPC Projects" },
   { year: "2023", title: "Automation Integration" },
@@ -411,6 +411,82 @@ function Counter({
 }
 
 // ============================================================================
+// JOURNEY LINE (curved, rises toward the end, arrowhead tip)
+// ============================================================================
+
+/**
+ * Vertical position of each timeline point, as a fraction of the track's
+ * height (0 = top, 1 = bottom/baseline). This single source of truth drives
+ * BOTH the SVG curve and the dot placement, so they always line up exactly
+ * regardless of viewport width or height.
+ * First points sit flat near the baseline, then ease upward toward the end.
+ */
+const JOURNEY_Y_FRACTIONS = [0.86, 0.8, 0.7, 0.48, 0.24, 0.04];
+
+/**
+ * Measures a container's actual rendered box (via ResizeObserver) and builds
+ * a smooth cubic-bezier SVG path across N evenly spaced x positions in REAL
+ * PIXELS matching that box. Authoring the path in real pixels — rather than
+ * a 0–100 viewBox stretched with preserveAspectRatio="none" — avoids the
+ * non-uniform X/Y squish that breaks a wide-short box into disjointed-looking
+ * curve segments. The path and the dot positions (computed the same way from
+ * the same fractions) always land on the same points because both read off
+ * this one measured box.
+ */
+function useJourneyPath(count: number) {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [size, setSize] = useState({ width: 0, height: 0 });
+
+  useEffect(() => {
+    const el = containerRef.current;
+    if (!el) return;
+    const update = () =>
+      setSize({ width: el.clientWidth, height: el.clientHeight });
+    update();
+    const obs = new ResizeObserver(update);
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, []);
+
+  const { width, height } = size;
+  // Horizontal inset must be large enough that a card (fixed w-48 = 192px,
+  // centered on its dot) never overflows the track's left/right edge at the
+  // first/last points. Scale with width but never drop below the half-card
+  // width + a little breathing room, and cap it so the curve keeps a
+  // reasonable amount of travel on smaller laptop screens.
+  const CARD_HALF_WIDTH = 96; // px, half of w-48
+  const padX = Math.min(
+    Math.max(CARD_HALF_WIDTH + 8, width * 0.09),
+    width * 0.16,
+  );
+  const padY = Math.max(12, height * 0.06);
+  const usableW = Math.max(0, width - padX * 2);
+  const usableH = Math.max(0, height - padY * 2);
+
+  const points = Array.from({ length: count }, (_, i) => {
+    const x = padX + (usableW * i) / (count - 1);
+    const frac =
+      JOURNEY_Y_FRACTIONS[i] ?? JOURNEY_Y_FRACTIONS[JOURNEY_Y_FRACTIONS.length - 1];
+    const y = padY + usableH * frac;
+    return { x, y };
+  });
+
+  let d =
+    width > 0 && points.length > 0 ? `M ${points[0].x} ${points[0].y}` : "";
+  for (let i = 1; i < points.length; i++) {
+    const prev = points[i - 1];
+    const curr = points[i];
+    const cx1 = prev.x + (curr.x - prev.x) * 0.5;
+    const cy1 = prev.y;
+    const cx2 = prev.x + (curr.x - prev.x) * 0.5;
+    const cy2 = curr.y;
+    d += ` C ${cx1} ${cy1}, ${cx2} ${cy2}, ${curr.x} ${curr.y}`;
+  }
+
+  return { containerRef, d, points, width, height };
+}
+
+// ============================================================================
 // PAGE
 // ============================================================================
 
@@ -440,6 +516,8 @@ export default function AboutPage() {
     offset: ["start end", "end start"],
   });
   const y = useTransform(scrollYProgress, [0, 1], ["-30%", "40%"]);
+
+  const journeyPath = useJourneyPath(JOURNEY.length);
 
   return (
     <>
@@ -679,7 +757,7 @@ export default function AboutPage() {
       {/* OUR JOURNEY */}
       <section
         id="our-journey"
-        className="relative overflow-hidden bg-white py-10"
+        className="relative overflow-hidden bg-white py-10 overflow-hidden"
       >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <Reveal className="mx-auto mb-10 max-w-3xl text-center">
@@ -694,39 +772,92 @@ export default function AboutPage() {
             </h2>
           </Reveal>
 
-          {/* Desktop timeline */}
-          <div className="relative hidden lg:block">
-            <motion.div
-              className="absolute left-0 right-0 top-1/2 h-0.5 -translate-y-1/2 origin-left bg-gradient-to-r from-[#3CAAE5] to-[#99C71E]"
-              initial={{ scaleX: 0 }}
-              whileInView={{ scaleX: 1 }}
-              viewport={{ once: true, amount: 0.4 }}
-              transition={{ duration: 1, ease: EASE }}
-            />
-            <RevealGroup className="relative grid grid-cols-6">
-              {JOURNEY.map((item, i) => {
-                const isTop = i % 2 === 0;
-                const color = i % 2 === 0 ? "#3CAAE5" : "#99C71E";
-                return (
-                  <motion.div
-                    key={item.year}
-                    variants={fadeUp}
-                    className="relative flex flex-col items-center"
-                  >
-                    <div className="grid h-72 grid-rows-[1fr_auto_auto_1fr] items-center">
-                      <div className="flex items-end justify-center px-3 pb-6">
-                        {isTop && (
-                          <div className="w-full rounded-2xl border border-gray-200 bg-white p-5 text-center shadow-lg transition-transform duration-300 hover:-translate-y-1">
-                            <p className="text-2xl font-bold" style={{ color }}>
-                              {item.year}
-                            </p>
-                            <p className="mt-1 text-sm font-semibold text-gray-800">
-                              {item.title}
-                            </p>
-                          </div>
-                        )}
-                      </div>
-                      <div className="flex items-center justify-center pb-1">
+          {/* Desktop timeline — curved rising path with arrowhead */}
+          {/*
+            The SVG track and the dots share ONE coordinate system, measured
+            in real pixels via ResizeObserver (see useJourneyPath):
+            - the track div is a fixed-height box whose actual pixel
+              width/height is measured on mount and on resize
+            - the SVG viewBox uses those exact pixel dimensions (no 0–100
+              percentage box, no preserveAspectRatio="none"), so the curve
+              is never non-uniformly stretched and stays one continuous line
+            - each dot is placed at the SAME pixel point the path was drawn
+              through (journeyPath.points[i]), so line and dots never drift
+            - padX (inset) reserves enough room that a card, centered on its
+              dot, never overflows the track's left/right edge — this keeps
+              the first (2007) and last (2026) cards fully on-screen on
+              laptop-width viewports, not just large desktops
+            my-20/my-24 on the wrapper reserves vertical room for the cards
+            that extend above/below the track itself.
+          */}
+          <div className="relative hidden lg:block my-16 xl:my-20 lg:py-10">
+            <div
+              ref={journeyPath.containerRef}
+              className="relative h-64 xl:h-72 2xl:h-80"
+            >
+              {journeyPath.width > 0 && (
+                <svg
+                  className="pointer-events-none absolute inset-0 h-full w-full overflow-visible"
+                  viewBox={`0 0 ${journeyPath.width} ${journeyPath.height}`}
+                  fill="none"
+                >
+                  <defs>
+                    <linearGradient
+                      id="journeyLineGradient"
+                      x1="0"
+                      y1="0"
+                      x2={journeyPath.width}
+                      y2="0"
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <stop offset="0%" stopColor="#3CAAE5" />
+                      <stop offset="55%" stopColor="#3CAAE5" />
+                      <stop offset="100%" stopColor="#99C71E" />
+                    </linearGradient>
+                    <marker
+                      id="journeyArrowhead"
+                      viewBox="0 0 10 10"
+                      refX="6"
+                      refY="5"
+                      markerWidth="8"
+                      markerHeight="8"
+                      orient="auto-start-reverse"
+                    >
+                      <path d="M0 0L10 5L0 10Z" fill="#99C71E" />
+                    </marker>
+                  </defs>
+                  <motion.path
+                    d={journeyPath.d}
+                    stroke="url(#journeyLineGradient)"
+                    strokeWidth={2.5}
+                    strokeLinecap="round"
+                    markerEnd="url(#journeyArrowhead)"
+                    initial={{ pathLength: 0 }}
+                    whileInView={{ pathLength: 1 }}
+                    viewport={{ once: true, amount: 0.4 }}
+                    transition={{ duration: 1.2, ease: EASE }}
+                  />
+                </svg>
+              )}
+
+              <RevealGroup className="absolute inset-0">
+                {JOURNEY.map((item, i) => {
+                  const isTop = i % 2 === 0;
+                  const color = i % 2 === 0 ? "#3CAAE5" : "#99C71E";
+                  // Use the exact same pixel point the path was drawn
+                  // through, so the dot always sits precisely on the curve
+                  // (including the horizontal inset reserved for card width).
+                  const point = journeyPath.points[i];
+                  if (!point) return null;
+                  return (
+                    <motion.div
+                      key={item.year}
+                      variants={fadeUp}
+                      className="absolute flex -translate-x-1/2 -translate-y-1/2 flex-col items-center"
+                      style={{ left: `${point.x}px`, top: `${point.y}px` }}
+                    >
+                      {/* growth pill, sits just above the dot */}
+                      <div className="absolute bottom-full mb-2 flex justify-center">
                         {item.growth && (
                           <motion.span
                             initial={{ opacity: 0, y: 6 }}
@@ -737,7 +868,7 @@ export default function AboutPage() {
                               delay: 0.4,
                               ease: EASE,
                             }}
-                            className="flex items-center gap-1 rounded-full border border-lime-300 bg-lime-50 px-2 py-1 text-[10px] font-bold uppercase tracking-wide text-lime-600 shadow-sm"
+                            className="flex items-center gap-1 whitespace-nowrap rounded-full border border-lime-300 bg-lime-50 px-2 py-1 text-[10px] font-bold uppercase tracking-wide text-lime-600 shadow-sm"
                           >
                             <svg
                               className="h-3 w-3"
@@ -756,31 +887,43 @@ export default function AboutPage() {
                           </motion.span>
                         )}
                       </div>
-                      <div className="flex items-center justify-center">
-                        <span
-                          className="relative z-10 flex h-6 w-6 items-center justify-center rounded-full border-4 border-white shadow-md"
-                          style={{ background: color }}
+
+                      {/* dot, centered exactly on the path point */}
+                      <span
+                        className="relative z-10 flex h-6 w-6 items-center justify-center rounded-full border-4 border-white shadow-md"
+                        style={{ background: color }}
+                      >
+                        <span className="h-2 w-2 rounded-full bg-white" />
+                      </span>
+
+                      {/* card, alternating above/below the dot */}
+                      <div
+                        className={`absolute w-40 xl:w-48 ${
+                          isTop
+                            ? "bottom-full mb-6 xl:mb-8"
+                            : "top-full mt-6 xl:mt-8"
+                        }`}
+                      >
+                        <div
+                          className={`w-full rounded-2xl border border-gray-200 bg-white p-4 xl:p-5 text-center shadow-lg transition-transform duration-300 ${
+                            isTop
+                              ? "hover:-translate-y-1"
+                              : "hover:translate-y-1"
+                          }`}
                         >
-                          <span className="h-2 w-2 rounded-full bg-white" />
-                        </span>
+                          <p className="text-xl xl:text-2xl font-bold" style={{ color }}>
+                            {item.year}
+                          </p>
+                          <p className="mt-1 text-sm font-semibold text-gray-800">
+                            {item.title}
+                          </p>
+                        </div>
                       </div>
-                      <div className="flex items-start justify-center px-3 md:pt-6">
-                        {!isTop && (
-                          <div className="w-full rounded-2xl border border-gray-200 bg-white p-5 text-center shadow-lg transition-transform duration-300 hover:translate-y-1">
-                            <p className="text-2xl font-bold" style={{ color }}>
-                              {item.year}
-                            </p>
-                            <p className="mt-1 text-sm font-semibold text-gray-800">
-                              {item.title}
-                            </p>
-                          </div>
-                        )}
-                      </div>
-                    </div>
-                  </motion.div>
-                );
-              })}
-            </RevealGroup>
+                    </motion.div>
+                  );
+                })}
+              </RevealGroup>
+            </div>
           </div>
 
           {/* Mobile timeline */}
@@ -839,7 +982,7 @@ export default function AboutPage() {
       <section
         ref={ref}
         id="engineering-excellence"
-        className="relative overflow-hidden bg-gray-950 py-10 text-white"
+        className="relative overflow-hidden bg-gray-950 py-10 overflow-hidden text-white"
       >
         <motion.div
           style={{ y }}
@@ -929,7 +1072,7 @@ export default function AboutPage() {
       </section>
 
       {/* INDUSTRIES WE SERVE */}
-      <section id="industries" className="bg-white py-10">
+      <section id="industries" className="bg-white py-10 overflow-hidden">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <Reveal className="mx-auto mb-8 max-w-3xl text-center">
             <h2 className="text-2xl font-bold leading-7 text-gray-900 md:text-4xl md:leading-8 lg:leading-none">
@@ -971,7 +1114,7 @@ export default function AboutPage() {
       {/* OUR EPC PROCESS */}
       <section
         id="epc-process"
-        className="relative overflow-hidden bg-gray-950 py-10 text-white"
+        className="relative overflow-hidden bg-gray-950 py-10 overflow-hidden text-white"
       >
         <div className="pointer-events-none absolute -right-24 top-10 h-80 w-80 rounded-full bg-sky-500/10 blur-[120px]" />
         <div className="pointer-events-none absolute -left-24 bottom-0 h-80 w-80 rounded-full bg-lime-400/10 blur-[120px]" />
@@ -1114,7 +1257,7 @@ export default function AboutPage() {
       {/* QUALITY & SAFETY */}
       <section
         id="quality-safety"
-        className="relative overflow-hidden bg-gray-950 py-10 text-white"
+        className="relative overflow-hidden bg-gray-950 py-10 overflow-hidden text-white"
       >
         <div className="pointer-events-none absolute -right-24 top-0 h-96 w-96 rounded-full bg-sky-500/10 blur-[120px]" />
         <div className="pointer-events-none absolute -left-24 bottom-0 h-96 w-96 rounded-full bg-lime-400/10 blur-[120px]" />
@@ -1169,7 +1312,7 @@ export default function AboutPage() {
       {/* VISION & MISSION */}
       {/* <section
         id="vision-mission"
-        className="relative overflow-hidden bg-white py-10"
+        className="relative overflow-hidden bg-white py-10 overflow-hidden"
       >
         <div className="pointer-events-none absolute -left-24 top-10 h-80 w-80 rounded-full bg-sky-100 blur-3xl" />
         <div className="pointer-events-none absolute -right-24 bottom-0 h-80 w-80 rounded-full bg-lime-100 blur-3xl" />
@@ -1211,7 +1354,7 @@ export default function AboutPage() {
       </section> */}
 
       {/* LEADERSHIP */}
-      <section id="leadership" className="bg-white py-10">
+      <section id="leadership" className="bg-white py-10 overflow-hidden">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid items-center gap-12 lg:grid-cols-[0.75fr_1.45fr] lg:gap-1">
             <Reveal
@@ -1274,7 +1417,7 @@ export default function AboutPage() {
       {/* COMPANY NUMBERS */}
       <section
         id="company-numbers"
-        className="relative overflow-hidden bg-gray-950 py-10 text-white"
+        className="relative overflow-hidden bg-gray-950 py-10 overflow-hidden text-white"
       >
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(60,170,229,0.1),transparent_60%)]" />
         <div
@@ -1352,7 +1495,7 @@ export default function AboutPage() {
       </section>
 
       {/* CTA */}
-      <section id="cta" className="bg-white py-10">
+      <section id="cta" className="bg-white py-10 overflow-hidden">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <Reveal
             variant={scaleIn}
