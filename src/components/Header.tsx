@@ -251,7 +251,7 @@ export default function Header() {
                 <div className="absolute top-full left-1/2 -translate-x-1/2 pt-3 w-72 animate-scale-in">
                   <div className="bg-white shadow-2xl rounded-2xl border border-gray-100 p-2 overflow-hidden">
                     <div className="max-h-[70vh] overflow-y-auto">
-                      {visibleServices.map((service) => (
+                      {servicesList.map((service) => (
                         <Link
                           key={service.name}
                           href={service.href}
@@ -385,7 +385,7 @@ export default function Header() {
                 }`}
               >
                 <div className="pl-4 py-1 flex flex-col gap-0.5">
-                  {visibleServices.map((service) => (
+                  {servicesList.map((service) => (
                     <Link
                       key={service.name}
                       href={service.href}
