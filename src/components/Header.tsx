@@ -58,16 +58,10 @@ export default function Header() {
       slug: "oil-refinery",
     },
     {
-      name: "Fractionation",
+      name: "Fractionation plant",
       href: "/services/fractionation",
       slug: "fractionation",
     },
-    {
-      name: "Deodorization",
-      href: "/services/deodorization",
-      slug: "deodorization",
-    },
-    { name: "Bleaching Plant", href: "/services/bleaching", slug: "bleaching" },
     {
       name: "De-Waxing / Winterization",
       href: "/services/dewaxing",
@@ -80,10 +74,16 @@ export default function Header() {
       slug: "bakery-shortening",
     },
     {
-      name: "Hydrogenation",
+      name: "Hydrogenation Plant",
       href: "/services/hydrogenation",
       slug: "hydrogenation",
     },
+    {
+      name: "Interesterification Plant",
+      href: "/services/interesterification",
+      slug: "interesterification",
+    },
+    // { name: "Bleaching Plant", href: "/services/bleaching", slug: "bleaching" },
   ];
 
   const visibleServices = servicesList.filter(
